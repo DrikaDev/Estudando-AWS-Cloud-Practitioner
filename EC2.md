@@ -5,11 +5,6 @@
 - [O que é uma instância?](#o-que-é-uma-instância)
 - [Tipos de Instâncias e Casos de Uso](#tipos-de-instâncias-e-casos-de-uso)
 - [Definição de Preços do Amazon EC2](#definição-de-preços-do-amazon-ec2)
-  - [Instâncias Sob Demanda](#instâncias-sob-demanda)
-  - [Instâncias Reservadas](#instâncias-reservadas)
-  - [Savings Plans](#savings-plans)
-  - [Instâncias Spot](#instâncias-spot)
-  - [Hosts Dedicados](#hosts-dedicados)
 - [Comparativo Resumido](#comparativo-resumido)
 
 ## O que é o Amazon EC2?
