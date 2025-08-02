@@ -42,7 +42,9 @@ Cada tipo de instância oferece um equilíbrio diferente de:
 
 ## Tipos de instâncias e casos de uso
 
-As instâncias da AWS são categorizadas de acordo com o perfil de desempenho que oferecem. A seguir, alguns tipos e seus principais cenários de uso:
+As instâncias da AWS são categorizadas de acordo com o perfil de desempenho que oferecem. 
+Escolher o tipo de instância certo é essencial para otimizar **custo x desempenho** em seus projetos na nuvem.
+A seguir, alguns tipos e seus principais cenários de uso:
 
 ### 🔹 Uso Geral — **t2/t3**
 Equilibram recursos de computação, memória e rede.  
@@ -95,8 +97,6 @@ Oferecem alto desempenho em operações de entrada/saída (IOPS).
 - Sistemas de arquivos distribuídos  
 - Data warehouses  
 - OLTP (Online Transaction Processing) de alta frequência  
-
-> ✨ **Dica:** Escolher o tipo de instância certo é essencial para otimizar **custo x desempenho** em seus projetos na nuvem.
 
 [⬆ Voltar ao índice](#índice)
 
