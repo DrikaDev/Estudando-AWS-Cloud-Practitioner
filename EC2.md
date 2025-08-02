@@ -27,14 +27,63 @@ Cada tipo de instância oferece um equilíbrio diferente de:
 
 ---
 
-## 📌 Exemplo de tipos de instâncias e casos de uso
+## 📌 Exemplos de tipos de instâncias e casos de uso
 
-- **t2/t3 (Uso geral)** → bom para aplicativos leves, sites e ambientes de teste  
-- **m4/m5 (Uso balanceado)** → equilíbrio entre CPU, memória e rede  
-- **c4/c5 (Otimizado para computação)** → indicado para cálculos intensivos  
-- **r4/r5 (Otimizado para memória)** → ideal para bancos de dados e cache em memória  
-- **p2/p3 (Otimizado para machine learning e IA)** → indicado para tarefas de deep learning
-- **d2/h1/i3 (Otimizado para armazenamento)** → indicado para sistemas de arquivos distribuidos
+As instâncias da AWS são categorizadas de acordo com o perfil de desempenho que oferecem. A seguir, alguns tipos e seus principais cenários de uso:
+
+### 🔹 Uso Geral — **t2/t3**
+Equilibram recursos de computação, memória e rede.  
+**Casos de uso comuns:**
+- Servidores de aplicações e back-end para sistemas empresariais
+- Sites e ambientes de teste
+- Servidores de jogos
+- Bancos de dados pequenos e médios  
+
+---
+
+### 🔹 Balanceadas — **m4/m5**
+Oferecem mais equilíbrio para aplicações que demandam desempenho consistente.  
+**Casos de uso comuns:**
+- Aplicações empresariais críticas
+- Ambientes que exigem estabilidade entre CPU, memória e rede
+
+---
+
+### 🔹 Otimizadas para Computação — **c4/c5**
+Usam processadores de alto desempenho para cargas de trabalho intensivas em CPU.  
+**Casos de uso comuns:**
+- Servidores web e de aplicações de alto desempenho  
+- Jogos online dedicados  
+- Processamento em lote e cálculos matemáticos complexos
+
+---
+
+### 🔹 Otimizadas para Memória — **r4/r5**
+Projetadas para cargas de trabalho que processam grandes volumes de dados na memória.  
+**Casos de uso comuns:**
+- Bancos de dados de alto desempenho  
+- Processamento em tempo real de grandes volumes de dados  
+- Aplicações que precisam pré-carregar muitos dados na memória  
+
+---
+
+### 🔹 Computação Acelerada — **p2/p3**
+Utilizam aceleradoras de hardware (como GPUs) para maior eficiência.  
+**Casos de uso comuns:**
+- Treinamento e inferência em Machine Learning / Deep Learning  
+- Processamento gráfico intensivo  
+- Streaming de jogos e renderização 3D  
+
+---
+
+### 🔹 Otimizadas para Armazenamento — **d2/h1/i3**
+Oferecem alto desempenho em operações de entrada/saída (IOPS).  
+**Casos de uso comuns:**
+- Sistemas de arquivos distribuídos  
+- Data warehouses  
+- OLTP (Online Transaction Processing) de alta frequência  
+
+💡 *Essas instâncias são ideais quando há grande volume de leitura e gravação de dados, exigindo baixa latência e alta taxa de IOPS.*
 
 ---
 
