@@ -1,6 +1,6 @@
 ## ☁️ Amazon EC2 – Elastic Compute Cloud
 
-## 📑 Índice
+## Índice
 - [O que é o Amazon EC2?](#o-que-é-o-amazon-ec2)
 - [O que é uma instância?](#o-que-é-uma-instância)
 - [Tipos de Instâncias e Casos de Uso](#-tipos-de-instâncias-e-casos-de-uso)
@@ -25,7 +25,8 @@ Com o EC2, você pode:
 - 📈 **Escalar verticalmente** para lidar com picos de uso (como processos intensivos ou aumento de tráfego), e  
 - 📉 **Reduzir capacidade** quando a demanda diminuir  
 
-[⬆ Voltar ao índice](#📑-índice)
+[⬆ Voltar ao índice](#-índice)
+
 ---
 
 ## O que é uma instância?
@@ -40,7 +41,8 @@ Cada tipo de instância oferece um equilíbrio diferente de:
 - 🌐 **Rede (Networking)**  
 - 💾 **Armazenamento (EBS, SSD, etc.)**
 
-[⬆ Voltar ao índice](#📑-índice)
+[⬆ Voltar ao índice](#-índice)
+
 ---
 
 ## Tipos de instâncias e casos de uso
@@ -101,7 +103,8 @@ Oferecem alto desempenho em operações de entrada/saída (IOPS).
 
 > ✨ **Dica:** Escolher o tipo de instância certo é essencial para otimizar **custo x desempenho** em seus projetos na nuvem.
 
-[⬆ Voltar ao índice](#📑-índice)
+[⬆ Voltar ao índice](#-índice)
+
 ---
 
 ## 💰 Definição de Preços do Amazon EC2
@@ -199,7 +202,8 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 - **Custo**
   - São a opção **mais cara** do Amazon EC2  
 
-[⬆ Voltar ao índice](#📑-índice)
+[⬆ Voltar ao índice](#-índice)
+
 ---
 
 ## 📊 Comparativo Resumido
@@ -211,8 +215,7 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 | **Reservadas (Conversíveis)** | Flexibilidade com bom desconto        | Workloads que podem mudar tipo de instância ou região |
 | **Savings Plans**         | Desconto alto sem especificar instância  | Diversos workloads dentro de uma família de instância |
 | **Spot**                  | Economia extrema (até 90%)               | Processamento flexível, tarefas tolerantes a falhas   |
-
-[⬆ Voltar ao índice](#📑-índice)
-
 | **Hosts Dedicados**       | Controle total + licenciamento próprio   | Workloads com requisitos de conformidade/licenciamento |
 
+
+[⬆ Voltar ao índice](#-índice)
