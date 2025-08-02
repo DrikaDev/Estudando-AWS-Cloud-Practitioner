@@ -107,7 +107,7 @@ Oferecem alto desempenho em operações de entrada/saída (IOPS).
 
 ---
 
-## 💰 Definição de Preços do Amazon EC2
+## Definição de Preços do Amazon EC2
 
 Com o **Amazon EC2**, você paga apenas pelo tempo de computação que usar.  
 A AWS oferece diversas opções de preço para diferentes necessidades:
@@ -206,7 +206,7 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 
 ---
 
-## 📊 Comparativo Resumido
+## Comparativo Resumido
 
 | Tipo de Instância         | Vantagem Principal                       | Casos de Uso Comuns                                    |
 |----------------------------|------------------------------------------|-------------------------------------------------------|
