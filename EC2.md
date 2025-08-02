@@ -25,6 +25,7 @@ Com o EC2, você pode:
 - 📈 **Escalar verticalmente** para lidar com picos de uso (como processos intensivos ou aumento de tráfego), e  
 - 📉 **Reduzir capacidade** quando a demanda diminuir  
 
+[⬆ Voltar ao índice](#📑-índice)
 ---
 
 ## O que é uma instância?
@@ -39,9 +40,10 @@ Cada tipo de instância oferece um equilíbrio diferente de:
 - 🌐 **Rede (Networking)**  
 - 💾 **Armazenamento (EBS, SSD, etc.)**
 
+[⬆ Voltar ao índice](#📑-índice)
 ---
 
-## 📌 Tipos de instâncias e casos de uso
+## Tipos de instâncias e casos de uso
 
 As instâncias da AWS são categorizadas de acordo com o perfil de desempenho que oferecem. A seguir, alguns tipos e seus principais cenários de uso:
 
@@ -97,10 +99,9 @@ Oferecem alto desempenho em operações de entrada/saída (IOPS).
 - Data warehouses  
 - OLTP (Online Transaction Processing) de alta frequência  
 
-💡 *Essas instâncias são ideais quando há grande volume de leitura e gravação de dados, exigindo baixa latência e alta taxa de IOPS.*
-
 > ✨ **Dica:** Escolher o tipo de instância certo é essencial para otimizar **custo x desempenho** em seus projetos na nuvem.
 
+[⬆ Voltar ao índice](#📑-índice)
 ---
 
 ## 💰 Definição de Preços do Amazon EC2
@@ -198,6 +199,7 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 - **Custo**
   - São a opção **mais cara** do Amazon EC2  
 
+[⬆ Voltar ao índice](#📑-índice)
 ---
 
 ## 📊 Comparativo Resumido
@@ -209,5 +211,8 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 | **Reservadas (Conversíveis)** | Flexibilidade com bom desconto        | Workloads que podem mudar tipo de instância ou região |
 | **Savings Plans**         | Desconto alto sem especificar instância  | Diversos workloads dentro de uma família de instância |
 | **Spot**                  | Economia extrema (até 90%)               | Processamento flexível, tarefas tolerantes a falhas   |
+
+[⬆ Voltar ao índice](#📑-índice)
+
 | **Hosts Dedicados**       | Controle total + licenciamento próprio   | Workloads com requisitos de conformidade/licenciamento |
 
