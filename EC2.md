@@ -7,6 +7,8 @@
 - [Definição de Preços do Amazon EC2](#definição-de-preços-do-amazon-ec2)
 - [Comparativo Resumido](#comparativo-resumido)
 
+---
+
 ## O que é o Amazon EC2?
 
 O **Amazon Elastic Compute Cloud (Amazon EC2)** oferece capacidade de computação **escalável e sob demanda** na **AWS (Amazon Web Services)**.  
@@ -54,15 +56,11 @@ Equilibram recursos de computação, memória e rede.
 - Servidores de jogos
 - Bancos de dados pequenos e médios  
 
----
-
 ### 🔹 Balanceadas — **m4/m5**
 Oferecem mais equilíbrio para aplicações que demandam desempenho consistente.  
 **Casos de uso comuns:**
 - Aplicações empresariais críticas
 - Ambientes que exigem estabilidade entre CPU, memória e rede
-
----
 
 ### 🔹 Otimizadas para Computação — **c4/c5**
 Usam processadores de alto desempenho para cargas de trabalho intensivas em CPU.  
@@ -71,8 +69,6 @@ Usam processadores de alto desempenho para cargas de trabalho intensivas em CPU.
 - Jogos online dedicados  
 - Processamento em lote e cálculos matemáticos complexos
 
----
-
 ### 🔹 Otimizadas para Memória — **r4/r5**
 Projetadas para cargas de trabalho que processam grandes volumes de dados na memória.  
 **Casos de uso comuns:**
@@ -80,16 +76,12 @@ Projetadas para cargas de trabalho que processam grandes volumes de dados na mem
 - Processamento em tempo real de grandes volumes de dados  
 - Aplicações que precisam pré-carregar muitos dados na memória  
 
----
-
 ### 🔹 Computação Acelerada — **p2/p3**
 Utilizam aceleradoras de hardware (como GPUs) para maior eficiência.  
 **Casos de uso comuns:**
 - Treinamento e inferência em Machine Learning / Deep Learning  
 - Processamento gráfico intensivo  
 - Streaming de jogos e renderização 3D  
-
----
 
 ### 🔹 Otimizadas para Armazenamento — **d2/h1/i3**
 Oferecem alto desempenho em operações de entrada/saída (IOPS).  
@@ -107,8 +99,6 @@ Oferecem alto desempenho em operações de entrada/saída (IOPS).
 Com o **Amazon EC2**, você paga apenas pelo tempo de computação que usar.  
 A AWS oferece diversas opções de preço para diferentes necessidades:
 
----
-
 ## 🔹 Instâncias Sob Demanda
 - **Características**  
   - Ideais para cargas de trabalho irregulares e de curto prazo que **não podem ser interrompidas**.  
@@ -119,8 +109,6 @@ A AWS oferece diversas opções de preço para diferentes necessidades:
   - Execução de aplicações com padrões de uso imprevisíveis  
 - **Observação**  
   - Não são recomendadas para cargas de trabalho de **longo prazo (≥ 1 ano)**, pois podem sair mais caras que as Reservadas.
-
----
 
 ## 🔹 Instâncias Reservadas
 Oferecem **descontos significativos** em comparação às instâncias sob demanda, em troca de um **compromisso de 1 ou 3 anos**.  
@@ -143,8 +131,6 @@ Se não renovar:
 - A instância continua executando como **sob demanda**, ou  
 - Você pode adquirir uma nova instância reservada compatível.  
 
----
-
 ## 🔹 Savings Plans
 Oferecem até **72% de desconto** em relação às tarifas sob demanda.  
 
@@ -166,8 +152,6 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
     - Seu uso dos últimos 7, 30 ou 60 dias  
     - Recomendações personalizadas de Savings Plans  
 
----
-
 ## 🔹 Instâncias Spot
 - **Características**
   - Utilizam capacidade não usada do EC2  
@@ -185,8 +169,6 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
   - Processar dados de uma pesquisa em horários de menor demanda.   
 
 ⚠️ *Não são ideais para aplicações que exigem disponibilidade contínua (como desenvolvimento e testes críticos).*
-
----
 
 ## 🔹 Hosts Dedicados
 - **Descrição**
