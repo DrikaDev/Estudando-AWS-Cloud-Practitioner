@@ -3,14 +3,14 @@
 ## Índice
 - [O que é o Amazon EC2?](#o-que-é-o-amazon-ec2)
 - [O que é uma instância?](#o-que-é-uma-instância)
-- [Tipos de Instâncias e Casos de Uso](#-tipos-de-instâncias-e-casos-de-uso)
-- [Definição de Preços do Amazon EC2](#-definição-de-preços-do-amazon-ec2)
-  - [Instâncias Sob Demanda](#-instâncias-sob-demanda)
-  - [Instâncias Reservadas](#-instâncias-reservadas)
-  - [Savings Plans](#-savings-plans)
-  - [Instâncias Spot](#-instâncias-spot)
-  - [Hosts Dedicados](#-hosts-dedicados)
-- [Comparativo Resumido](#-comparativo-resumido)
+- [Tipos de Instâncias e Casos de Uso](#tipos-de-instâncias-e-casos-de-uso)
+- [Definição de Preços do Amazon EC2](#definição-de-preços-do-amazon-ec2)
+  - [Instâncias Sob Demanda](#instâncias-sob-demanda)
+  - [Instâncias Reservadas](#instâncias-reservadas)
+  - [Savings Plans](#savings-plans)
+  - [Instâncias Spot](#instâncias-spot)
+  - [Hosts Dedicados](#hosts-dedicados)
+- [Comparativo Resumido](#comparativo-resumido)
 
 ## O que é o Amazon EC2?
 
@@ -25,7 +25,7 @@ Com o EC2, você pode:
 - 📈 **Escalar verticalmente** para lidar com picos de uso (como processos intensivos ou aumento de tráfego), e  
 - 📉 **Reduzir capacidade** quando a demanda diminuir  
 
-[⬆ Voltar ao índice](#-índice)
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -41,7 +41,7 @@ Cada tipo de instância oferece um equilíbrio diferente de:
 - 🌐 **Rede (Networking)**  
 - 💾 **Armazenamento (EBS, SSD, etc.)**
 
-[⬆ Voltar ao índice](#-índice)
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -103,7 +103,7 @@ Oferecem alto desempenho em operações de entrada/saída (IOPS).
 
 > ✨ **Dica:** Escolher o tipo de instância certo é essencial para otimizar **custo x desempenho** em seus projetos na nuvem.
 
-[⬆ Voltar ao índice](#-índice)
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -202,7 +202,7 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 - **Custo**
   - São a opção **mais cara** do Amazon EC2  
 
-[⬆ Voltar ao índice](#-índice)
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -218,4 +218,4 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 | **Hosts Dedicados**       | Controle total + licenciamento próprio   | Workloads com requisitos de conformidade/licenciamento |
 
 
-[⬆ Voltar ao índice](#-índice)
+[⬆ Voltar ao índice](#índice)
