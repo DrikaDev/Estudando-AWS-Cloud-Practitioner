@@ -136,8 +136,7 @@ sudo chown -R apache:apache /var/www/html/
 
 ---
 
-22. Acessar o site no navegador.  
-Usar o IPv4 público da instância EC2 no navegador:  
+22. Acessar o site no navegador com o IPv4 público da instância EC2:  
 http://<IPv4-público>  
 
 🎉 Deploy concluído com sucesso no Amazon EC2! 🎉
