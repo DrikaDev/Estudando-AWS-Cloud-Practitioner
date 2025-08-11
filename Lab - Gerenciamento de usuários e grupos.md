@@ -1,19 +1,24 @@
-Objetivos
+## Lab - Gerenciamento de Usuários e Grupos no Linux
+
+## Objetivos
 Neste laboratório, você vai:
+- Criar novos usuários com uma senha padrão.
+- Criar grupos e atribuir os usuários apropriados.
+- Fazer login como diferentes usuários.
 
-Criará novos usuários com uma senha padrão
-Criará grupos e atribuirá os usuários apropriados
-Fará o login como diferentes usuários
+---
 
-Tarefa 1: Usar SSH para se conectar a uma instância do Amazon Linux EC2
-se conectar a uma instância do EC2 do Amazon Linux. Você usará um utilitário SSH para realizar todas essas operações
+## Tarefa 1: Usar SSH para se conectar a uma instância do Amazon Linux EC2
+Primeiro devemos nos conectar a uma instância do EC2 do Amazon Linux usando um utilitário SSH para realizar as operações.
 
-Tarefa 2: Criar usuários
-Nesta seção, você criará usuários com base na tabela a seguir:
-Importante: Fique atento à ortografia correta das IDs de usuário para que possam usar as credenciais padrão para fazer o login.
+---
+
+## Tarefa 2: Criar usuários
+Nesta seção, você criará usuários com base na tabela a seguir:  
+**Importante:** fique atento à ortografia correta das IDs de usuário para que possam usar as credenciais padrão para fazer o login.  
 <img width="1309" height="575" alt="image" src="https://github.com/user-attachments/assets/aeda7e23-bd78-4631-9c20-3709f275b321" />  
 
-Confirme que você está na pasta inicial do usuário atual digitando pwd e pressionando ENTER.
+1. Confirme que você está na pasta inicial do usuário atual digitando pwd e pressionando ENTER.
 <img width="293" height="73" alt="image" src="https://github.com/user-attachments/assets/3c5cab70-8e34-4a16-91cb-077a2ae63977" />
 
 Para adicionar o primeiro usuário da lista anterior, Alejandro Rosalez, digite sudo useradd arosalez e pressione Enter.
@@ -43,19 +48,7 @@ Para verificar se todos os usuários foram criados, digite sudo cat /etc/passwd 
 Tarefa 3: Criar grupos
 Nesta seção, você criará grupos de usuários e adicionará usuários aos grupos.
 
-Sales
-
-HR
-
-Finance
-
-Personnel
-
-CEO
-
-Shipping
-
-Managers
+Sales, HR, Finance, Personnel, CEO, Shipping, Managers
 
 Quando tiver criado esses grupos, você incluirá os usuários aos devidos grupos com base nas informações fornecidas na tabela da Tarefa 2.   
 
