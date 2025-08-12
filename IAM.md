@@ -1,4 +1,4 @@
-## AWS IAM (Identity and Access Management)
+## IAM (Identity and Access Management)
 
 O **IAM** é um serviço da **AWS** usado para gerenciar **usuários** e **acessar recursos**.
 
@@ -30,3 +30,5 @@ Exemplos de permissões:
 - **Acesso somente leitura** ao Amazon Simple Storage Service (**Amazon S3**)  
 
 ---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
