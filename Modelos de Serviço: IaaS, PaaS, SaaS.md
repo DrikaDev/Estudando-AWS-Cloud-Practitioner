@@ -66,3 +66,5 @@ O usuário só precisa saber **como utilizar** o aplicativo, sem se preocupar co
 | **SaaS** | Tudo gerenciado pelo provedor | WorkMail, Chime | Usuários finais |
 
 > ✅ *Lembre-se: quanto mais subimos de IaaS para SaaS, menos responsabilidade temos e mais facilidade no uso.*  
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
