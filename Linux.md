@@ -1,4 +1,4 @@
-## 📚 O que é o Linux?
+## 🐧 O que é o Linux?
 
 Linux é um sistema operacional criado em 1991 por Linus Torvalds.  
 Ele gerencia os recursos de hardware e software de um computador e executa aplicativos.  
