@@ -12,24 +12,44 @@
 
 ## Índice de Conteúdos
 
-### AWS
+### AWS ☁️
 
-- [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
+- [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)  
+- [Modelos de Serviços: Iaas, PaasS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20Servi%C3%A7o%3A%20IaaS%2C%20PaaS%2C%20SaaS.md)  
+- [Modelos de Implementação: Nuvem, Híbrida, On-Premise]()  
+- [EC2 - Instâncias e Preços]()  
+- [S3]()  
+- [Protocolos da Internet: IP Públicos e Privados]()  
+
+---
+
+## Linux 🐧
+- [Linux]() 
+
+---
+
+## Laboratórios 🧪  
+- [EC2 - Meu primeiro deploy]()  
+- [S3 - Hospedagem de site estático]()  
+- [VPC - Criação de VPC e Sub-redes]()  
+- [VPC - Criação de VPC e Servidor Web]()
+- [Linux - Gerenciamento de usuários e grupos]()
+- 
 
 ---
 
 ### ✍️ Sobre mim
 
-Me chamo **Adriana Gutierrez**, sou uma profissional 40+, formada em Análise e Desenvolvimento de Sistemas, com inglês avançado e uma breve experiência como desenvolvedora front-end. 
+Olá, me chamo **Adriana Gutierrez**, sou uma profissional 40+, formada em Análise e Desenvolvimento de Sistemas, com inglês avançado e uma breve experiência profissional como desenvolvedora de front-end. 
 
-Atualmente, estou em transição de carreira para a área de tecnologia, me aprofundando em **AWS e soluções em nuvem** - e, este repositório faz parte dessa caminhada.
+Atualmente, estou em transição de carreira para a área de tecnologia, estou me aprofundando em **AWS e soluções em nuvem** e, este repositório faz parte dessa caminhada. 🚶🏻‍♀️‍➡️
 
 ---
 
 ### 🚀 Vamos juntos?
 
-Se este conteúdo te ajudar de alguma forma, me conta!  
-E, se você também estiver estudando para a AWS Cloud Practitioner, bora trocar figurinhas? 💬
+Se este conteúdo te ajudar de alguma forma, agradeço se puder me dar uma ⭐!  
+E, se você também estiver estudando para a AWS Cloud Practitioner, bora trocar figurinhas? 🤩
 
 ---
 
