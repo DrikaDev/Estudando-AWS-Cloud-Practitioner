@@ -1,4 +1,4 @@
-## 🛠️ Lab - Criar a sua VPC e iniciar um servidor Web
+## 🛠️ Lab - Criação de uma VPC e iniciar um servidor Web
 
 ## Tarefa 1: Criar a VPC
 
@@ -249,3 +249,7 @@ EOF
    Se tudo deu certo, a página exibida no navegador deve corresponder à página do servidor web do laboratório.
 
 ![Imagem do WhatsApp de 2025-08-07 à(s) 11 29 28_97015cbf](https://github.com/user-attachments/assets/9d50ec86-c80c-4131-992a-d043d57978c0)
+
+---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
