@@ -1,4 +1,4 @@
-## 🧪 Laboratório: Criar uma Amazon Virtual Private Cloud (Amazon VPC) e entender como criar sub-redes e alocar endereços IP;
+## 🧪 Lab: Criação de uma Amazon Virtual Private Cloud (Amazon VPC) e entender como criar sub-redes e alocar endereços IP
 
 Neste laboratório, investigamos as necessidades do cliente e montamos um ambiente **VPC** com base nos requisitos.  
 Em seguida, criamos um passo a passo simples para o cliente seguir.
@@ -75,3 +75,5 @@ Os **endereços IP privados** não são acessíveis pela Internet, garantindo qu
 Isso aumenta a **segurança** e o **controle** da rede.
 
 ---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
