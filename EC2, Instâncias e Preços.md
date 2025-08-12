@@ -196,3 +196,5 @@ Oferecem até **72% de desconto** em relação às tarifas sob demanda.
 
 
 [⬆ Voltar ao índice](#índice)
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
