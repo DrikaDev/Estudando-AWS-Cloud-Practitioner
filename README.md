@@ -30,7 +30,7 @@
 
 ## Laboratórios 🧪  
 - [EC2 - Meu primeiro deploy](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)  
-- [S3 - Hospedagem de site estático]()  
+- [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
 - [VPC - Criação de VPC e Sub-redes]()  
 - [VPC - Criação de VPC e Servidor Web]()
 - [Linux - Gerenciamento de usuários e grupos]()
