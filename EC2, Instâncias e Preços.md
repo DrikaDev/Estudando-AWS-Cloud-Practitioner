@@ -1,4 +1,4 @@
-## ☁️ Amazon EC2 – Elastic Compute Cloud
+## ☁️ Amazon EC2
 
 ## Índice
 - [O que é o Amazon EC2?](#o-que-é-o-amazon-ec2)
