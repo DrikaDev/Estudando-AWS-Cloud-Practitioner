@@ -24,7 +24,7 @@ Nesta seção, você criará usuários com base na tabela a seguir:
 2. Para adicionar o primeiro usuário da lista anterior, Alejandro Rosalez, digite **sudo useradd arosalez** e pressione Enter.  
 <img width="450" height="41" alt="image" src="https://github.com/user-attachments/assets/22c923f6-144e-4a27-b749-ed58c14bcc3d" />
 
-3. Digite **sudo passwd arosalez** e pressione Enter. 
+3. Para adicionar a senha, digite **sudo passwd arosalez** e pressione Enter. 
 A senha deverá ser digitada duas vezes. Você pode usar a senha P@ssword1234!  
 - Observação: Ao digitar a senha, nada aparecerá na tela, portanto digite sua senha e pressione Enter.
 <img width="498" height="120" alt="image" src="https://github.com/user-attachments/assets/502fea69-28ce-4385-884f-cc948cba33f5" />
