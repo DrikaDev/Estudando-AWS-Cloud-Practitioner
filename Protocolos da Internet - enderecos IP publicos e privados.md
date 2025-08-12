@@ -82,3 +82,5 @@ Acessamos o console do EC2 e identificamos:
 - **Validação de configuração** → verificar atribuição de IPs, rotas e permissões de segurança é fundamental em troubleshooting.  
 
 ✅ Atividade concluída com sucesso, aplicando conceitos de **endereços IP públicos e privados na AWS** e práticas de **troubleshooting em instâncias EC2**.
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
