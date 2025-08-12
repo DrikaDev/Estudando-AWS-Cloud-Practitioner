@@ -1,30 +1,20 @@
 ## ☁️ Meus Estudos com AWS | Rumo à Certificação Cloud Practitioner 🚀
 
-✏️ Este repositório foi criado para documentar minha jornada de estudos com a **Amazon Web Services (AWS)**, com foco na certificação **AWS Certified Cloud Practitioner**.  
-📝 Aqui pretendo reunir minhas anotações, resumos, insights e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
+### 🎯 Objetivo  
+
+✏️ Este repositório tem como objetivo documentar minha jornada de estudos com a **Amazon Web Services (AWS)**, com foco na certificação **AWS Certified Cloud Practitioner**.  
+📝 Aqui pretendo reunir minhas anotações, resumos e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
 🚧 Está sendo construído e alimentado gradualmente à medida que avanço nos meus estudos sobre AWS.  
 
----
-
-### 🎯 Objetivo
-
-- Consolidar o conhecimento teórico e prático da AWS.
-- Criar uma base de consulta rápida e organizada.
-- Compartilhar aprendizados que possam ajudar outras pessoas em transição de carreira ou iniciantes em Cloud.
+> ✅ *Lembrando que este conteúdo está em constante construção. Sinta-se à vontade para explorar e sugerir melhorias!*
 
 ---
 
-### 📚 Conteúdo a ser construído:
+## Índice de Conteúdos
 
-- [x] Conceitos básicos de Cloud Computing  
-- [x] Modelo de responsabilidade compartilhada  
-- [x] Regiões, Zonas de Disponibilidade e Edge Locations  
-- [x] Serviços principais da AWS (EC2, S3, RDS, Lambda etc.)  
-- [x] IAM e boas práticas de segurança  
-- [x] Preços, faturamento e suporte  
-- [ ] Revisão geral e simulado
+### AWS
 
-> ✅ *Lembrando que este conteúdo ainda está em construção. Sinta-se à vontade para explorar e sugerir melhorias!*
+- [O que é Computação em Nuvem?](aws/o-que-é-computação-em-nuvem?.md)  
 
 ---
 
