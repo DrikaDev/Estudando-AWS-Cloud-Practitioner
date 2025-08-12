@@ -19,7 +19,8 @@
 - [Modelos de Implementação: Nuvem, Híbrida, On-Premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20implementa%C3%A7%C3%A3o:%20nuvem,%20h%C3%ADbrida,%20on-primise.md)  
 - [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)  
 - [S3](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3.md)  
-- [Protocolos da Internet: IP Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)  
+- [Protocolos da Internet: IP Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)
+- [IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/IAM.md)
 
 ---
 
