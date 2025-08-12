@@ -23,4 +23,6 @@ Esses computadores são chamados de **servidores** e ficam em grandes **data cen
 
 ---
 
-> ✅ *A nuvem permite que empresas de todos os tamanhos inovem com mais rapidez, reduzindo custos e complexidade.*  
+> ✅ *A nuvem permite que empresas de todos os tamanhos inovem com mais rapidez, reduzindo custos e complexidade.*
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
