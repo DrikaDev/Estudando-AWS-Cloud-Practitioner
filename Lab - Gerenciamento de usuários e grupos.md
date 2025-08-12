@@ -1,4 +1,4 @@
-## Lab - Gerenciamento de Usuários e Grupos no Linux
+## 🧪 Lab - Gerenciamento de Usuários e Grupos no Linux
 
 ## Objetivos
 Neste laboratório, você vai:
@@ -134,3 +134,5 @@ Desça até o final do arquivo usando a seta para baixo.
 <img width="1326" height="36" alt="image" src="https://github.com/user-attachments/assets/4250c184-2b19-4bb9-81fb-a6b306e3f7df" />  
 
 ---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
