@@ -33,7 +33,7 @@
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
 - [VPC - Criação de VPC e Sub-redes](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/VPC%20-%20Lab.%20Criar%20VPC%20e%20sub-redes.md) 
 - [VPC - Criação de VPC e Servidor Web](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criar%20uma%20VPC%20e%20iniciar%20um%20servidor%20Web.md)  
-- [Linux - Gerenciamento de usuários e grupos]()
+- [Linux - Gerenciamento de usuários e grupos](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Gerenciamento%20de%20usu%C3%A1rios%20e%20grupos.md)
 - 
 
 ---
