@@ -14,7 +14,7 @@
 
 ### AWS
 
-- [O que é Computação em Nuvem?]([aws/o-que-é-computação-em-nuvem?.md](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md))  
+- [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
 
 ---
 
