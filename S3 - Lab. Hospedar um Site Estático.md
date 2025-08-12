@@ -1,4 +1,4 @@
-## 🛠️ Atividade Prática: Hospedar um Site Estático no S3
+## 🧪 Lab: Hospedar um Site Estático no S3
 
 Vamos criar um bucket no Amazon S3 para hospedar um site estático e colocar em prática os conceitos de **permissões e políticas públicas**.  
 
@@ -112,3 +112,5 @@ Para corrigir:
 
 👉🏻 Essa prática não só reforça o aprendizado de **permissões e políticas públicas**,  
 mas também mostra como usar a AWS para **publicar um site real** de forma simples e acessível.
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
