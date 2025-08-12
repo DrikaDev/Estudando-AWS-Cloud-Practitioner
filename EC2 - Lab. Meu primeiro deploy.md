@@ -1,4 +1,4 @@
-## 🚀 Praticando um Lab de EC2: Meu Primeiro Deploy!
+## 🚀 Lab EC2: Meu Primeiro Deploy!
 
 Neste laboratório, realizei meu primeiro deploy de um projeto utilizando o **Amazon EC2**.  
 Abaixo está o passo a passo com imagens ilustrativas.
@@ -142,3 +142,4 @@ http://<IPv4-público>
 🎉 Deploy concluído com sucesso no Amazon EC2! 🎉
 <img width="1421" height="808" alt="image" src="https://github.com/user-attachments/assets/1ecdd34b-e1d9-45f2-b130-de5bf7d1cd14" />
 
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
