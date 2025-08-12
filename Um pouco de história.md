@@ -19,3 +19,5 @@ Assim, em **2006**, nasceu oficialmente a **Amazon Web Services (AWS)**, lançan
 - **SQS** → filas de mensagens  
 
 ---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
