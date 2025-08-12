@@ -24,7 +24,7 @@
 ---
 
 ## Linux 🐧
-- [Linux]() 
+- [Linux](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Linux.md) 
 
 ---
 
