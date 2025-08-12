@@ -112,4 +112,6 @@ O fluxo de trabalho de login do Linux é composto por três etapas principais:
 3. **Conceder permissões administrativas completas a um usuário:**  
    Comando `su root`, que eleva o usuário ao perfil administrador (root) no ambiente do usuário.
 
-> **Dica:** Em muitas distribuições, recomenda-se usar `sudo` para executar comandos com permissões administrativas sem trocar totalmente para o usuário root.
+> **Dica:** Em muitas distribuições, recomenda-se usar `sudo` para executar comandos com permissões administrativas sem trocar totalmente para o usuário root.  
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
