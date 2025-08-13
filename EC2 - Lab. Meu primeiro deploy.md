@@ -1,4 +1,4 @@
-## 🚀 Lab EC2: Meu Primeiro Deploy!
+## 🧪 Lab EC2: Meu Primeiro Deploy!
 
 Neste laboratório, realizei meu primeiro deploy de um projeto utilizando o **Amazon EC2**.  
 Abaixo está o passo a passo com imagens ilustrativas.
