@@ -1,3 +1,16 @@
+Lab - Proteção de dados usando criptografia
+
+Criptografia é o processo de transformar informações em código secreto para garantir confidencialidade, autenticação, integridade e não repúdio.  
+O processo inverso é a descriptografia, que torna os dados legíveis novamente.
+
+Neste laboratório seremos capazes:
+Criar uma chave de criptografia do AWS KMS
+Instalar a AWS Encryption CLI
+Criptografar texto simples
+Descriptografar texto cifrado
+
+---
+
 Tarefa 1: criar uma chave do AWS KMS
 Nessa tarefa, vamos criar uma chave simétrica do AWS KMS e conceder propriedade dessa chave para o perfil do IAM voclabs que foi pré-criada para este laboratório.  
 
@@ -32,12 +45,17 @@ pesquise e selecione a caixa de seleção para voclabs e, depois, Next (Próximo
 8. Escolha o link para a MyKMSKey que você acabou de criar e copie o valor do ARN (Amazon Resource Name) para um editor de texto.
 <img width="1135" height="261" alt="image" src="https://github.com/user-attachments/assets/50a00571-9909-4b97-b50d-159de013819a" />
 
+---
+
 Tarefa 2: configurar a instância do servidor de arquivos  
 Antes de criptografar ou descriptografar dados, você precisa definir alguns pontos.  
 Para usar sua chave AWS KMS, você deve configurar as credenciais da AWS na instância do EC2 no File Server (Servidor de arquivos).  
 Depois disso, instale a AWS Encryption CLI (aws-encryption-cli), que você pode usar para executar os comandos de criptografar e descriptografar.  
 
-1. No console, insira EC2 na barra de pesquisa e escolha EC2.
+Nesta tarefa, vamos configurou o arquivo de credenciais da AWS que habilita o uso da chave do AWS KMS que você criou em uma etapa anterior.  
+Vamos instalar a AWS Encryption CLI para conseguir executar comandos de criptografia.  
+
+1. No console, insira EC2 na barra de pesquisa e escolha EC2.  
 
 2. Na lista Instances (instâncias), marque a caixa de seleção ao lado da instância File Server e escolha Connect (Conectar).
 <img width="1192" height="171" alt="image" src="https://github.com/user-attachments/assets/0d0e24e2-b507-4a6d-a67b-9b72b91937e5" />
@@ -62,5 +80,42 @@ Default output format (Formado de saída padrão): pressione Enter.
 O arquivo de configuração da AWS será criado e você o atualizará em uma etapa mais adiante. As entradas anteriores de 1 são espaços reservados temporários.
 <img width="316" height="118" alt="image" src="https://github.com/user-attachments/assets/85ada3a9-9318-446e-9176-535863d07b00" />
 
+6. Navegue até à página do console Vocareum e selecione o botão  AWS Details (Detalhes da AWS).
+Ao lado de AWS CLI, selecione Show (Exibir).
+Copie e cole o bloco de código, que começa com [default], em um editor de texto.
+Retorne à guia do navegador em que você está logado no servidor de arquivos.
+Para abrir o arquivo de credenciais da AWS, execute o seguinte comando:
+```
+vi ~/.aws/credentials
+```
+
+7. No arquivo ~/.aws/credentials file, digite dd várias vezes para excluir o conteúdo do arquivo.
+Cole o bloco de código que você copiou do Vocareum.
+<img width="727" height="135" alt="image" src="https://github.com/user-attachments/assets/95a63897-ced2-42d5-9d09-65ff3ebd6366" />
+
+8. Para salvar e fechar o arquivo, pressione Esc, digite :wq e pressione Enter.
+Para visualizar o conteúdo atualizado do arquivo, execute o seguinte comando:
+```
+cat ~/.aws/credentials
+```
+Agora você instalará a AWS Encryption CLI e exportar o caminho. Fazendo isso, você poderá executar os comandos para criptografar e descriptografar dados.  
+
+9. Para instalar a AWS Encryption CLI e definir o caminho, execute os seguintes comandos:
+```
+pip3 install aws-encryption-sdk-cli
+export PATH=$PATH:/home/ssm-user/.local/bin
+```
+
+---
+
+Tarefa 3: criptografar e descriptografar dados  
+
+Nesta tarefa, você criará um arquivo de texto com uma simulação de dados sigilosos. Depois, você usará a criptografia para proteger o conteúdo do arquivo. A próxima etapa é descriptografar e visualizar o conteúdo do arquivo.
+
+1. Para criar o arquivo de texto, execute os seguintes comandos:
+```
+touch secret1.txt secret2.txt secret3.txt
+echo 'TOP SECRET 1!!!' > secret1.txt
+```
 
 
