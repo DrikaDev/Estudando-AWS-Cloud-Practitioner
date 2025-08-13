@@ -50,7 +50,7 @@ Atualmente, estou em transição de carreira para a área de tecnologia, estou m
 
 ---
 
-### 🚀 Vamos juntos?
+### 🫱🏻‍🫲🏼 Vamos juntos?
 
 Se este conteúdo te ajudar de alguma forma, agradeço se puder me dar uma ⭐!  
 E, se você também estiver estudando para a AWS Cloud Practitioner, bora trocar figurinhas? 🤩
