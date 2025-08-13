@@ -21,7 +21,7 @@
 - [Protocolos da Internet: IP Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)
 - [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)  
 - [S3](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3.md)  
-- [IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/IAM.md)
+- [Segurança na Nuvem: Root e IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Seguran%C3%A7a%20na%20Nuvem%3A%20Root%20e%20IAM.md)
 
 ---
 
