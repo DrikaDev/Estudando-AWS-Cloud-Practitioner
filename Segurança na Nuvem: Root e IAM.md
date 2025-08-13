@@ -13,7 +13,12 @@
 
 ### Usuário IAM:
 - Integra-se a outros serviços da AWS.  
-- Permite federação de identidades, acesso seguro para aplicativos e permissões granulares.  
+- Permite **federação de identidades**, ou seja, você “liga” a identidade do usuário num sistema externo à AWS, e a AWS aceita essa autenticação.  
+  Isso traz vantagens como:  
+  - Menos gerenciamento de usuários no IAM.  
+  - Acesso centralizado e consistente.  
+  - Mais segurança, pois as políticas de senha e MFA do provedor externo continuam valendo.  
+- E permite acesso seguro para aplicativos e permissões granulares e específicas, ou seja, o 'príncipio do menor privilégio' (o mínimo necessário para realizar a tarefa).  
 
 ## 🔐 Mas, o que é o IAM?
 
