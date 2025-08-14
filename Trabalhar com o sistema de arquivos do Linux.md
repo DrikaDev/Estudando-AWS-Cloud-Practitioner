@@ -200,3 +200,5 @@ rm -r pasta
 pwd
 ```
 Útil para saber exatamente onde você está no sistema de arquivos.
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
