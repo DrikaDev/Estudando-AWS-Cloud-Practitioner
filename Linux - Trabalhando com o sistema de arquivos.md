@@ -1,4 +1,4 @@
-## 🐧 Trabalhar com o sistema de arquivos do Linux
+## 🐧 Linux - Trabalhando com o sistema de arquivos
 
 ### 📚 Objetivos da lição
 - Navegar por arquivos e diretórios no Linux.
