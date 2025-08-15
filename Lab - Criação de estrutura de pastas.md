@@ -1,4 +1,4 @@
-## 🐧 Trabalhando com o Sistema de Arquivos no Linux
+## 🐧 Sistema de Arquivos no Linux: criação de estrutura de pastas
 
 ### 🎯 Objetivos do laboratório
 - Criar uma estrutura de pastas fornecida pelo exercício.
