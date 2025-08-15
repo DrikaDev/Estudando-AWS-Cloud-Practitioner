@@ -28,7 +28,7 @@
 ---
 
 ## Linux 🐧
-- [Linux - Sobre o Linux](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Linux.md)
+- [Linux - O que é?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Linux%20-%20O%20que%20%C3%A9.md)
 - [Linux - Trabalhando com o sistema de arquivos](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Linux%20-%20Trabalhando%20com%20o%20sistema%20de%20arquivos.md)
 
 ---
