@@ -1,4 +1,4 @@
-## 🐧 Linux - Comandos para Trabalhar com Arquivos
+## 🐧 Linux - Comandos para trabalhar com arquivos
 
 Vários comandos facilitam o trabalho com arquivos no Linux.  
 
