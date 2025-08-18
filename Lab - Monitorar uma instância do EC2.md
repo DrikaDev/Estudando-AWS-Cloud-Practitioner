@@ -211,3 +211,5 @@ Esse experimento simula o que poderia ocorrer caso um **agente malicioso** obtiv
 Vale destacar que esses picos podem ter diferentes causas, sendo uma delas a presença de **malware**.
 
 ---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
