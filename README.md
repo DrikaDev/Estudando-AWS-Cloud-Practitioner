@@ -35,7 +35,8 @@
 ---
 
 ## Laboratórios 🧪  
-- [EC2 - Meu primeiro deploy](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)  
+- [EC2 - Meu primeiro deploy](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)
+- [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
 - [VPC - Criação de VPC e Sub-redes](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/VPC%20-%20Lab.%20Criar%20VPC%20e%20sub-redes.md) 
 - [VPC - Criação de VPC e Servidor Web](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criar%20uma%20VPC%20e%20iniciar%20um%20servidor%20Web.md) 
