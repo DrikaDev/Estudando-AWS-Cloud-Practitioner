@@ -1,4 +1,4 @@
-## 🧪 Lab - Proteção de dados usando criptografia  
+## 🧪 Lab - Proteção de dados usando criptografia - AWS KMS (Key Management Service) 
 
 Criptografia é o processo de transformar informações em código secreto para garantir confidencialidade, autenticação, integridade e não repúdio.  
 O processo inverso é a descriptografia, que torna os dados legíveis novamente.  
@@ -11,7 +11,7 @@ O processo inverso é a descriptografia, que torna os dados legíveis novamente.
 
 ---
 
-### Tarefa 1: criar uma chave do AWS KMS  
+### Tarefa 1: criar uma chave do AWS KMS (Key Management Service)
 Nessa tarefa, vamos criar uma chave simétrica do AWS KMS e conceder propriedade dessa chave para o perfil do IAM voclabs que foi pré-criada para este laboratório.  
 
 1. No console, insira KMS na barra  de pesquisa e escolha Key Management Service.  
