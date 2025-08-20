@@ -72,5 +72,4 @@ E, se você também estiver estudando para a AWS Cloud Practitioner, bora trocar
 
 ---
 
-> ✨ *Este repositório está em constante construção.  
-Se quiser trocar ideias ou sugestões, fique à vontade para abrir uma issue ou me chamar!*  
+> ✨ *Se quiser trocar ideias ou sugestões, fique à vontade para abrir uma issue ou me chamar!*  
