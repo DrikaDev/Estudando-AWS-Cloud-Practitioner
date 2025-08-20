@@ -8,7 +8,7 @@
 
 🛑 Atenção! Os Labs foram construído em ambiente Sandbox! ⌛
 
-> *Lembrando que este conteúdo está em constante construção.*  
+> *Lembrando que este conteúdo está em constante construção, portanto, podem haver 'erros'.*  
 > Sinta-se à vontade para explorar e sugerir melhorias!  
 > Deixe uma ⭐ se gostar do conteúdo!  
 
