@@ -48,7 +48,7 @@
 - [EC2 - Meu primeiro deploy](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)
 - [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
-- [VPC - Criação de VPC e Sub-redes](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/VPC%20-%20Lab.%20Criar%20VPC%20e%20sub-redes.md) 
+- [VPC - Criação de VPC e Sub-redes](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab.%20Criar%20VPC%20e%20sub-redes.md) 
 - [VPC - Criação de VPC e Servidor Web](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criar%20uma%20VPC%20e%20iniciar%20um%20servidor%20Web.md) 
 - [VPC - Protocolos da Internet: IP Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)
 - [AWS KMS - Proteção de dados usando criptografia](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Prote%C3%A7%C3%A3o%20de%20dados%20usando%20criptografia.md)
