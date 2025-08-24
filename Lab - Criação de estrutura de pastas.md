@@ -16,7 +16,7 @@ Conecte-se à sua instância Linux usando o comando `ssh` no terminal.
 
 ### 📝 Tarefa 2: Criar uma estrutura de pastas
 
-Usando o terminal, recrie a seguinte estrutura na máquina Linux.
+Usando o terminal, recrie a seguinte estrutura na máquina Linux.  
 <img width="500" height="232" alt="image" src="https://github.com/user-attachments/assets/44749aed-23c8-476f-bb60-e83b2efe8790" />
 <img width="377" height="288" alt="image" src="https://github.com/user-attachments/assets/3ce7304f-0cb7-475d-aea8-58a27f58f7ec" />
 
