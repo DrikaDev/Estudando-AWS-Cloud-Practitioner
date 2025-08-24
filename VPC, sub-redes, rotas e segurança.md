@@ -34,10 +34,11 @@ Para conseguir sobreviver dentro desse universo de **Cloud**, é essencial saber
 
 ## 🏘️ Sub-redes (Subnets)
 
-Dentro da VPC, dividimos a rede em **sub-redes menores**.
+Dentro da VPC, dividimos a rede em **sub-redes menores** que são deploiadas dentro da VPC.
 
-- **Públicas** → conectadas à Internet (usadas por servidores que precisam ser acessados de fora, como um site).  
-- **Privadas** → sem acesso direto à Internet (usadas para proteger dados sensíveis como bancos de dados ou sistemas internos).  
+- **Públicas** → conectadas à Internet (usadas por servidores que precisam ser acessados de fora, como um site) através do 'Internet Gateway'.  
+- **Privadas** → sem acesso direto à Internet (usadas para proteger dados sensíveis como bancos de dados ou sistemas internos) tem apenas a rota local para
+  acesso interno ou se precisar de acesso externo, precisa de um 'Nat Gateway'.  
 
 📌 É como separar o **condomínio em áreas públicas** (quadra, parquinho) e **áreas privadas** (escritório do síndico).
 
@@ -45,7 +46,8 @@ Dentro da VPC, dividimos a rede em **sub-redes menores**.
 
 ## 🚦 Rotas (Route Tables)
 
-Definem **para onde o tráfego vai dentro da rede**.
+Definem **para onde o tráfego vai dentro da rede**. 
+Cada rota especifica uma origem e um destino: da onde o pacote tá saindo e pra onde ele vai.
 
 ### Exemplos:
 - Se a **sub-rede pública** precisar sair para a Internet → rota aponta para o **Internet Gateway**.  
