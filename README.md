@@ -22,7 +22,6 @@
 - [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)  
 - [Modelos de Serviços: Iaas, PaasS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20Servi%C3%A7o%3A%20IaaS%2C%20PaaS%2C%20SaaS.md)  
 - [Modelos de Implementação: Nuvem, Híbrida, On-Premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20implementa%C3%A7%C3%A3o:%20nuvem,%20h%C3%ADbrida,%20on-primise.md)  
-- [Protocolos da Internet: IP Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)
 - [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)  
 - [Amazon S3 - O que é](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Amazon%20S3%20-%20O%20que%20%C3%A9.md)  
 - [Segurança na Nuvem: Root e IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Seguran%C3%A7a%20na%20Nuvem%3A%20Root%20e%20IAM.md)
@@ -45,6 +44,7 @@
 
 ## Laboratórios 🧪
 
+- [Protocolos da Internet: IP Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)
 - [EC2 - Meu primeiro deploy](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)
 - [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
