@@ -90,3 +90,4 @@ Definem **para onde o tráfego vai dentro da rede**.
   
 ---
 
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
