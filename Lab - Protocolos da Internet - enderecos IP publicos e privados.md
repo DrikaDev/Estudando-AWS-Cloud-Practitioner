@@ -1,4 +1,4 @@
-## 🌐 Protocolos da Internet: IPs Públicos e Privados na AWS
+## 🧪 Lab - Protocolos da Internet: IPs Públicos e Privados na AWS
 
 Nessa atividade, **“Protocolos da Internet: endereços IP públicos e privados”**, recebemos um desafio interessante: investigar um problema real de um cliente e propor uma solução.
 
