@@ -1,4 +1,4 @@
-## 🧪 Lab: Criação de uma Amazon Virtual Private Cloud (Amazon VPC) e entender como criar sub-redes e alocar endereços IP
+## 🧪 Lab: Criação de uma Amazon VPC, entender como criar sub-redes e alocar endereços IP
 
 Neste laboratório, investigamos as necessidades do cliente e montamos um ambiente **VPC** com base nos requisitos.  
 Em seguida, criamos um passo a passo simples para o cliente seguir.
