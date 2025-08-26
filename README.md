@@ -23,6 +23,7 @@
 - [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
 - [Modelos de Serviços: Iaas, PaasS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20Servi%C3%A7o%3A%20IaaS%2C%20PaaS%2C%20SaaS.md)  
 - [Modelos de Implementação: Nuvem, Híbrida, On-Premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20implementa%C3%A7%C3%A3o:%20nuvem,%20h%C3%ADbrida,%20on-primise.md)
+- [Infraestrutura Global da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Infraestrutura%20global%20da%20AWS.md)
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelo%20de%20Responsabilidade%20Compartilhada.md)
 - [AWS Well Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/AWS%20Well-Architected.md)
 
