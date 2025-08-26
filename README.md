@@ -17,12 +17,17 @@
 ## 📒 Índice de Conteúdos
 
 ### AWS ☁️
+### Introdução:
 
 - [Um pouco de história](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Um%20pouco%20de%20hist%C3%B3ria.md)
 - [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
-- [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelo%20de%20Responsabilidade%20Compartilhada.md)
 - [Modelos de Serviços: Iaas, PaasS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20Servi%C3%A7o%3A%20IaaS%2C%20PaaS%2C%20SaaS.md)  
 - [Modelos de Implementação: Nuvem, Híbrida, On-Premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20implementa%C3%A7%C3%A3o:%20nuvem,%20h%C3%ADbrida,%20on-primise.md)
+- [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelo%20de%20Responsabilidade%20Compartilhada.md)
+- [AWS Well Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/AWS%20Well-Architected.md)
+
+### Serviços Essenciais:
+
 - [VPC, Sub-redes, Rotas e Segurança](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/VPC%2C%20sub-redes%2C%20rotas%20e%20seguran%C3%A7a.md)
 - [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)  
 - [Amazon S3 - O que é](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Amazon%20S3%20-%20O%20que%20%C3%A9.md)  
