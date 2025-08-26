@@ -10,6 +10,8 @@ Para conseguir sobreviver dentro desse universo de **Cloud**, é essencial saber
 
 📌 É como um **condomínio fechado**: temos os portões de entrada e definimos quem pode entrar e como as casas (as sub-redes) se conectam.
 
+Além disso, você pode criar uma **conexão de Rede Virtual Privada (VPN)** de hardware entre seu datacenter corporativo e sua VPC para aproveitar a nuvem AWS como uma extensão do seu datacenter corporativo.  
+
 ### 🔑 Principais funções da VPC:
 - **Isolamento e segurança**  
   Cada VPC é separada das outras, então seus recursos não ficam “misturados” com os de outras empresas.  
