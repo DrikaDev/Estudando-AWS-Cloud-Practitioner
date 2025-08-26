@@ -11,16 +11,20 @@
 
 ## O que é o Amazon EC2?
 
-O **Amazon Elastic Compute Cloud (Amazon EC2)** oferece capacidade de computação **escalável e sob demanda** na **AWS (Amazon Web Services)**.  
-
-O uso do Amazon EC2 ajuda a **reduzir custos de hardware**, permitindo o desenvolvimento e a implantação de aplicativos com mais rapidez e flexibilidade.  
+O **Amazon Elastic Compute Cloud (EC2)** é um serviço web da **AWS (Amazon Web Services)** que oferece capacidade de computação **segura, escalável e sob demanda**.  
+Ele permite que desenvolvedores criem, implantem e executem aplicativos de forma rápida e flexível, sem precisar investir em hardware físico.
 
 Com o EC2, você pode:  
 - 🚀 Iniciar quantos **servidores virtuais** precisar  
 - 🔒 Configurar **segurança e rede**  
 - 💾 Gerenciar o **armazenamento**  
-- 📈 **Escalar verticalmente** para lidar com picos de uso (como processos intensivos ou aumento de tráfego), e  
+- 📈 **Escalar verticalmente** para lidar com picos de uso  
 - 📉 **Reduzir capacidade** quando a demanda diminuir  
+
+Benefícios principais:  
+- **Redução de custos de hardware**  
+- **Agilidade no desenvolvimento e implantação**  
+- **Flexibilidade para escalar conforme a demanda**
 
 [⬆ Voltar ao índice](#índice)
 
