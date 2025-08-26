@@ -6,9 +6,9 @@
 📝 Aqui pretendo reunir minhas anotações, resumos e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
 🚧 Está sendo construído e alimentado gradualmente à medida que avanço nos meus estudos sobre AWS.  
 
-🛑 Atenção! Os Labs foram construído em ambiente Sandbox! ⌛
+🛑 Atenção! Os Labs foram construídos em ambiente Sandbox! ⌛
 
-> *Lembrando que este conteúdo está em constante construção, portanto, podem haver 'erros'.*  
+> *Lembrando que este conteúdo está em constante construção, portanto, pode haver 'erros'.*  
 > Sinta-se à vontade para explorar e sugerir melhorias!  
 > Deixe uma ⭐ se gostar do conteúdo!  
 
