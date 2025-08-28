@@ -153,7 +153,7 @@ Role até a seção Conectividade e Segurança e copie o campo Endpoint.
 
 ---
 
-### 4. Interaja com seu banco de dados
+### 4. Interagindo com o banco de dados
 
 Agora vamos abrir uma aplicação web em execução no seu servidor web e a configurará para usar o banco de dados.  
 Vá em EC2, selecione a instância, e copie o endereço do IP público do servidor web selecionando em "Detalhes".
