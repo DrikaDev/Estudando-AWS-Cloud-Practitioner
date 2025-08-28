@@ -70,7 +70,7 @@
 
 Olá, me chamo **Adriana Gutierrez**, sou uma profissional 40+, formada em Análise e Desenvolvimento de Sistemas, com inglês avançado e uma breve experiência profissional como desenvolvedora de front-end. 
 
-Atualmente, estou em transição de carreira para a área de tecnologia, estou me aprofundando em **AWS e soluções em nuvem** e, este repositório faz parte dessa caminhada. 🚶🏻‍♀️‍➡️
+Atualmente, estou em transição de carreira para a área de tecnologia, me aprofundando em **AWS e soluções em nuvem** e, este repositório faz parte dessa caminhada. 🚶🏻‍♀️‍➡️
 
 ---
 
