@@ -1,5 +1,10 @@
 ## 🧪Lab - Criando um servidor de banco de dados RDS
 
+### Indice 📒
+
+[1. Criar um Grupo de Segurança para a Instância de Banco de Dados RDS](#criar-um-grupo-de-segurança-para-a-instância-de-banco-de-dados-rds)
+[2. Criar grupo de sub-redes](#criar-grupo-de-sub-redes)
+
 Neste lab vamos criar um banco de dados que atenda a seguinte estrutura:
 
 <img width="1077" height="510" alt="image" src="https://github.com/user-attachments/assets/acf5251b-9d88-48c0-bcbb-f411c72c1858" />
