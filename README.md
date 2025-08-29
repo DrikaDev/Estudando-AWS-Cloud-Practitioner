@@ -34,6 +34,10 @@
 - [Amazon S3 - O que é](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Amazon%20S3%20-%20O%20que%20%C3%A9.md)  
 - [Segurança na Nuvem: Root e IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Seguran%C3%A7a%20na%20Nuvem%3A%20Root%20e%20IAM.md)
 
+### Bando de dados:
+
+- [DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/DynamoDB.md)
+
 ---
 
 ## Linux 🐧
