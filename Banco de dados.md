@@ -98,5 +98,12 @@ O **Amazon DynamoDB** é um **banco de dados NoSQL da AWS**, rápido, escalável
 
 ---
 
-👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
+### Amazon Aurora
 
+O Aurora é um mecanismo de banco de dados relacional, compatível com MySQL e totalmente gerenciado, que combina o desempenho e a confiabilidade de bancos 
+de dados comerciais avançados com a simplicidade e a economia de bancos de dados de código aberto.  
+Ele oferece até cinco vezes mais desempenho que o MySQL sem exigir alterações na maioria das aplicações existentes que usam bancos de dados MySQL.  
+
+---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
