@@ -34,9 +34,9 @@
 - [Amazon S3 - O que é](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Amazon%20S3%20-%20O%20que%20%C3%A9.md)  
 - [Segurança na Nuvem: Root e IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Seguran%C3%A7a%20na%20Nuvem%3A%20Root%20e%20IAM.md)
 
-### Bando de dados:
+### Bando de dados 🎲
 
-- [DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/DynamoDB.md)
+-[]()
 
 ---
 
@@ -57,6 +57,7 @@
 ## Laboratórios 🧪
 
 - [Banco de dados - Criando um servidor RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criando%20um%20servidor%20de%20banco%20de%20dados%20RDS.md)
+- [Banco de dados - Criar tabela no DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criar%20tabela%20no%20DynamoDB.md)
 - [EC2 - Meu primeiro deploy](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)
 - [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
