@@ -70,8 +70,9 @@ O RDS (Amazon Relational Database Service) é um serviço gerenciado da AWS que 
 
 O que é o DynamoDB?
 
-O **Amazon DynamoDB** é um serviço de **banco de dados NoSQL totalmente gerenciado** da AWS.  
+O **Amazon DynamoDB** é um serviço de **banco de dados NoSQL rápido e flexível totalmente gerenciado** da AWS.  
 Ele foi projetado para oferecer **alta performance** (milissegundos de resposta) e **escalabilidade automática**, sem que você precise se preocupar em configurar ou manter servidores.  
+O modelo de dados flexível e o desempenho confiável fazem dele a escolha perfeita para aplicativos móveis e da web como jogos, tecnologia de anúncios, Internet das Coisas (IoT) e muitos outros aplicativos.  
 
 ---
 
