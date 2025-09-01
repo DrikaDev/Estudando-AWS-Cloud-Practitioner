@@ -7,6 +7,13 @@ Tudo isso é acessado pela internet e pago **conforme o uso** (*pay-as-you-go*).
 
 ---
 
+### 💡Como surgiu o nome **'Amazon'**?
+O nome **"Amazon"** foi escolhido por Jeff Bezos após buscar no dicionário palavras que começassem com a letra **"A"**.  
+Ele se deparou com “Amazon”, descrito como o maior rio da Terra, e achou perfeito para simbolizar a grandeza que imaginava para sua empresa.  
+A história é contada por Brad Stone no livro **"A Loja de Tudo: Jeff Bezos e a Era da Amazon"**.  
+
+---
+
 ### 📖 Como surgiu a AWS?
 No início dos anos 2000, o e-commerce da Amazon cresceu muito rápido e acabou enfrentando **problemas internos de infraestrutura**.  
 As equipes levavam muito tempo para configurar servidores, bancos de dados e autenticação, o que atrasava o desenvolvimento de novos produtos.  
