@@ -20,7 +20,7 @@ Ele funciona como uma **bússola**, orientando empresas sobre como avaliar e mel
 ---
 
 ## Resumindo
-O **AWS Well-Architected Framework** funciona como um **checklist estratégico** para garantir que workloads na nuvem sejam:  
+O **AWS Well-Architected Framework** funciona como um **checklist estratégico** para garantir que as cargas de trabalho na nuvem sejam:  
 - 🔒 Seguros  
 - ⚡ Eficientes  
 - ♻️ Sustentáveis  
