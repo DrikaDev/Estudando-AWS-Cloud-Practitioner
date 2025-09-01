@@ -5,8 +5,44 @@ O **AWS Well-Architected Framework** é um conjunto de boas práticas e princíp
 Ele funciona como uma **bússola**, orientando empresas sobre como avaliar e melhorar suas arquiteturas na nuvem.  
 
 O **AWS Well-Architected Framework** não fornece detalhes de implementação ou padrões de arquitetura.  
+
 Em vez disso, ele oferece um conjunto de perguntas essenciais que ajudam a avaliar como uma arquitetura específica se alinha às melhores práticas da nuvem.  
 Cada pergunta vem acompanhada de informações sobre serviços e soluções relevantes, além de referências a recursos adicionais para aprofundamento.  
+
+---
+
+## Perguntas Essenciais
+
+### 1️⃣ Operational Excellence (Excelência Operacional)
+- Como você monitora e opera sua carga de trabalho?  
+- Como você realiza mudanças e gerencia incidentes?  
+- Como você evolui procedimentos e processos?  
+
+### 2️⃣ Security (Segurança)
+- Como você protege dados, sistemas e ativos?  
+- Como você gerencia identidade e acesso?  
+- Como você detecta e responde a eventos de segurança?  
+
+### 3️⃣ Reliability (Confiabilidade)
+- Como você se prepara para falhas de serviço ou picos de demanda?  
+- Como você monitora a integridade do sistema?  
+- Como você planeja a recuperação de desastres?  
+
+### 4️⃣ Performance Efficiency (Eficiência de Performance)
+- Como você seleciona os recursos certos para cada carga de trabalho?  
+- Como você monitora e ajusta a performance?  
+- Como você avalia novas tecnologias para otimização?  
+
+### 5️⃣ Cost Optimization (Otimização de Custos)
+- Como você gerencia e monitora custos?  
+- Como você evita gastos desnecessários?  
+- Como você dimensiona os recursos conforme a demanda?  
+
+---
+
+💡 **Resumo:**  
+O framework não dita “como fazer”, mas fornece **perguntas estratégicas** que ajudam a **identificar pontos fortes, riscos e oportunidades de melhoria** em qualquer arquitetura na nuvem.
+
 
 ---
 
