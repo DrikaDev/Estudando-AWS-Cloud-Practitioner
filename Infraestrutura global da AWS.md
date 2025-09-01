@@ -9,7 +9,7 @@ Ela foi projetada para ser **segura, escalável, resiliente e de alta disponibil
 
 | **Componente**                  | **Descrição / Função**                                                                 |
 |---------------------------------|---------------------------------------------------------------------------------------|
-| **Regiões (Regions)**           | Conjuntos de data centers em uma área geográfica específica. Isoladas entre si para resiliência. Ex.: `us-east-1`, `sa-east-1`. |
+| **Regiões (Regions)**           | São áreas geográficas que contém várias AZ´s. Ex.: `us-east-1` (Virgínia, EUA), `sa-east-1` (São Paulo, Brasil). |
 | **Zonas de Disponibilidade (AZs)** | Cada AZ é composta por um ou mais data centers, projetadas para isolamento de falha. Permitem alta disponibilidade, são tolerantes a falhas e são elásticas e escaláveis. |
 | **Zonas Locais (Local Zones)**   | Infraestruturas menores próximas a grandes centros urbanos, para reduzir **latência** em aplicações críticas. |
 | **AWS Outposts**                | Extensão da infraestrutura AWS instalada **no ambiente do cliente**, gerenciada pela AWS, ideal para workloads híbridos. |
