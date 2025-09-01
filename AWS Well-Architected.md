@@ -4,9 +4,13 @@ O **AWS Well-Architected Framework** é um conjunto de boas práticas e princíp
 
 Ele funciona como uma **bússola**, orientando empresas sobre como avaliar e melhorar suas arquiteturas na nuvem.  
 
+O **AWS Well-Architected Framework** não fornece detalhes de implementação ou padrões de arquitetura.  
+Em vez disso, ele oferece um conjunto de perguntas essenciais que ajudam a avaliar como uma arquitetura específica se alinha às melhores práticas da nuvem.  
+Cada pergunta vem acompanhada de informações sobre serviços e soluções relevantes, além de referências a recursos adicionais para aprofundamento.  
+
 ---
 
-## Os 6 pilares do Well-Architected Framework
+## Os 5 pilares do Well-Architected Framework
 
 | **Pilar**                    | **Objetivo**                                                                 | **Exemplos de Boas Práticas**                                                                 |
 |-------------------------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
@@ -15,7 +19,8 @@ Ele funciona como uma **bússola**, orientando empresas sobre como avaliar e mel
 | **Confiabilidade**            | Garantir resiliência, recuperação de falhas e adaptação a mudanças.           | Multi-AZ, backups automáticos, testes de recuperação de desastres.                             |
 | **Eficiência de Performance** | Usar recursos de forma otimizada e escalável para atender às demandas.         | Escolha correta de instâncias (EC2, Lambda), escalabilidade automática (*Auto Scaling*).       |
 | **Otimização de Custos**      | Evitar desperdícios e otimizar o uso de recursos.                              | Instâncias reservadas ou spot, desligar recursos ociosos, monitorar custos com AWS Cost Explorer. |
-| **Sustentabilidade**          | Minimizar impactos ambientais ao executar workloads.                          | Uso de regiões mais eficientes energeticamente, otimização de armazenamento e processamento.   |
+
+<img width="680" height="337" alt="image" src="https://github.com/user-attachments/assets/509c69b1-3136-490c-abf6-2cb7f2f84646" />
 
 ---
 
