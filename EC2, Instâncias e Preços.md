@@ -11,8 +11,19 @@
 
 ## O que é o Amazon EC2?
 
-O **Amazon Elastic Compute Cloud (EC2)** é um serviço web da **AWS (Amazon Web Services)** que oferece capacidade de computação **segura, escalável e sob demanda**.  
-Ele permite que desenvolvedores criem, implantem e executem aplicativos de forma rápida e flexível, sem precisar investir em hardware físico.
+O **Amazon Elastic Compute Cloud (EC2)** é um serviço de computação em nuvem da **AWS** que fornece instâncias (máquinas virtuais) com capacidade de computação **segura, escalável e sob demanda**.  
+Ele permite que desenvolvedores criem, implantem e executem aplicativos de forma rápida e flexível, sem precisar comprar e manter servidores físicos.  
+
+Uma instância EC2 é composta por:  
+- CPU;
+- Memória (RAM);
+- Armazenamento/Disco (EBS, Instance Store ou outros volumes anexados);
+- Rede (interfaces de rede virtuais, largura de banda configurável);
+- Sistema Operacional (Linux, Windows ou outro que você escolher instalar);
+
+> PS: O disco de uma EC2 pode variar — não é fixo como em um PC comum.
+> Você pode escolher EBS (Elastic Block Store) para armazenamento persistente,
+> ou usar o Instance Store (armazenamento temporário que se perde ao desligar a instância).
 
 Com o EC2, você pode:  
 - 🚀 Iniciar quantos **servidores virtuais** precisar  
