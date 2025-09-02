@@ -1,6 +1,7 @@
 ## ☁️ Amazon EC2
 
 ## Índice
+
 - [O que é o Amazon EC2?](#o-que-é-o-amazon-ec2)
 - [O que é uma instância?](#o-que-é-uma-instância)
 - [Tipos de instâncias e casos de uso](#tipos-de-instâncias-e-casos-de-uso)
@@ -44,7 +45,6 @@ Benefícios principais:
 ## O que é uma instância?
 
 Uma **instância do EC2** é um **servidor virtual** na Nuvem AWS.  
-
 Ao iniciar uma instância do EC2, você precisa definir um **tipo de instância**, que determina o hardware e os recursos disponíveis.  
 
 Cada tipo de instância oferece um equilíbrio diferente de:  
@@ -102,9 +102,9 @@ operacional e econômica.
 
 Ou seja, depende de equilibrar **custo, desempenho e requisitos técnicos** da sua aplicação.  
 
-🔑 Passos para escolher a EC2 correta:
+**Passos para escolher a EC2 correta:**
 
-* 1. Defina o tipo de carga de trabalho
+1. Defina o tipo de carga de trabalho
 - **Teste/Desenvolvimento** → instâncias menores e mais baratas (ex: `t2`, `t3` – burstable)  
 - **Aplicações Web** → balanceie CPU e memória (ex: `m5`, `m6` – general purpose)  
 - **Banco de Dados/Cache** → muita memória (ex: `r5`, `r6` – memory optimized)  
@@ -112,22 +112,22 @@ Ou seja, depende de equilibrar **custo, desempenho e requisitos técnicos** da s
 - **Big Data/Processamento pesado** → otimizado para computação (ex: `c5`, `c6` – compute optimized)  
 - **Armazenamento intenso** → alta taxa de I/O (ex: `i3`, `i4`, `d2` – storage optimized)  
 
-* 2. Analise os requisitos técnicos da aplicação
+2. Analise os requisitos técnicos da aplicação
 - **CPU** → número de vCPUs necessárias  
 - **Memória (RAM)** → essencial para bancos de dados, cache e apps em tempo real  
 - **Armazenamento** → escolha entre **EBS (persistente)** ou **Instance Store (temporário)**  
 - **Rede** → largura de banda necessária (até 100 Gbps em algumas instâncias)  
 
-* 3. Pense no crescimento (escalabilidade)
+3. Pense no crescimento (escalabilidade)
 - **Tráfego imprevisível** → use **Auto Scaling**  
 - **Tráfego estável** → escolha uma instância fixa de tamanho adequado  
 
-* 4. Compare preços e descontos
+4. Compare preços e descontos
 - **On-Demand** → flexível, mas mais caro  
 - **Reserved Instances** → até 72% mais barato (1 ou 3 anos)  
 - **Spot Instances** → até 90% de desconto, mas podem ser interrompidas  
 
-* 5. Teste antes de decidir
+5. Teste antes de decidir
 - Rode **benchmarks** da aplicação em diferentes instâncias  
 - Use o **AWS Compute Optimizer** para recomendações automáticas  
 
