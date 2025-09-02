@@ -9,11 +9,24 @@ Ela foi projetada para ser **segura, escalável, resiliente e de alta disponibil
 
 | **Componente**                  | **Descrição / Função**                                                                 |
 |---------------------------------|---------------------------------------------------------------------------------------|
-| **Regiões (Regions)**           | São áreas geográficas que contém várias AZ´s. Ex.: `us-east-1` (Virgínia, EUA), `sa-east-1` (São Paulo, Brasil). |
-| **Zonas de Disponibilidade (AZs)** | Cada AZ é composta por um ou mais data centers, projetadas para isolamento de falha. Permitem alta disponibilidade, são tolerantes a falhas e são elásticas e escaláveis. |
+| **Regiões (Regions)**           | São áreas geográficas que contém 2 ou mais AZ´s. Ex.: `us-east-1` (Virgínia, EUA), `sa-east-1` (São Paulo, Brasil). |
+| **Zonas de Disponibilidade (AZ's)** | Cada AZ é composta por um ou mais data centers, projetadas para isolamento de falha. Permitem alta disponibilidade, são tolerantes a falhas e são elásticas e escaláveis. |
 | **Zonas Locais (Local Zones)**   | Infraestruturas menores próximas a grandes centros urbanos, para reduzir **latência** em aplicações críticas. |
 | **AWS Outposts**                | Extensão da infraestrutura AWS instalada **no ambiente do cliente**, gerenciada pela AWS, ideal para workloads híbridos. |
 | **Pontos de Presença (PoPs)**   | Incluem **Edge Locations** e **Regional Edge Caches**, usados por serviços como CloudFront para entregar conteúdo rapidamente e reduzir latência. |
+
+> *AZ: Availability Zone
+
+---
+
+## 🤔 O que levar em consideração ao escolher uma **Região**?
+
+Ao selecionar a região ideal para hospedar serviços, aplicativos ou armazenar dados, é importante avaliar:  
+
+- **Governança e requisitos legais**: conformidade com leis e regulamentos locais;  
+- **Proximidade dos clientes**: menor latência e melhor experiência de uso;  
+- **Disponibilidade de serviços**: nem todos os serviços estão em todas as regiões;  
+- **Custos**: variam conforme a região escolhida.  
 
 ---
 
@@ -30,7 +43,7 @@ Ela foi projetada para ser **segura, escalável, resiliente e de alta disponibil
 
 ---
 
-## *Arquitetura Multi-AZ
+## *O que é uma Arquitetura Multi-AZ?
 
 A **arquitetura multi-AZ (Multi Availability Zone)** é um padrão de design na AWS que **distribui recursos e serviços em múltiplas Zonas de Disponibilidade 
 (AZs)** dentro de uma mesma região.  
