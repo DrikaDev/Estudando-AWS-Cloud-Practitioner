@@ -5,7 +5,7 @@
 - [O que é uma instância?](#o-que-é-uma-instância)
 - [Tipos de instâncias e casos de uso](#tipos-de-instâncias-e-casos-de-uso)
 - [Definição de preços do EC2](#definição-de-preços-do-ec2)
-- [Como escolher o EC2 correto?](#como-escolher-o-ec2-correto)
+- [Como escolher a instância EC2 correta?](#como-escolher-a-instância-ec2-correta)
 
 ---
 
@@ -94,7 +94,7 @@ A AWS oferece diversas opções de preço para diferentes necessidades:
 
 ---
 
-## Como escolher o EC2 correto?
+## Como escolher a instância EC2 correta?
 
 Escolher a **instância EC2 correta** não se trata apenas de selecionar um tipo aleatório, mas sim de **entender as 
 necessidades da aplicação** e utilizar os recursos da nuvem de forma inteligente para alcançar eficiência 
