@@ -36,7 +36,9 @@ Assim, em **2006**, nasceu oficialmente a **Amazon Web Services (AWS)**, lançan
 
 ### 📌 Mas afinal, o que é a **"AWS"**?
 
-A **AWS (Amazon Web Services)** é uma plataforma de computação em nuvem da Amazon.  
+A **AWS (Amazon Web Services)** é uma plataforma de computação em nuvem muito conhecida pela sua escalabilidade e infraestrutura robusta, capaz de 
+suportar sistemas de grande porte e alta demanda como a Amazon.com, Netflix e sistemas bancários por exemplo.  
+
 Ela oferece mais de **200 serviços sob demanda** como servidores, armazenamento, banco de dados, redes, segurança, inteligência artificial etc.  
 Tudo isso é acessado pela internet e pago **conforme o uso** (*pay-as-you-go*).
 
