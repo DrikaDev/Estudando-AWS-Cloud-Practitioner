@@ -1,10 +1,10 @@
 ## 🪪 Segurança na Nuvem: ROOT (Raiz) & IAM (Identity and Access Management)
 
-## Diferenças entre usuário Root & usuário IAM:
+## Diferenças entre usuários Root & usuário IAM:
 
 ### Usuário ROOT:
 - É o **usuário raiz** da conta AWS.  
-- Possui **acesso total** a todos os recursos e **não** pode ter seus privilégios limitados.  
+- Possui **acesso total** a todos os recursos, ous eja, ele tem super poderes!  
 
 > **Prática recomendada**: não use o usuário ROOT no dia a dia. Utilize-o apenas quando **estritamente necessário**, como para:
 > - Alterar o plano do AWS Support.  
