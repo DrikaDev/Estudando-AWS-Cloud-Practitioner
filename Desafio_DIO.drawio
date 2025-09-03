@@ -42,7 +42,7 @@
           <mxGeometry x="570" y="303" width="52.5" height="75" as="geometry" />
         </mxCell>
         <mxCell id="CeTHd3bhz1H60QF5U9jG-13" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/File.svg;" parent="1" vertex="1">
-          <mxGeometry x="251" y="560" width="56.00000000000001" height="69" as="geometry" />
+          <mxGeometry x="249" y="565.5" width="56.00000000000001" height="69" as="geometry" />
         </mxCell>
         <mxCell id="CeTHd3bhz1H60QF5U9jG-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;flowAnimation=1;" parent="1" source="CeTHd3bhz1H60QF5U9jG-13" target="CeTHd3bhz1H60QF5U9jG-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
