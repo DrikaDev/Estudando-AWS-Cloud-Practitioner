@@ -50,7 +50,7 @@
 
 ## Python 🐍
 
--[DevOps: Automação x Orquestração](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/DevOps%20-%20Automa%C3%A7%C3%A3o%20x%20Orquestra%C3%A7%C3%A3o.md)
+- [DevOps: Automação x Orquestração](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/DevOps%20-%20Automa%C3%A7%C3%A3o%20x%20Orquestra%C3%A7%C3%A3o.md)
 
 ---
 
