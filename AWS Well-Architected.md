@@ -1,46 +1,59 @@
 ## ☁️ AWS Well-Architected Framework (WAF)
 
-O **AWS Well-Architected Framework** é um conjunto de boas práticas e princípios criado pela AWS para ajudar arquitetos de nuvem a **projetar, construir e manter workloads** (aplicações, sistemas, infraestruturas) que sejam **seguros, eficientes, resilientes, econômicos e sustentáveis**.  
+O **AWS Well-Architected Framework** é um conjunto de boas práticas e princípios criado pela AWS para ajudar arquitetos de nuvem a 
+**projetar, construir e manter workloads** (aplicações, sistemas, infraestruturas) que sejam **seguros, eficientes, resilientes, 
+econômicos e sustentáveis**.  
 
 Ele funciona como uma **bússola**, orientando empresas sobre como avaliar e melhorar suas arquiteturas na nuvem.  
 
-Em vez de fornecer detalhes de implementação, o framework oferece um **conjunto de perguntas essenciais** que ajudam a avaliar como uma arquitetura específica se alinha às melhores práticas da nuvem.  
+Em vez de fornecer detalhes de implementação, o framework oferece um **conjunto de perguntas essenciais** que ajudam a avaliar como 
+uma arquitetura específica se alinha às melhores práticas da nuvem.  
 
-Cada pergunta vem acompanhada de informações sobre serviços e soluções relevantes, além de referências a recursos adicionais para aprofundamento.
+Cada pergunta vem acompanhada de informações sobre serviços e soluções relevantes, além de referências a recursos adicionais para 
+aprofundamento.
 
 ---
 
 ## 📝 Perguntas Essenciais
 
-### 1️⃣ Operational Excellence (Excelência Operacional)
-Foco: monitoramento, automação, melhoria contínua e processos eficientes.
-- Como você monitora e opera sua carga de trabalho?  
-- Como você realiza mudanças e gerencia incidentes?  
-- Como você evolui procedimentos e processos?  
+### 📌 1. Excelência Operacional: monitoramento, automação, melhoria contínua e processos eficientes.
 
-### 2️⃣ Security (Segurança) 
-Foco: proteção de dados, sistemas e ativos; gerenciamento de identidade e acesso; resposta a incidentes.
-- Como você protege dados, sistemas e ativos?  
-- Como você gerencia identidade e acesso?  
-- Como você detecta e responde a eventos de segurança?  
+Como você gerencia e monitora operações para apoiar seus objetivos de negócio?
+Como você documenta e evolui procedimentos operacionais?
+Como você antecipa falhas e aprende com elas?
 
-### 3️⃣ Reliability (Confiabilidade)
-Foco: resiliência, recuperação de falhas, redundância e continuidade do serviço.
-- Como você se prepara para falhas de serviço ou picos de demanda?  
-- Como você monitora a integridade do sistema?  
-- Como você planeja a recuperação de desastres?  
+### 🔒 2. Segurança: proteção de dados, sistemas e ativos; gerenciamento de identidade e acesso; resposta a incidentes.
 
-### 4️⃣ Performance Efficiency (Eficiência de Performance)
-Foco: uso otimizado de recursos, escalabilidade e avaliação de novas tecnologias.
-- Como você seleciona os recursos certos para cada carga de trabalho?  
-- Como você monitora e ajusta a performance?  
-- Como você avalia novas tecnologias para otimização?  
+Como você controla quem pode fazer o quê com os recursos?
+Como você protege dados em trânsito e em repouso?
+Como você detecta e responde a incidentes de segurança?
 
-### 5️⃣ Cost Optimization (Otimização de Custos)
-Foco: gestão eficiente de custos, evitar desperdícios e dimensionamento conforme demanda.
-- Como você gerencia e monitora custos?  
-- Como você evita gastos desnecessários?  
-- Como você dimensiona os recursos conforme a demanda?  
+### ⚡ 3. Confiabilidade: resiliência, recuperação de falhas, redundância e continuidade do serviço.
+
+Como você projeta sua workload para lidar com falhas?
+Como você testa e valida mecanismos de recuperação?
+Como você monitora métricas de saúde e disponibilidade?
+
+### 🚀 4. Eficiência de Performance: uso otimizado de recursos, escalabilidade e avaliação de novas tecnologias.
+
+Como você escolhe os tipos e tamanhos de recursos corretos?
+Como você monitora e otimiza o desempenho ao longo do tempo?
+Como você utiliza serviços gerenciados para ganhar eficiência?
+
+### 💰 5. Otimização de Custos: gestão eficiente de custos, evitar desperdícios e dimensionamento conforme demanda.
+
+Como você garante que está gastando apenas com o necessário?
+Como você analisa e prevê custos?
+Como você otimiza o uso de instâncias e serviços?
+
+### 🌱 6. Sustentabilidade: 
+
+Como você mede e reduz a pegada de carbono da sua workload?
+Como você maximiza a utilização de recursos de forma eficiente?
+Como você avalia impacto ambiental nas decisões de arquitetura?
+
+> 👉 Essas perguntas não exigem respostas fechadas, mas sim reflexões que ajudam a identificar pontos de melhoria e alinhar workloads
+> às boas práticas da AWS.
 
 ---
 
@@ -59,7 +72,8 @@ Foco: gestão eficiente de custos, evitar desperdícios e dimensionamento confor
 ## 🏗️ Princípios de Design
 
 - **Parar de adivinhar suas necessidades de capacidade**  
-  Ajuste automaticamente a infraestrutura conforme a demanda muda. Monitore e automatize a adição ou remoção de recursos para manter níveis ideais.
+  Ajuste automaticamente a infraestrutura conforme a demanda muda. Monitore e automatize a adição ou remoção de recursos para manter
+  níveis ideais.
 
 - **Testar os sistemas em escala de produção**  
   Crie ambientes duplicados sob demanda, realize testes e desative os recursos após o uso, pagando apenas pelo período de execução.
@@ -71,22 +85,12 @@ Foco: gestão eficiente de custos, evitar desperdícios e dimensionamento confor
   Automatize e teste sob demanda, reduzindo riscos e permitindo que sistemas evoluam junto com as necessidades do negócio.
 
 - **Impulsionar arquiteturas orientadas por dados**  
-  Coletar dados sobre o comportamento das cargas de trabalho permite decisões baseadas em fatos e aprimoramentos contínuos da arquitetura.
+  Coletar dados sobre o comportamento das cargas de trabalho permite decisões baseadas em fatos e aprimoramentos contínuos da
+  arquitetura.
 
 - **Aprimorar por meio de simulações**  
-  Teste operações e processos programando eventos aleatórios em produção, identificando melhorias e desenvolvendo experiências na gestão de incidentes.
-
----
-
-## 💡Resumo
-
-O AWS Well-Architected Framework funciona como um checklist estratégico que ajuda a:
-
-🔒 Garantir segurança  
-⚡ Otimizar performance  
-🔄 Melhorar confiabilidade  
-💰 Controlar custos  
-♻️ Evoluir a arquitetura continuamente  
+  Teste operações e processos programando eventos aleatórios em produção, identificando melhorias e desenvolvendo experiências na
+  gestão de incidentes.
 
 ---
 
