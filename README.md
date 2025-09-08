@@ -25,7 +25,7 @@
 - [Modelos de Implementação: Nuvem, Híbrida, On-Premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20implementa%C3%A7%C3%A3o:%20nuvem,%20h%C3%ADbrida,%20on-primise.md)
 - [Infraestrutura Global da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Infraestrutura%20global%20da%20AWS.md)
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelo%20de%20Responsabilidade%20Compartilhada.md)
-- [AWS Well Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/AWS%20Well-Architected.md)
+- [AWS Well Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/AWS%20Well-Architected%20Framework.md)
 
 ### Serviços Essenciais:
 
