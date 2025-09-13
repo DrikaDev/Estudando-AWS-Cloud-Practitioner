@@ -1,11 +1,10 @@
-## 🧪 Lab 172 - Criar instância do Amazon EC2 / Servidor Web com Amazon Linux
+## 🧪 Lab 172 - Criar instância do EC2 + Servidor Apache
 
 ## Objetivos
 
 Após concluir este desafio, você será capaz de:
 
-- Configurar uma rede virtual (VPC).  
-- Criar uma instância do Amazon Linux EC2 nessa rede.  
+- Criar uma instância do Amazon Linux EC2.  
 - Instalar e iniciar um servidor web (Apache).  
 - Implantar e executar uma aplicação web simples.
 
