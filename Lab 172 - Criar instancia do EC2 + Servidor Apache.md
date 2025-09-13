@@ -80,7 +80,10 @@ Vamos provar que o servidor Apache está rodando de verdade e que o site (mesmo 
 
 3. Criar o arquivo **projects.html** digitando o comando ```sudo nano projects.html```  
 
-4. Colar o código html:
+   <img width="1132" height="412" alt="image" src="https://github.com/user-attachments/assets/f944fc60-a373-4482-a9f2-240bf3ba2743" />
+
+4. No editor, colar o código html:
+
    ```
    <!DOCTYPE html>
    <html>
@@ -93,10 +96,13 @@ Vamos provar que o servidor Apache está rodando de verdade e que o site (mesmo 
 
 5. Salvar o arquivo e sair do nano.
 
-6. Testar no navegador
+6. Testar no navegador  
    Copie o IPv4 público da instância e cole numa outra aba do navegador:
+   
    ```http://<IP-PUBLICO-DA-SUA-EC2>/projects.html```
-   Veja a página: "Adriana's re/Start Project Work" 🎉  
+   
+   Veja a página: "Adriana's re/Start Project Work" 🎉
+   
    <img width="816" height="170" alt="image" src="https://github.com/user-attachments/assets/088a5ba1-533f-4276-be90-deae9870a541" />
 
 ---
