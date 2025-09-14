@@ -3,6 +3,23 @@
 Nesta atividade, vamos usar a **AWS Command Line Interface (AWS CLI)** para iniciar instâncias do **Amazon Elastic Compute Cloud 
 (Amazon EC2)**.  
 
+## Índice
+
+1. [Objetivos](#objetivos)
+2. [Funcionamento](#funcionamento)
+3. [Arquitetura](#arquitetura)
+4. [Tarefa 1: Conectar-se à instância CLI Host](#tarefa-1-conectar-se-à-instância-cli-host)
+5. [Tarefa 2: Configurar a AWS CLI](#tarefa-2-configurar-a-aws-cli)
+6. [Tarefa 3: Criar uma instância do EC2 usando a AWS CLI](#tarefa-3-criar-uma-instância-do-ec2-usando-a-aws-cli)
+   - [Tarefa 3.1: Observar os detalhes do script](#tarefa-31-observar-os-detalhes-do-script)
+   - [Tarefa 3.2: Tentar executar o script](#tarefa-32-tentar-executar-o-script)
+   - [Tarefa 3.3: Solução de problemas](#tarefa-33-solução-de-problemas)
+       - [Problema #1](#problema-1)
+       - [Problema #2](#problema-2)
+7. [Tarefa 4: Verificar a funcionalidade do site](#tarefa-4-verificar-a-funcionalidade-do-site)
+
+---
+
 ### Objetivos
 
 - Configurar a instância usando um **script de dados do usuário**.  
@@ -13,6 +30,8 @@ Nesta atividade, vamos usar a **AWS Command Line Interface (AWS CLI)** para inic
 Esses softwares juntos formam a **pilha LAMP**: **Linux, Apache, MySQL/MariaDB e PHP**, uma forma prática de criar um site com back-
 end de banco de dados em uma única máquina.
 
+---
+
 ### Funcionamento
 
 O **script de dados do usuário** realizará:  
@@ -21,6 +40,8 @@ O **script de dados do usuário** realizará:
 - Execução dos **scripts de configuração do banco de dados**.  
 
 O resultado será uma instância que **hospeda o aplicativo web de uma cafeteria**.
+
+---
 
 ### Arquitetura
 
@@ -52,6 +73,8 @@ Vamos usar essa instância para executar comandos da **AWS CLI**.
 Agora que a conexão com a instância **CLI Host** foi estabelecida, você poderá configurar e usar a **AWS CLI** para chamar os serviços 
 da AWS.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 2: Configurar a AWS CLI
@@ -73,6 +96,8 @@ Quando solicitado, insira as seguintes informações:
 
 <img width="903" height="314" alt="image" src="https://github.com/user-attachments/assets/e233eba3-854d-44ef-ad8c-63ed48ab1181" />
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 3: Criar uma instância do EC2 usando a AWS CLI
@@ -86,6 +111,8 @@ Seu desafio é:
 1. **Encontrar os problemas** no script.  
 2. **Corrigi-los** para que o script funcione corretamente.  
 3. **Executar o script novamente** para verificar se os problemas foram resolvidos.  
+
+---
 
 ### Tarefa 3.1: Observar os detalhes do script
 
@@ -106,10 +133,10 @@ Use o comando: `view create-lamp-instance-v2.sh`
 
 ### Analisando o conteúdo do script:
 
-> 💡 **Dica:**
-> Se você estiver usando o VI, poderá exibir os números de linha digitando `:set number`:
-> Pressione a tecla Esc para garantir que você está no modo normal do VI.
-> Digite ':' (dois pontos) para entrar no modo de comando, depois digite 'set number' e pressione Enter.
+> 💡 **Dica:**  
+> Se você estiver usando o VI, poderá exibir os números de linha digitando `:set number`:  
+> Pressione a tecla Esc para garantir que você está no modo normal do VI.  
+> Digite ':' (dois pontos) para entrar no modo de comando, depois digite 'set number' e pressione Enter.  
 
 - **Linha 1:** este é um arquivo bash, portanto, a primeira linha contém `#!/bin/bash`.  
 
@@ -150,7 +177,7 @@ Use o comando: `view create-lamp-instance-v2.sh`
   - A chamada para criar a instância é capturada na variável `instanceDetails`, exibida no terminal e formatada com **Python JSON**
     para melhor visualização.
 
-  <img width="1422" height="255" alt="image" src="https://github.com/user-attachments/assets/9efaecc9-3296-4d7d-ba31-e2cd2977cd44" />
+<img width="1422" height="255" alt="image" src="https://github.com/user-attachments/assets/9efaecc9-3296-4d7d-ba31-e2cd2977cd44" />
 
 - **Linhas 179 a 188:** o valor `instanceId` é analisado a partir de `instanceDetails`.
   Um loop `while` verifica a cada 10 segundos se um **endereço IP público** foi atribuído à instância.
@@ -170,6 +197,10 @@ Para exibir o conteúdo do **script de dados do usuário**, execute o seguinte c
 
 <img width="1425" height="192" alt="image" src="https://github.com/user-attachments/assets/2bd07666-5563-405e-ae83-81d8a3710a5c" />
 
+[⬆ Voltar ao índice](#índice)
+
+---
+
 ### Tarefa 3.2: Tentar executar o script
 
 Agora que você já analisou o que o **script de shell** se destina a fazer, tente executá-lo: `./create-lamp-instance-v2.sh` 
@@ -178,6 +209,8 @@ Agora que você já analisou o que o **script de shell** se destina a fazer, ten
 Esse comportamento é esperado, pois o script contém **problemas intencionais** para que você os identifique e corrija.  
 
 <img width="1424" height="441" alt="image" src="https://github.com/user-attachments/assets/dddb14f0-a538-4517-88b5-3b59ca87a0ca" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -202,7 +235,8 @@ Aqui está como resolver:
 - O **valor da Região** usado para o comando `run-instances` está correto?  
 
 Após identificar o problema, **atualize o script** para corrigi-lo e execute-o novamente.  
-> ⚠️ Se for solicitado que você exclua instâncias ou grupos de segurança criados na execução anterior do script, sempre responda com `Y`.  
+> ⚠️ Se for solicitado que você exclua instâncias ou grupos de segurança criados na execução anterior do script,
+> sempre responda com `Y`.  
 
 - O erro foi resolvido?  
 - Depois de corrigir o problema, o comando `run-instances` deve ser executado com êxito e um **endereço IPv4 público** será atribuído à
@@ -217,3 +251,90 @@ Tente se conectar à página da web.
 
 <img width="1197" height="390" alt="image" src="https://github.com/user-attachments/assets/c655f2db-926f-4cf5-b9eb-2602debe7af3" />
 
+[⬆ Voltar ao índice](#índice)
+
+---
+
+### Problema #2
+
+O comando `run-instances` foi executado com êxito e um endereço IP público foi atribuído à nova instância.  
+No entanto, **não é possível carregar a página da web de teste**.
+
+Conecte-se à nova instância LAMP usando o **EC2 Instance Connect**, que é o mesmo método usado para acessar a instância CLI Host.
+
+#### Dicas para resolver o problema #2
+
+1. **Verifique a porta do servidor web**
+   - O servidor web é executado na **porta TCP 80**.  
+   - Certifique-se de que a porta está aberta.
+
+2. **Verifique se o serviço do servidor web está funcionando**
+   - O serviço do servidor web é o **httpd**.
+
+3. **Instale e use o nmap para verificar portas**
+   - No terminal da instância CLI Host, execute: `sudo yum install -y nmap`
+   - Substitua <public-ip> pelo endereço IPv4 público da instância LAMP: `nmap -Pn <public-ip>`
+   - Verifique se a porta 80 está aberta para acessar o servidor web.
+
+#### Testando o script de dados do usuário
+
+1. **Verifique se o script de dados do usuário foi executado corretamente**.  
+
+2. **Acesse a página web da instância**  
+   - No navegador, substitua `<public-ip>` pelo endereço IPv4 público da instância LAMP: `http://<public-ip>`
+   - Se o **Problema #2** foi resolvido, você verá a mensagem:  **“Saudações do seu servidor web”**.
+
+3. **Confira o arquivo de log do cloud-init**  
+- Ele mostra se o script de dados do usuário (`user-data`) foi executado conforme o esperado.  
+- No terminal da instância LAMP, execute: `sudo tail -f /var/log/cloud-init-output.log`
+O comando exibirá as entradas do log à medida que são gravadas.
+Você deve ver mensagens relacionadas à instalação do MariaDB, PHP e arquivos do aplicativo web.
+
+#### Observando a execução do `user-data` com cloud-init
+
+Em uma instância do **Amazon Linux**, o serviço **cloud-init** executa os comandos presentes no arquivo de dados do usuário 
+(`user-data`).
+
+1. **Verifique as entradas do arquivo de log**
+   - Observe as mensagens relacionadas à instalação do **MariaDB** e do **PHP**.  
+   - Não deve haver mensagens de erro.
+
+2. **Verifique as mensagens do aplicativo web**
+   - Você também verá mensagens relacionadas aos arquivos do aplicativo web da cafeteria que foram baixados e extraídos para a
+     instância. Exemplo de mensagem esperada:  `Criação de script de banco de dados concluída`
+
+3. **Finalizando a visualização do log**
+   - Para sair do utilitário `tail -f`, pressione `Ctrl-C`.
+
+4. **Visualização completa do log**
+   - Para ver todo o conteúdo do arquivo de log, execute: `sudo cat /var/log/cloud-init-output.log`
+
+[⬆ Voltar ao índice](#índice)
+
+---
+
+## Tarefa 4: Verificar a funcionalidade do site
+
+1. **Acesse o site da cafeteria**  
+   - No navegador, substitua `<public-ip>` pelo endereço IPv4 público da instância criada: `http://<public-ip>/cafe`  
+   - Se a implantação foi bem-sucedida, você verá a **página inicial do site da cafeteria**.  
+   ✅ Parabéns!
+
+2. **Verifique a funcionalidade de pedidos**
+   - Clique no link **Menu**.  
+     - Uma nova página será carregada em: `http://<public-ip>/cafe/menu.php`
+   - Selecione algumas sobremesas e clique em **Enviar pedido**.  
+   - A página **Confirmação do pedido** exibirá os detalhes dos itens selecionados.
+
+3. **Faça outro pedido**
+   - Escolha itens diferentes e envie o pedido.  
+   - Depois, selecione a página **Histórico de pedidos**.  
+   - Os detalhes de ambos os pedidos devem estar capturados corretamente.
+
+> **Observação:** os detalhes dos pedidos são armazenados no **banco de dados** em execução na instância LAMP que você iniciou.
+
+[⬆ Voltar ao índice](#índice)
+
+---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
