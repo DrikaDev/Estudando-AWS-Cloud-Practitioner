@@ -1,12 +1,26 @@
 ## 🧪 Lab 174 - Dimensionar e balancear a carga da arquitetura
 
+## Índice
+1. [Resumo do Desafio](#resumo-do-desafio)  
+2. [Tarefa 1: Criar uma AMI para o Auto Scaling](#tarefa-1-criar-uma-ami-para-o-auto-scaling)  
+3. [Tarefa 2: Criar um balanceador de carga](#tarefa-2-criar-um-balanceador-de-carga)  
+4. [Tarefa 3: Criar um modelo de execução](#tarefa-3-criar-um-modelo-de-execução)  
+5. [Tarefa 4: Criar um grupo do Auto Scaling](#tarefa-4-criar-um-grupo-do-auto-scaling)  
+6. [Tarefa 5: Verificar se o balanceamento de carga está funcionando](#tarefa-5-verificar-se-o-balanceamento-de-carga-está-funcionando)  
+7. [Tarefa 6: Testar o Auto Scaling](#tarefa-6-testar-o-auto-scaling)  
+8. [Tarefa 7: Encerrar a instância Web Server 1](#tarefa-7-encerrar-a-instância-web-server-1)  
+9. [Desafio opcional: Criar uma AMI utilizando a AWS CLI](#desafio-opcional-criar-uma-ami-utilizando-a-aws-cli)  
+
+---
+
 ## Resumo do Desafio
 
 Neste laboratório vamos aprender a usar o **Elastic Load Balancing (ELB)** e o **Amazon EC2 Auto Scaling** para criar uma 
 infraestrutura escalável e resiliente.  
 
 - **Elastic Load Balancing (ELB):** distribui automaticamente o tráfego de entrada entre várias instâncias EC2, garantindo
-  balanceamento de carga e maior tolerância a falhas.  
+  balanceamento de carga e maior tolerância a falhas.
+  
 - **Auto Scaling:** ajusta automaticamente o número de instâncias EC2 conforme a demanda, aumentando a capacidade em picos de tráfego
   e reduzindo-a em períodos ociosos, ajudando a manter o desempenho e otimizar custos.  
 
@@ -20,16 +34,6 @@ Ao final, teremos uma aplicação capaz de se adaptar dinamicamente à demanda e
 
 <img width="2534" height="1550" alt="image" src="https://github.com/user-attachments/assets/6d69d7f9-22c3-47aa-83ef-ca19d0cfb401" />
 
-## Objetivos
-
-Após concluir o laboratório, seremos capazes de:
-
-- Criar uma **AMI** a partir de uma instância do **EC2**.  
-- Criar um **balanceador de carga (ELB)**.  
-- Criar um **modelo de execução** e um **grupo de Auto Scaling**.  
-- Configurar um grupo de Auto Scaling para dimensionar novas instâncias em **sub-redes privadas**.  
-- Criar **alarmes do Amazon CloudWatch** para monitorar o desempenho da infraestrutura.
-
 ---
 
 ## Tarefa 1: Criar uma AMI para o Auto Scaling
@@ -42,29 +46,32 @@ Essa ação salvará o conteúdo do disco de inicialização para que novas inst
 3. A instância **Web Server 1** será listada. Agora, vamos criar uma AMI com base nessa instância.    
 4. Selecione a instância **Web Server 1**.  
 
-   <img width="1417" height="248" alt="image" src="https://github.com/user-attachments/assets/63880022-2e75-484e-99f9-024af83ba0f7" />  
+<img width="1417" height="248" alt="image" src="https://github.com/user-attachments/assets/63880022-2e75-484e-99f9-024af83ba0f7" /> 
 
 5. Na lista suspensa **Ações**, selecione **Imagem e modelos > Criar imagem** e configure as seguintes opções:  
    - **Nome da imagem:** `Web Server AMI`  
    - **Descrição da imagem (opcional):** `Lab AMI for Web Server`   
 
-  <img width="1411" height="409" alt="image" src="https://github.com/user-attachments/assets/f34e6613-05dd-49d1-b33a-b013044eda19" />
+<img width="1411" height="409" alt="image" src="https://github.com/user-attachments/assets/f34e6613-05dd-49d1-b33a-b013044eda19" />
 
 6. Clique em **Criar imagem**.  
 
 A tela de confirmação exibirá o **ID da nova AMI**, que será usado ao iniciar o grupo de **Auto Scaling** posteriormente no laboratório.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 2: Criar um balanceador de carga
 
-Nesta tarefa, vamos criar um **balanceador de carga** capaz de distribuir o tráfego entre várias instâncias EC2 e Zonas de Disponibilidade.  
+Nesta tarefa, vamos criar um **balanceador de carga** capaz de distribuir o tráfego entre várias instâncias EC2 e Zonas de 
+Disponibilidade.  
 
 1. No painel de navegação à esquerda, vá em **Balanceamento de carga** e selecione **Balanceadores de carga**.  
 2. Clique em **Criar balanceador de carga**.  
 3. Na seção **Tipos de balanceador de carga**, para **Application Load Balancer**, selecione **Criar**.  
 
-   <img width="807" height="602" alt="image" src="https://github.com/user-attachments/assets/5063c82f-7576-4bc4-96ca-67743b9a1fb2" />
+<img width="807" height="602" alt="image" src="https://github.com/user-attachments/assets/5063c82f-7576-4bc4-96ca-67743b9a1fb2" />
 
 > O **Application Load Balancer** distribui o tráfego HTTP e HTTPS de entrada em vários destinos, como instâncias do Amazon EC2,
 > microsserviços e contêineres, com base nos atributos da solicitação.
@@ -72,7 +79,6 @@ Nesta tarefa, vamos criar um **balanceador de carga** capaz de distribuir o trá
 > determinar qual regra deve ser aplicada e, se aplicável, seleciona um destino do grupo de destino para a ação da regra.  
 
 <img width="932" height="225" alt="image" src="https://github.com/user-attachments/assets/f9cd978b-6c93-49c7-ba15-5e78b13d0255" />
-
 
 ### Configuração básica
 - **Nome do balanceador de carga:** `LabELB`  
@@ -114,6 +120,8 @@ Nesta tarefa, vamos criar um **balanceador de carga** capaz de distribuir o trá
 <img width="1145" height="94" alt="image" src="https://github.com/user-attachments/assets/50b23ace-c88e-430b-9045-7d39e6f1270d" />
 
 8. Copie o **Nome do DNS** do balanceador de carga e cole em um editor de texto — essas informações serão necessárias posteriormente no laboratório.
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -169,6 +177,8 @@ tipo de instância, par de chaves, grupo de segurança e discos.
 <img width="1388" height="77" alt="image" src="https://github.com/user-attachments/assets/3611c0ce-b023-4dd8-9d20-7687dc60295a" />
 
 6. Clique em **Visualizar modelos de execução**
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -258,6 +268,8 @@ Nesta tarefa, vamos usar o **modelo de execução** para criar um **grupo do Aut
 
 > **Observação:** se houver erro relacionado ao tipo de instância `t3.micro`, repita a tarefa usando `t2.micro`.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 5: Verificar se o balanceamento de carga está funcionando
@@ -292,6 +304,8 @@ Nesta tarefa, vamos verificar se o **balanceamento de carga** está funcionando 
      encaminhou para uma das instâncias EC2 e repassou o resultado.
 
 <img width="1195" height="456" alt="image" src="https://github.com/user-attachments/assets/6ebbc4c0-e00b-4af4-b26a-22111138ad8b" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -334,6 +348,8 @@ criados.
    - Agora, mais de duas instâncias chamadas **Instância do laboratório** devem estar em execução, indicativo de que o Auto Scaling
      respondeu ao alarme.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 7: Encerrar a instância "Web Server 1"  
@@ -350,6 +366,8 @@ Essa instância foi utilizada para criar a AMI usada pelo grupo do Auto Scaling,
 <img width="812" height="393" alt="image" src="https://github.com/user-attachments/assets/5ea909f9-0d6f-44f6-81a2-2df726e731ec" />
 
 <img width="1170" height="142" alt="image" src="https://github.com/user-attachments/assets/12fe30f7-8d6e-48c0-b226-37a04fa61500" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -377,6 +395,8 @@ Neste desafio, você deverá criar uma AMI utilizando os comandos da **AWS Comma
 
 #### 💡 Dica:  
 É necessário fornecer o **nome da AMI** e o **ID da instância do EC2** para a qual você precisa da imagem.  
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
