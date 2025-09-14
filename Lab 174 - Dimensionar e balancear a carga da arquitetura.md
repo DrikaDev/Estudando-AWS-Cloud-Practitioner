@@ -127,7 +127,7 @@ Disponibilidade.
 
 ## Tarefa 3: Criar um modelo de execução
 
-Nesta tarefa, vamos criar um **modelo de execução** para o grupo do **Auto Scaling**.  
+Nesta tarefa, vamos criar um **modelo de execução** (Launch Template) para o grupo do **Auto Scaling**.  
 Um modelo de execução é utilizado pelo Auto Scaling para iniciar instâncias EC2, especificando informações como AMI, 
 tipo de instância, par de chaves, grupo de segurança e discos.  
 
