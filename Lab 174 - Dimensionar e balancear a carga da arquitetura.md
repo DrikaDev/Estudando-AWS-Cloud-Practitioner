@@ -302,11 +302,17 @@ Atualmente, duas instâncias estão em execução porque o tamanho mínimo é du
 
 Nesta tarefa, vamos aumentar a carga para acionar o **Auto Scaling** e adicionar novas instâncias.  
 
-1. No **Console de Gerenciamento da AWS**, feche a guia da aplicação **Teste de carga** temporariamente.  
-2. Na barra de pesquisa, insira e escolha **CloudWatch**.  
+1. Feche a guia da aplicação **Teste de carga** temporariamente.  
+2. No **Console de Gerenciamento da AWS**, na barra de pesquisa, insira e escolha **CloudWatch**.  
 3. No painel de navegação à esquerda, vá em **Alarmes > Todos os alarmes**.  
    - Dois alarmes devem estar listados, criados automaticamente pelo grupo do Auto Scaling.  
-   - Esses alarmes mantêm a carga média da CPU próxima a 50%, garantindo que o número de instâncias fique entre 2 e 4.  
+   - Esses alarmes mantêm a carga média da CPU próxima a 50%, garantindo que o número de instâncias fique entre 2 e 4.
+
+**=> PS: no meu lab não apareceram os dois alarmes listados.**
+Isso é um comportamento comum no CloudWatch quando você ainda não iniciou totalmente o Auto Scaling ou se os alarmes ainda não foram 
+criados.
+
+<img width="1434" height="331" alt="image" src="https://github.com/user-attachments/assets/c60e1e98-32d1-484f-a93c-c90f032c5d26" />
 
 4. Selecione o alarme com **AlarmHigh** no nome.  
    - Verifique se o **Estado** está **OK**.  
@@ -318,13 +324,60 @@ Nesta tarefa, vamos aumentar a carga para acionar o **Auto Scaling** e adicionar
    - Isso fará a aplicação gerar cargas elevadas, aumentando a utilização da CPU em todas as instâncias do grupo.  
 
 6. Volte para o **CloudWatch** e monitore os alarmes:  
-   - Em menos de cinco minutos, o alarme **AlarmLow** deve mudar para **OK** e o status do **AlarmHigh** deve mudar para **Em alarme**.  
+   - Em menos de cinco minutos, o alarme **AlarmLow** deve mudar para **OK** e o status do **AlarmHigh** deve mudar para **Em
+     alarme**.  
    - Atualize a cada 60 segundos para acompanhar o grafo de utilização da CPU.  
    - Quando a CPU média ultrapassar 50% por mais de três minutos, o Auto Scaling adicionará novas instâncias.  
 
 7. Verifique as instâncias adicionais:  
    - No **Console de Gerenciamento da AWS**, vá em **EC2 > Instâncias**.  
-   - Agora, mais de duas instâncias chamadas **Instância do laboratório** devem estar em execução, indicativo de que o Auto Scaling respondeu ao alarme.
+   - Agora, mais de duas instâncias chamadas **Instância do laboratório** devem estar em execução, indicativo de que o Auto Scaling
+     respondeu ao alarme.
 
 ---
 
+## Tarefa 7: Encerrar a instância "Web Server 1"  
+
+Nesta tarefa, vamos encerrar a instância **Web Server 1**.  
+Essa instância foi utilizada para criar a AMI usada pelo grupo do Auto Scaling, mas ela não é mais necessária.  
+
+1. Selecione **Web Server 1** e verifique se é a única instância selecionada.  
+2. No menu suspenso **Estado da instância**, selecione **Encerrar instância**.  
+3. Selecione **Encerrar**.  
+
+<img width="1185" height="195" alt="image" src="https://github.com/user-attachments/assets/d423aeb1-9930-47c5-89a0-b35fb8d8902a" />
+
+<img width="812" height="393" alt="image" src="https://github.com/user-attachments/assets/5ea909f9-0d6f-44f6-81a2-2df726e731ec" />
+
+<img width="1170" height="142" alt="image" src="https://github.com/user-attachments/assets/12fe30f7-8d6e-48c0-b226-37a04fa61500" />
+
+---
+
+### Desafio opcional: Criar uma AMI utilizando a AWS CLI  
+
+Esse desafio é **opcional** e foi incluído para o caso de você ainda ter tempo restante no laboratório.  
+
+Neste desafio, você deverá criar uma AMI utilizando os comandos da **AWS Command Line Interface (AWS CLI)**.  
+
+#### Tarefas:  
+
+1. Usar o **Amazon EC2 Instance Connect** para se conectar a uma das instâncias do EC2 criadas anteriormente.  
+
+2. Na parte superior da página, selecione **Detalhes da AWS**.  
+   - Em **AWS CLI**, selecione **Mostrar**.  
+   - Configure as credenciais da AWS com base nas informações fornecidas.  
+
+   > ℹ️ Para mais informações sobre como configurar as credenciais da AWS, consulte:  
+   **Configurações do arquivo de configuração e credenciais**.  
+
+3. Depois de configurar as credenciais, crie uma **AMI** usando a **AWS CLI**.  
+
+   > ℹ️ Para mais informações sobre como criar uma AMI usando a AWS CLI, consulte:  
+   **AWS CLI Command Reference Examples**.  
+
+#### 💡 Dica:  
+É necessário fornecer o **nome da AMI** e o **ID da instância do EC2** para a qual você precisa da imagem.  
+
+---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
