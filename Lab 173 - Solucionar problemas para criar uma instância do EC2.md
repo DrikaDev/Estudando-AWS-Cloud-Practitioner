@@ -1,49 +1,33 @@
 ## 🧪 Lab 173 - Solucionar problemas para criar uma instância do EC2
 
-# Solucionar problemas com a criação de uma instância do EC2
-
 Nesta atividade, vamos usar a **AWS Command Line Interface (AWS CLI)** para iniciar instâncias do **Amazon Elastic Compute Cloud 
 (Amazon EC2)**.  
 
-## Objetivo
+### Objetivos
 
-Ao criar a instância, você vai:
+- Configurar a instância usando um **script de dados do usuário**.  
+- Garantir execução de: **Apache**, **MariaDB** e **PHP**.  
+- Iniciar uma instância **Amazon EC2** via **AWS CLI**.  
+- Solucionar problemas usando dicas e o utilitário **nmap**.
 
-- Consultar um **script de dados do usuário** para configurar a instância.  
-- Garantir que ela tenha em execução:  
-  - Servidor web **Apache**  
-  - Banco de dados relacional **MariaDB** (fork do MySQL)  
-  - **PHP**
+Esses softwares juntos formam a **pilha LAMP**: **Linux, Apache, MySQL/MariaDB e PHP**, uma forma prática de criar um site com back-
+end de banco de dados em uma única máquina.
 
-Juntos, esses pacotes de software instalados em uma única máquina são chamados de **pilha LAMP**:  
-**Linux, Apache, MySQL/MariaDB e PHP**.  
+### Funcionamento
 
-Usar uma **pilha LAMP** é uma forma comum de criar um site com um back-end de banco de dados em uma única máquina.
+O **script de dados do usuário** realizará:  
 
-## Funcionamento
+- Implantação dos **arquivos do site**.  
+- Execução dos **scripts de configuração do banco de dados**.  
 
-O mesmo arquivo de dados do usuário irá:  
+O resultado será uma instância que **hospeda o aplicativo web de uma cafeteria**.
 
-- Implantar os **arquivos do site**.  
-- Executar **scripts de configuração do banco de dados**.  
-
-O resultado será uma instância que **hospeda o aplicativo web de uma cafeteria**.  
-
-## Arquitetura
+### Arquitetura
 
 O diagrama a seguir mostra a arquitetura do aplicativo web que vamos criar nesta atividade:  
 
 <img width="3136" height="1536" alt="image" src="https://github.com/user-attachments/assets/2f43fefa-c9b3-4927-b150-3346e41ba7c8" />
  
-## Objetivos
-
-Depois de concluir este laboratório, você será capaz de:
-
-- Iniciar uma instância do **Amazon EC2** usando a **AWS CLI**.  
-- Solucionar problemas em comandos da **AWS CLI** e nas configurações do serviço **Amazon EC2**, utilizando:  
-  - Dicas básicas de solução de problemas.  
-  - O utilitário de código aberto **nmap**.  
-
 ---
 
 ## Tarefa 1: Conectar-se à instância CLI Host
