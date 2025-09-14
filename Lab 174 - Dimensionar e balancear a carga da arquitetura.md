@@ -26,11 +26,11 @@ infraestrutura escalável e resiliente.
 
 Ao final, teremos uma aplicação capaz de se adaptar dinamicamente à demanda e com alta disponibilidade.  
 
-## Veja abaixo a arquitetura inicial mostrando a infraestrutura da AWS com o **Servidor Web 1** em uma subnet pública.  
+### Veja abaixo a arquitetura inicial mostrando a infraestrutura da AWS com o **Servidor Web 1** em uma subnet pública.  
 
 <img width="1202" height="688" alt="image" src="https://github.com/user-attachments/assets/9bdaf73a-0d06-4c9b-b4f4-82c37d8a3d31" />
 
-## Veja abaixo a arquitetura final mostrando o **ELB** e as instâncias do **EC2** no grupo do **Auto Scaling** em subnets privadas distribuídas por duas AZ´s.  
+### Veja abaixo a arquitetura final mostrando o **ELB** e as instâncias do **EC2** no grupo do **Auto Scaling** em subnets privadas distribuídas por duas AZ´s.  
 
 <img width="2534" height="1550" alt="image" src="https://github.com/user-attachments/assets/6d69d7f9-22c3-47aa-83ef-ca19d0cfb401" />
 
