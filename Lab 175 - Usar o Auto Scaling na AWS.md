@@ -481,6 +481,8 @@ Nesta tarefa, vamos testar se o **Auto Scaling** responde corretamente ao aument
    - Essa ação executará a aplicação `stress` em segundo plano.  
    - A utilização da **CPU** da instância que atendeu à solicitação subirá para **100%**.  
 
+<img width="1130" height="160" alt="image" src="https://github.com/user-attachments/assets/66b04932-79d3-46c8-ae7d-2f183222a847" />
+
 4. Verificar no Console da AWS:  
 - No **Console de Gerenciamento do EC2**, no painel de navegação à esquerda, vá até **Auto Scaling** → **Grupos do Auto Scaling**.  
 - Selecione o grupo: **Grupo do Auto Scaling do aplicativo web**.  
