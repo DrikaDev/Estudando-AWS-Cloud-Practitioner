@@ -3,8 +3,8 @@
 ## Índice
 
 - [Visão Geral do Laboratório](#visão-geral-do-laboratório)
-- [Arquitetura inicial](#arquitetura-inicial-mostrando-a-infraestrutura-da-aws-com-uma-instância-command-host-em-uma-sub-rede-pública)
-- [Arquitetura final](#arquitetura-final-mostrando-o-balanceador-de-carga-elástico-e-instâncias-do-ec2-em-um-grupo-do-auto-scaling-em-sub-redes-privadas-distribuídas-por-duas-zonas-de-disponibilidade)
+  - [Arquitetura inicial](#arquitetura-inicial-mostrando-a-infraestrutura-da-aws-com-uma-instância-command-host-em-uma-sub-rede-pública)
+  - [Arquitetura final](#arquitetura-final-mostrando-o-balanceador-de-carga-elástico-e-instâncias-do-ec2-em-um-grupo-do-auto-scaling-em-sub-redes-privadas-distribuídas-por-duas-zonas-de-disponibilidade)
 - [Objetivos](#objetivos)
 - [Tarefa 1: Criar uma AMI para o Amazon EC2 Auto Scaling](#tarefa-1-criar-uma-ami-para-o-amazon-ec2-auto-scaling)
   - [Tarefa 1.1: Conectar à instância Command Host](#tarefa-11-conectar-à-instância-command-host)
@@ -33,12 +33,14 @@ Neste laboratório, você vai:
 - Criar um **Elastic Load Balancer (ELB)** para distribuir a carga entre instâncias do EC2 em várias **Zonas de Disponibilidade**
   por meio da configuração do Auto Scaling.  
 
-### Arquitetura inicial mostrando a infraestrutura da AWS com uma instância **Command Host** em uma sub-rede pública:  
+#### Arquitetura inicial mostrando a infraestrutura da AWS com uma instância **Command Host** em uma sub-rede pública:  
 <img width="1196" height="690" alt="image" src="https://github.com/user-attachments/assets/32169e7d-efba-46dd-9521-43865e8a7654" />
 
-### Arquitetura final mostrando o balanceador de carga elástico e instâncias do EC2 em um grupo do Auto Scaling em sub-redes privadas 
+#### Arquitetura final mostrando o balanceador de carga elástico e instâncias do EC2 em um grupo do Auto Scaling em sub-redes privadas 
 distribuídas por duas Zonas de Disponibilidade:  
 <img width="1704" height="1038" alt="image" src="https://github.com/user-attachments/assets/a69b6495-7f7d-40ed-977a-9a0d0f19f5b9" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -52,6 +54,8 @@ Depois de concluir este laboratório, você poderá:
 - Criar uma **configuração de execução** do Amazon EC2 Auto Scaling.  
 - Configurar as **políticas de scaling** e criar um **grupo do Auto Scaling** para reduzir ou aumentar a quantidade de servidores com
   base em uma carga variável.
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -84,6 +88,8 @@ Vamos usar essa instância para executar comandos da **AWS CLI**.
 Agora que você já estabeleceu conexão com a instância **Command Host**, é possível configurar e usar a **AWS CLI** para chamar os 
 serviços da AWS.  
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 #### Tarefa 1.2: Configurar a AWS CLI  
@@ -111,6 +117,8 @@ Agora está tudo pronto para acessar e executar os scripts detalhados nas etapas
 
 Para acessar esses scripts, insira o seguinte comando para navegar até o diretório: `cd /home/ec2-user/`
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 #### Tarefa 1.3: Criar uma instância do EC2  
@@ -132,6 +140,7 @@ find -wholename /root/.*history -wholename /home/*/.*history -exec rm -f {} \;
 find / -name 'authorized_keys' -exec rm -f {} \;
 rm -rf /var/lib/cloud/data/scripts/*
 ```
+
 Estas linhas apagam todo o **histórico** ou informações de **segurança** que possam ter sido acidentalmente deixadas na instância 
 quando a imagem foi capturada.  
 
@@ -203,6 +212,8 @@ http://ec2-54-214-124-193.us-west-2.compute.amazonaws.com/index.php
 > Aguarde pelo menos **cinco minutos** antes de passar para as próximas etapas.  
 > ❌ Não selecione **Iniciar stress** nesta fase.  
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 #### Tarefa 1.4: Criar uma AMI personalizada  
@@ -217,6 +228,8 @@ Para isso, utilize o comando abaixo, substituindo **NEW-INSTANCE-ID** pelo valor
 > ⚠️ Observação:
 > Por padrão, o comando aws ec2 create-image reiniciará a instância atual antes de criar a AMI, garantindo a integridade da
 > imagem no sistema de arquivos.
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -233,6 +246,8 @@ carga sempre que o desempenho da **CPU** de qualquer máquina do grupo **exceder
 📌 **Observação:**  
 A tarefa pode ser executada usando a **AWS CLI** ou o **Console de Gerenciamento da AWS**.  
 👉🏻 Para este laboratório, utilize o **Console de Gerenciamento da AWS**.  
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -292,6 +307,8 @@ diferentes **Zonas de Disponibilidade**.
 
 <img width="1159" height="203" alt="image" src="https://github.com/user-attachments/assets/e552f799-1e71-4e37-885e-ac231705a222" />
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 #### Tarefa 2.2: Criar um modelo de execução  
@@ -337,6 +354,8 @@ discos).
 9. Por fim, clique no botão **Visualizar modelos de execução**.
 
 <img width="1418" height="272" alt="image" src="https://github.com/user-attachments/assets/50df012f-abe2-401f-bfc7-059330759d42" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -407,6 +426,8 @@ Nesta tarefa, vamos usar o **modelo de execução** criado anteriormente para co
 ⚠️ **Observação:**  
 Se ocorrer erro indicando que o tipo de instância `t3.micro` não está disponível, refaça a tarefa usando `t2.micro`.  
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 3: Verificar a configuração do Auto Scaling  
@@ -442,6 +463,8 @@ aumento da quantidade de instâncias**.
 Assim que as instâncias estiverem com status **Íntegro**, você poderá **testar o aplicativo web** acessando-o por meio do
 **balanceador de carga**.  
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 4: Testar a configuração do Auto Scaling  
@@ -466,7 +489,8 @@ Nesta tarefa, vamos testar se o **Auto Scaling** responde corretamente ao aument
 
 5. Vá até a guia **Atividade**.  
 - Após alguns minutos, o grupo de Auto Scaling deverá **adicionar uma nova instância**.  
-- Isso acontece porque o **Amazon CloudWatch** detectou que a **utilização média da CPU** do grupo ultrapassou **50%**, disparando a política de expansão configurada.  
+- Isso acontece porque o **Amazon CloudWatch** detectou que a **utilização média da CPU** do grupo ultrapassou **50%**, disparando a política de expansão
+  configurada.  
 
 <img width="1195" height="408" alt="image" src="https://github.com/user-attachments/assets/a1c8070e-5218-4572-906c-209a4691ea94" />
 
@@ -475,6 +499,8 @@ Nesta tarefa, vamos testar se o **Auto Scaling** responde corretamente ao aument
 - Também é possível visualizar as novas instâncias no **Painel do EC2**.  
 
 <img width="1416" height="252" alt="image" src="https://github.com/user-attachments/assets/5d599def-be09-4c2e-844a-fe5bf709ef0f" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -489,4 +515,8 @@ Concluimos com êxito as seguintes tarefas:
 - 📊 Configuramos as **políticas de scaling** e criar um **grupo do Auto Scaling** para reduzir ou aumentar a quantidade de servidores
   com base em uma carga variável.  
 
+[⬆ Voltar ao índice](#índice)
+
 ---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
