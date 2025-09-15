@@ -17,7 +17,7 @@
   - [Tarefa 2.3: Criar um grupo do Auto Scaling](#tarefa-23-criar-um-grupo-do-auto-scaling)
 - [Tarefa 3: Verificar a configuração do Auto Scaling](#tarefa-3-verificar-a-configuração-do-auto-scaling)
 - [Tarefa 4: Testar a configuração do Auto Scaling](#tarefa-4-testar-a-configuração-do-auto-scaling)
-- [Parabéns!](#parabéns!)
+- [Conclusão:](#conclusão)
 
 ---
 
@@ -478,8 +478,9 @@ Nesta tarefa, vamos testar se o **Auto Scaling** responde corretamente ao aument
 
 ---
 
-## Parabéns! 
-🎉 Concluimos com êxito as seguintes tarefas:
+## Conclusão: 
+
+Concluimos com êxito as seguintes tarefas:
 
 - 🚀 Criamos uma instância do **EC2** usando um comando da **AWS CLI**.  
 - 📦 Criamos uma **AMI** usando a **AWS CLI**.  
