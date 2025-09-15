@@ -25,7 +25,7 @@
 
 ---
 
-### 🔎 Visão Geral do Laboratório
+### Visão Geral do Laboratório
 
 O **Amazon Virtual Private Cloud (Amazon VPC)** possibilita que você provisione uma seção da nuvem **Amazon Web Services (AWS)** 
 isolada logicamente, em que é possível executar recursos da AWS em uma rede virtual que você define por conta própria.  
