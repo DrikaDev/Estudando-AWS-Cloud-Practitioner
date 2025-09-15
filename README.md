@@ -56,10 +56,10 @@
 
 ## Laboratórios 🧪
 
+- [11 - EC2 Primeiro deploy "Mundo Invertido"](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)
 - [Banco de dados - Criando um servidor RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criando%20um%20servidor%20de%20banco%20de%20dados%20RDS.md)
 - [Banco de dados - Criar tabela no DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criar%20tabela%20no%20DynamoDB.md)
 - [Banco de dados - Introdução ao Amazon Aurora](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20Aurora.md)
-- [EC2 - Meu primeiro deploy](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/EC2%20-%20Lab.%20Meu%20primeiro%20deploy.md)
 - [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
 - [VPC - Criação de VPC e Sub-redes](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20-%20Criar%20VPC%20e%20sub-redes.md) 
