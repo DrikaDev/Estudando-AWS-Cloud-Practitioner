@@ -1,5 +1,30 @@
 ## 🧪 Lab - Configurar uma VPC
 
+### Índice
+
+- [Visão Geral do Laboratório](#visão-geral-do-laboratório)  
+- [Arquitetura](#arquitetura)  
+- [Tarefa 1: Criar uma VPC](#tarefa-1-criar-uma-vpc)  
+- [Tarefa 2: Criar Sub-redes](#tarefa-2-criar-sub-redes)  
+  - [Tarefa 2.1: Criar uma Sub-rede Pública](#tarefa-21-criar-uma-sub-rede-pública)  
+  - [Tarefa 2.2: Criar uma Sub-rede Privada](#tarefa-22-criar-uma-sub-rede-privada)  
+- [Tarefa 3: Criar um Gateway de Internet](#tarefa-3-criar-um-gateway-de-internet)  
+- [Tarefa 4: Configurar Tabelas de Rota](#tarefa-4-configurar-tabelas-de-rota)  
+  - [Criar a Tabela de Rota Pública](#criar-a-tabela-de-rota-pública)  
+  - [Adicionar Rota para a Internet](#adicionar-rota-para-a-internet)  
+  - [Associar a Tabela de Rota Pública à Sub-rede Pública](#associar-a-tabela-de-rota-pública-à-sub-rede-pública)  
+- [Tarefa 5: Iniciar um Servidor Bastion na Sub-rede Pública](#tarefa-5-iniciar-um-servidor-bastion-na-sub-rede-pública)  
+- [Tarefa 6: Criar um Gateway NAT](#tarefa-6-criar-um-gateway-nat)  
+  - [Criar o Gateway NAT](#criar-o-gateway-nat)  
+  - [Configurar a Rota da Sub-rede Privada](#configurar-a-rota-da-sub-rede-privada)  
+- [Desafio Opcional: Testar a Sub-rede Privada](#desafio-opcional-testar-a-sub-rede-privada)  
+- [Fazer Login no Servidor Bastion](#fazer-login-no-servidor-bastion)  
+- [Fazer Login na Instância Privada](#fazer-login-na-instância-privada)  
+- [Testar o Gateway NAT](#testar-o-gateway-nat)  
+- [Conclusão](#conclusão)
+
+---
+
 ### 🔎 Visão Geral do Laboratório
 
 O **Amazon Virtual Private Cloud (Amazon VPC)** possibilita que você provisione uma seção da nuvem **Amazon Web Services (AWS)** 
@@ -17,6 +42,8 @@ Neste laboratório, vamos criar:
 
 ### Arquitetura:
 <img width="1460" height="878" alt="image" src="https://github.com/user-attachments/assets/9f163efb-9cee-4dac-a697-70f7aea1dc15" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -56,6 +83,8 @@ Na parte superior da página, será exibida a mensagem:
 7. Clique em **Salvar**.  
 
 ✅ Agora, as instâncias do **Amazon EC2** iniciadas na VPC receberão automaticamente um **nome de host DNS IPv4 público**.
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -97,6 +126,8 @@ Agora, configure a **sub-rede pública** para atribuir automaticamente um endere
 > ℹ️ Mesmo que essa sub-rede tenha o nome **Sub-rede pública**, ela ainda **não é pública**!  
 > Para ser considerada pública, será necessário anexar um **gateway de internet**, o que será feito em outra tarefa do laboratório.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ### Tarefa 2.2: Criar uma Sub-rede Privada
@@ -127,6 +158,8 @@ Nesta tarefa, vamos criar a **sub-rede privada**, que será usada para recursos 
 ⚠️ No entanto, a VPC ainda está totalmente **isolada** e não pode se comunicar com recursos fora dela.  
 ➡️ Na próxima tarefa, você configurará a **sub-rede pública** para se conectar à internet por meio de um **gateway de internet**.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 3: Criar um Gateway de Internet
@@ -151,6 +184,8 @@ O gateway de internet é necessário para estabelecer **conectividade externa** 
 ✅ Agora, sua **sub-rede pública** tem uma conexão com a internet.  
 ⚠️ Entretanto, para que o tráfego seja roteado corretamente, será necessário **configurar a tabela de rota da sub-rede pública** 
 para utilizar o **gateway de internet** — o que será feito na próxima tarefa.  
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -223,6 +258,8 @@ internet por meio do **gateway de internet**.
 
 ➡️ Agora já é possível **iniciar recursos nas sub-redes conforme necessário**.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 5: Iniciar um Servidor Bastion na Sub-rede Pública
@@ -276,6 +313,8 @@ Nesta tarefa, vamos iniciar um **servidor bastion** (instância EC2) na **sub-re
 ✅ O **servidor bastion** foi iniciado na **sub-rede pública**.  
 ➡️ Prossiga para a próxima tarefa. (*Não é necessário aguardar até a instância estar em execução.*)
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 6: Criar um Gateway NAT
@@ -319,6 +358,8 @@ os recursos da **sub-rede privada** se comuniquem com a internet.
 
 ✅ Agora, os **recursos na sub-rede privada** que desejarem se comunicar com a internet terão seu tráfego roteado pelo **gateway NAT**.  
 ➡️ O gateway NAT encaminha a solicitação para a internet, e as respostas retornam por ele de volta à sub-rede privada.
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -370,13 +411,16 @@ systemctl restart sshd.service
 ```
 
 > ⚠️ Esse script permite o login usando uma senha.  
-> Ele foi incluído para ajudar a encurtar as etapas do laboratório, mas **não é recomendado** para implementações normais de instâncias.
+> Ele foi incluído para ajudar a encurtar as etapas do laboratório, mas **não é recomendado** para implementações normais de
+> instâncias.
 
 4. Clique em **Executar instância**.  
 
 5. Para exibir a instância iniciada, selecione **Visualizar todas as instâncias**.
 
 <img width="1424" height="214" alt="image" src="https://github.com/user-attachments/assets/f1f615c7-9e82-4e31-9c78-abef39c2b4f7" />
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -387,11 +431,77 @@ Em vez disso, faremos login **primeiro no servidor Bastion** (sub-rede pública)
 
 ### 🔹 Passos para acessar o Bastion
 
-1. No **Console de Gerenciamento da AWS**, na barra de pesquisa, insira e escolha **EC2** para abrir o Console de Gerenciamento do EC2.  
+1. No **Console de Gerenciamento da AWS**, na barra de pesquisa, insira e escolha **EC2**.  
 2. No painel de navegação, selecione **Instâncias**.  
 3. Na lista de instâncias, clique na instância **Bastion Server**.  
 4. Clique em **Conectar-se**.  
 5. Na guia **EC2 Instance Connect**, clique em **Conectar-se**.  
 
-> ℹ️ Observação: se preferir usar um **cliente SSH** para se conectar à instância do EC2, consulte as orientações em *Conecte-se à sua instância do Linux*.
+---
 
+## Fazer Login na Instância Privada
+
+Você já deve estar conectado ao **servidor Bastion** (sub-rede pública).  
+Mantenha essa janela do terminal aberta para uso posterior.
+Agora, você irá se conectar à **instância privada** (sub-rede privada).
+
+### 🔹 Passos
+
+1. No **Console do Amazon EC2**, selecione **Instâncias** e clique na **Instância privada**.  
+   - Desmarque todas as outras instâncias.  
+
+2. Copie o **endereço IPv4 privado** (mostrado na parte inferior da página).  
+   - Este endereço começa com `10.0.2.x` ou `10.0.3.x`.  
+   - ⚠️ Este endereço **não é acessível diretamente pela internet**, por isso é necessário passar pelo Bastion.  
+
+3. Retorne à janela do terminal conectada ao Bastion e execute: `ssh PRIVATE-IP`  
+> O comando executado deve ser similar ao seguinte: `ssh 10.0.2.123`
+
+Se a mensagem “Tem certeza de que deseja continuar se conectando” for exibida, insira 'yes'.
+Quando for solicitada uma senha, insira `lab-password`.
+
+Agora você deve ter conexão com a instância privada.  
+Você realizou essa tarefa conectando-se primeiro ao servidor bastion (na sub-rede pública), depois à instância privada (na sub-rede 
+privada).  
+
+[⬆ Voltar ao índice](#índice)
+
+---
+
+## Testar o Gateway NAT
+
+A última parte deste desafio é confirmar que a **instância privada** pode acessar a internet através do **gateway NAT**.
+
+### 🔹 Passos
+
+1. Na instância privada, execute o comando `ping` para testar a conectividade: `ping -c 3 amazon.com`
+
+Você deve ver resultados semelhantes aos seguintes:
+
+```
+PING amazon.com (176.32.98.166) 56(84) bytes of data.
+64 bytes from 176.32.98.166 (176.32.98.166): icmp_seq=1 ttl=222 time=79.2 ms
+64 bytes from 176.32.98.166 (176.32.98.166): icmp_seq=2 ttl=222 time=79.2 ms
+64 bytes from 176.32.98.166 (176.32.98.166): icmp_seq=3 ttl=222 time=79.0 ms
+```
+
+✅ Essa saída indica que a **instância privada** se comunicou com êxito com `amazon.com` na internet.  
+A instância privada está na **sub-rede privada**, e a única maneira de isso ser possível no cenário atual é **passando pelo gateway 
+NAT**.  
+Essa saída confirma que a **configuração de rede foi bem-sucedida**.
+
+---
+
+## Conclusão
+
+- Criamos uma **VPC** com uma **sub-rede privada** e uma **sub-rede pública**, além de um **gateway de internet** e um **gateway NAT**.
+- Configuramos as **tabelas de rota** associadas às sub-redes para o tráfego local e para o tráfego vinculado à internet, usando o
+  **gateway de internet** e o **gateway NAT**.
+- Iniciamos um **servidor Bastion** na sub-rede pública.
+- Usamos o **servidor Bastion** para fazer login em uma instância localizada na **sub-rede privada**.
+
+[⬆ Voltar ao índice](#índice)
+
+---
+
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
