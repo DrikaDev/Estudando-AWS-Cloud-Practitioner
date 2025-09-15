@@ -84,7 +84,7 @@ Nos prompts, insira as seguintes informações:
 - **AWS Secret Access Key**: pressione **Enter**.  
 - **Default region name**: insira o nome da Região das etapas anteriores desta tarefa (por exemplo, `us-west-2`).  
   - Se a Região já estiver sendo exibida, pressione **Enter**.  
-- **Default output format (Formato de saída padrão)**: insira `json`.  
+- **Default output format**: insira `json`.  
 
 Agora está tudo pronto para acessar e executar os scripts detalhados nas etapas a seguir.  
 
