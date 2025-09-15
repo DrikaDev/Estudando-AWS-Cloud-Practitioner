@@ -144,7 +144,7 @@ Substitua esse valor conforme necessário no decorrer do laboratório.
 
 Copie e cole o valor **InstanceId** em um editor de texto para usar mais tarde.  
 
-<img width="1426" height="150" alt="image" src="https://github.com/user-attachments/assets/693d53d7-f08e-4164-af7e-4cf30cd47ed8" />
+<img width="1429" height="204" alt="image" src="https://github.com/user-attachments/assets/554e2587-9d45-4a13-9647-75960e07b9db" />
 
 Use o comando `aws ec2 wait instance-running` para monitorar o status dessa instância.  
 Substitua **NEW-INSTANCE-ID** no comando a seguir pelo valor de **InstanceId** que você copiou na etapa anterior e execute o comando 
