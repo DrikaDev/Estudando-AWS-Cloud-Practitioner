@@ -72,6 +72,7 @@
 - [172 - Criar instância do EC2 + Servidor Apache](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20172%20-%20Criar%20instancia%20do%20EC2%20+%20Servidor%20Apache.md)
 - [173 - Solucionar problemas para criar uma instância do EC2.md](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20173%20-%20Solucionar%20problemas%20para%20criar%20uma%20inst%C3%A2ncia%20do%20EC2.md#%C3%ADndice)
 - [174 - Dimensionar e balancear a carga da arquitetura](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20174%20-%20Dimensionar%20e%20balancear%20a%20carga%20da%20arquitetura.md)
+- [175 - Usar o Auto Scaling na AWS(Linux)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Lab%20175%20-%20Usar%20o%20Auto%20Scaling%20na%20AWS.md)
 
 ---
 
