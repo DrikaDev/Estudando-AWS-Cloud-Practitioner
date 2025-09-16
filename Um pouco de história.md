@@ -1,4 +1,4 @@
-## ☁️ AWS - Um pouco de história
+## ☁️ AWS - Um pouco de história da AWS
 
 ### 📚 Primeiro, como Jeff Bezos começou a Amazon?  
 
