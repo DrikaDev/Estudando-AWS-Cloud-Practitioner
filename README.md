@@ -18,7 +18,7 @@
 
 ### AWS ☁️
 
-- [Guia do Exame AWS Certified Cloud Practitioner (CLF-C02)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Guia%20do%20exame%20AWS%20Certified%20Cloud%20Practitioner.md)
+- [Guia do Exame AWS Certified Cloud Practitioner (CLF-C02)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Guia%20do%20exame%20AWS%20Certified%20Cloud%20Practitioner.md)
 - [Um pouco de história da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Um%20pouco%20de%20hist%C3%B3ria.md)
 - [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
 - [Modelos de Serviços: Iaas, PaasS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/Modelos%20de%20Servi%C3%A7o%3A%20IaaS%2C%20PaaS%2C%20SaaS.md)  
