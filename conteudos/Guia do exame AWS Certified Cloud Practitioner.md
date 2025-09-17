@@ -362,4 +362,10 @@ riscos.
 
 ---
 
+✅ Agora é com você!  
+Espero que esse guia te ajude a revisar melhor os conteúdos.  
+Boa prova e sucesso na sua jornada para se tornar AWS Certified Cloud Practitioner!🚀  
+
+---
+
 👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
