@@ -87,8 +87,8 @@ O **S3 Intelligent-Tiering** (Camadas de Classes de Armazenamento Inteligente) f
 
 - **S3 Standard**: dados acessados com frequência.  
 - **S3 Standard-IA (Infrequent Access)**: dados duradouros, acessados ocasionalmente.  
-- **S3 One Zone-IA (Infrequent Access)**: dados duradouros, **não críticos** e acessados com pouca frequência.  
-- **S3 Glacier / Deep Archive**: arquivamento de dados raramente acessados.  
+- **S3 Glacier / Deep Archive**: arquivamento de dados raramente acessados.
+> PS: Não existe "exclusão" como parte do Intelligent-Tiering. A exclusão só ocorre se você configurar uma **lifecycle policy** separada.
 
 [⬆ Voltar ao índice](#índice)
 
