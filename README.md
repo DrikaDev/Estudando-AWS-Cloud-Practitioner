@@ -30,7 +30,8 @@
 ### Serviços Essenciais:
 
 - [VPC, Sub-redes, Rotas e Segurança](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/VPC%2C%20sub-redes%2C%20rotas%20e%20seguran%C3%A7a.md)
-- [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)  
+- [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)
+- [Créditos de CPU](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Cr%C3%A9ditos%20de%20CPU.md)
 - [Amazon S3 - O que é](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20S3%20-%20O%20que%20%C3%A9.md)  
 - [Segurança na Nuvem: Root e IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Seguran%C3%A7a%20na%20Nuvem%3A%20Root%20e%20IAM.md)
 
