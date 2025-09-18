@@ -63,7 +63,7 @@ Em outras palavras, é como **conhecer as regras do jogo antes de jogar** - o qu
 
 ### 1.2 Princípios de Design da Nuvem  
 
-**WAF - Well-Architected Framework**  
+**Well-Architected Framework**  
 **Pilares:**  
 - **Excelência operacional** → executar e monitorar sistemas para agregar valor ao negócio e melhorar continuamente processos e procedimentos.  
 - **Segurança** → proteger dados, sistemas e ativos por meio de controles de segurança e gerenciamento de riscos.  
@@ -76,7 +76,7 @@ Em outras palavras, é como **conhecer as regras do jogo antes de jogar** - o qu
 
 ### 1.3 Migração para a Nuvem  
 
-**CAF - Cloud Adoption Framework**  
+**Cloud Adoption Framework (CAF)**  
 **Benefícios e estratégias de adoção:**  
 - **Redução do risco comercial** → migração planejada reduz riscos operacionais e financeiros.  
 - **Melhoria do desempenho ESG** (*Environmental, Social and Governance*) → práticas sustentáveis, responsabilidade social e melhor governança corporativa. 
