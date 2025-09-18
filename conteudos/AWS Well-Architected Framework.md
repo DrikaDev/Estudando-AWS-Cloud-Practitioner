@@ -1,4 +1,4 @@
-## ☁️ AWS Well-Architected Framework (WAF)
+## ☁️ AWS Well-Architected Framework
 
 O **AWS Well-Architected Framework** é um conjunto de boas práticas e princípios criado pela AWS para ajudar arquitetos de nuvem a 
 **projetar, construir e manter workloads** (aplicações, sistemas, infraestruturas) que sejam **seguros, eficientes, resilientes, 
@@ -16,48 +16,48 @@ aprofundamento.
 
 ## 📝 Perguntas Essenciais
 
-### 📌 1. Excelência Operacional: monitoramento, automação, melhoria contínua e processos eficientes.
+### 📌 1. Excelência Operacional (monitoramento, automação, melhoria contínua e processos eficientes):
 
-Como você gerencia e monitora operações para apoiar seus objetivos de negócio?
-Como você documenta e evolui procedimentos operacionais?
-Como você antecipa falhas e aprende com elas?
+Como você gerencia e monitora operações para apoiar seus objetivos de negócio?  
+Como você documenta e evolui procedimentos operacionais?  
+Como você antecipa falhas e aprende com elas?  
 
-### 🔒 2. Segurança: proteção de dados, sistemas e ativos; gerenciamento de identidade e acesso; resposta a incidentes.
+### 🔒 2. Segurança (proteção de dados, sistemas e ativos, gerenciamento de identidade e acesso, resposta a incidentes):
 
-Como você controla quem pode fazer o quê com os recursos?
-Como você protege dados em trânsito e em repouso?
-Como você detecta e responde a incidentes de segurança?
+Como você controla quem pode fazer o quê com os recursos?  
+Como você protege dados em trânsito e em repouso?  
+Como você detecta e responde a incidentes de segurança?  
 
-### ⚡ 3. Confiabilidade: resiliência, recuperação de falhas, redundância e continuidade do serviço.
+### ⚡ 3. Confiabilidade (resiliência, recuperação de falhas, redundância e continuidade do serviço):
 
-Como você projeta sua workload para lidar com falhas?
-Como você testa e valida mecanismos de recuperação?
-Como você monitora métricas de saúde e disponibilidade?
+Como você projeta sua workload para lidar com falhas?  
+Como você testa e valida mecanismos de recuperação?  
+Como você monitora métricas de saúde e disponibilidade?  
 
-### 🚀 4. Eficiência de Performance: uso otimizado de recursos, escalabilidade e avaliação de novas tecnologias.
+### 🚀 4. Eficiência de Performance (uso otimizado de recursos, escalabilidade e avaliação de novas tecnologias):
 
-Como você escolhe os tipos e tamanhos de recursos corretos?
-Como você monitora e otimiza o desempenho ao longo do tempo?
-Como você utiliza serviços gerenciados para ganhar eficiência?
+Como você escolhe os tipos e tamanhos de recursos corretos?  
+Como você monitora e otimiza o desempenho ao longo do tempo?  
+Como você utiliza serviços gerenciados para ganhar eficiência?  
 
-### 💰 5. Otimização de Custos: gestão eficiente de custos, evitar desperdícios e dimensionamento conforme demanda.
+### 💰 5. Otimização de Custos (gestão eficiente de custos, evitar desperdícios e dimensionamento conforme demanda):
 
-Como você garante que está gastando apenas com o necessário?
-Como você analisa e prevê custos?
-Como você otimiza o uso de instâncias e serviços?
+Como você garante que está gastando apenas com o necessário?  
+Como você analisa e prevê custos?  
+Como você otimiza o uso de instâncias e serviços?  
 
-### 🌱 6. Sustentabilidade: 
+### 🌱 6. Sustentabilidade (minimizar impacto ambiental e uso consciente de recursos):
 
-Como você mede e reduz a pegada de carbono da sua workload?
-Como você maximiza a utilização de recursos de forma eficiente?
-Como você avalia impacto ambiental nas decisões de arquitetura?
+Como você aproveita instâncias Spot ou serviços serverless para usar capacidade ociosa da AWS?
+Como você mede e reduz a pegada de carbono da sua workload?  
+Como você avalia impacto ambiental nas decisões de arquitetura?  
 
 > 👉 Essas perguntas não exigem respostas fechadas, mas sim reflexões que ajudam a identificar pontos de melhoria e alinhar workloads
 > às boas práticas da AWS.
 
 ---
 
-## ⚡ Os 5 pilares do Well-Architected Framework
+## ⚡ Os 6 pilares do Well-Architected Framework
 
 | **Pilar**                    | **Objetivo**                                                                 | **Exemplos de Boas Práticas**                                                                 |
 |-------------------------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
@@ -66,6 +66,7 @@ Como você avalia impacto ambiental nas decisões de arquitetura?
 | **Confiabilidade**            | Garantir resiliência, recuperação de falhas e adaptação a mudanças.           | Multi-AZ, backups automáticos, testes de recuperação de desastres.                             |
 | **Eficiência de Performance** | Usar recursos de forma otimizada e escalável para atender às demandas.        | Escolha correta de instâncias (EC2, Lambda), escalabilidade automática (*Auto Scaling*).       |
 | **Otimização de Custos**      | Evitar desperdícios e otimizar o uso de recursos.                              | Instâncias reservadas ou spot, desligar recursos ociosos, monitorar custos com AWS Cost Explorer. |
+| **Sustentabilidade**          | Reduzir impacto ambiental e usar recursos de forma consciente e eficiente.    | Escolha de regiões com energia renovável, uso de instâncias spot/serverless, dimensionamento correto para evitar desperdício. |
 
 ---
 
@@ -95,5 +96,7 @@ Como você avalia impacto ambiental nas decisões de arquitetura?
 ---
 
 🔗 Referência oficial: [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected)
+
+---
 
 👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
