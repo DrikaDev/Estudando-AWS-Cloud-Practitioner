@@ -76,13 +76,22 @@ Em outras palavras, é como **conhecer as regras do jogo antes de jogar** - o qu
 
 ### 1.3 Migração para a Nuvem  
 
-**Cloud Adoption Framework (CAF)**  
+**Cloud Adoption Framework (AWS CAF)**  
+O **AWS CAF** agrupa os recursos em **seis perspectivas** que orientam a migração para a nuvem:  
+- **Negócios** → alinhamento da estratégia de TI aos objetivos corporativos.  
+- **Pessoas** → desenvolvimento de competências e gestão da mudança organizacional.  
+- **Governança** → definição de políticas, compliance e gerenciamento financeiro.  
+- **Plataforma** → seleção e arquitetura dos serviços de nuvem.  
+- **Segurança** → proteção de dados, aplicações e infraestrutura.  
+- **Operações** → gerenciamento contínuo e eficiente do ambiente em nuvem.  
+
 **Benefícios e estratégias de adoção:**  
 - **Redução do risco comercial** → migração planejada reduz riscos operacionais e financeiros.  
 - **Melhoria do desempenho ESG** (*Environmental, Social and Governance*) → práticas sustentáveis, responsabilidade social e melhor governança corporativa. 
 - **Aumento da receita** → possibilita inovação mais rápida, criação de novos produtos e maior alcance de clientes.  
 - **Aumento da eficiência operacional** → processos otimizados e redução de custos com infraestrutura física.  
-- **Estratégias de migração adequadas**, como:  
+
+**Estratégias de migração adequadas:**
   - **Réplicas de banco de dados** → permitem migração contínua e com menos downtime.  
   - **Uso do AWS Snowball** → facilita a transferência segura e rápida de grandes volumes de dados para a nuvem.  
 
