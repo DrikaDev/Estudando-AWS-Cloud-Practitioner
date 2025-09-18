@@ -204,8 +204,7 @@ de trabalho.
   - **AWS Lambda** → executar código sem gerenciar servidores; paga-se apenas pelo uso efetivo.  
   - **Fargate** → executar containers sem provisionar ou gerenciar servidores, totalmente serverless.  
 - **Auto Scaling** → ajusta automaticamente a quantidade de instâncias ou containers de acordo com a demanda, proporcionando elasticidade.  
-- **Balanceadores de Carga (Elastic Load Balancer)** → distribuem tráfego entre múltiplas instâncias ou containers, aumentando disponibilidade e
-desempenho.  
+- **Balanceadores de Carga (Elastic Load Balancer)** → distribuem tráfego entre múltiplas instâncias ou containers, aumentando disponibilidade e desempenho.  
 
 ---
 
@@ -213,7 +212,7 @@ desempenho.
 
 **Quando usar bancos de dados na AWS:**  
 - **Banco de dados no EC2** → quando você precisa de controle total sobre o banco e o sistema operacional.  
-- **Banco de dados gerenciado pela AWS** → quando deseja que a AWS cuide da manutenção, backup, escalabilidade e alta disponibilidade.  
+- **Banco de dados gerenciado pela AWS** → quando deseja que a AWS cuide da manutenção, backup, escalabilidade e alta disponibilidade. 
 
 **Tipos de bancos de dados e serviços:**  
 - **Relacionais:**  
@@ -254,15 +253,14 @@ desempenho.
 ### 3.6 Serviços de Armazenamento  
 
 - **Amazon S3 (Simple Storage Service)** → armazenamento de objetos altamente escalável, durável e acessível.  
-- **S3 Storage Classes** → diferentes classes de armazenamento (Standard, Infrequent Access, Glacier, Deep Archive) que otimizam custo conforme frequência
-de acesso e requisitos de retenção.  
-- **Amazon EBS (Elastic Block Store)** → armazenamento em blocos persistente para instâncias EC2.  
-- **Instance Store** → armazenamento em blocos temporário (efêmero), vinculado ao ciclo de vida da instância EC2.  
+- **S3 Storage Classes** → diferentes classes de armazenamento (Standard, Infrequent Access, Glacier, Deep Archive) que otimizam custo conforme frequência de acesso e requisitos de retenção.  
+- **Amazon EBS (Elastic Block Store)** → armazenamento em blocos 'persistente' para instâncias EC2.  
+- **Instance Store** → armazenamento em blocos 'temporário' (efêmero), vinculado ao ciclo de vida da instância EC2.  
 
 **Serviços de Arquivos:**  
-- **Amazon EFS (Elastic File System)** → sistema de arquivos elástico e escalável para instâncias Linux.  
-- **Amazon FSx** → sistemas de arquivos gerenciados compatíveis com Windows File Server e Lustre.  
-- **AWS Storage Gateway** → integra ambientes locais com a nuvem, permitindo cache de arquivos e backup híbrido.  
+- **Amazon EFS (Elastic File System)** → serviço de arquivo elástico e escalável para instâncias 'Linux' - protocolo **NFS**.  
+- **Amazon FSx** → serviço de arquivo gerenciado compatível com 'Windows File Server' - protocolo **SMB**.  
+- **AWS Storage Gateway** → serviço que integra ambientes **on-premisse com a nuvem**, permitindo cache de arquivo local, backup e arquivamento em nuvem em um modelo 'híbrido'.  
 
 **Gerenciamento de dados e backup:**  
 - **Políticas de ciclo de vida do S3** → automatizam a transição de objetos entre classes de armazenamento ou exclusão após determinado tempo.  
