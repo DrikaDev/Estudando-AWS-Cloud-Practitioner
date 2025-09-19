@@ -110,6 +110,8 @@ Nesta tarefa, vamos analisar os perfis do IAM e as permissões que eles vão con
 
 > A função do Lambda `salesAnalysisReportDataExtractor` usará o perfil `salesAnalysisReportDERole`.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Tarefa 2: Criar uma camada do Lambda e uma função extratora de dados do Lambda
@@ -216,6 +218,8 @@ Antes de testar a função, é necessário definir as **configurações de rede*
      > As regras de entrada e saída do grupo de segurança serão exibidas automaticamente abaixo do campo.
 
 3. Clique em **Salvar**.
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -392,11 +396,14 @@ O URL do site tem o formato: ` http://publicIP/cafe ` onde `publicIP` é o **end
     ]
 }
 ```
+
 ### Conclusão
 
 🎉 **Parabéns!** Você criou com sucesso a função **salesAnalysisReportDataExtractor** no AWS Lambda.
 
 A função agora está pronta para extrair dados de pedidos do banco de dados da cafeteria e gerar relatórios diários conforme configurado.
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -423,6 +430,8 @@ Nesta tarefa, vamos criar um tópico do **SNS** e, depois, inscreverá um endere
 2. Clique em **Criar assinatura**.
 3. Na caixa de entrada do e-mail fornecido, abra a mensagem do SNS e clique em **Confirmar assinatura**.
 4. Uma nova página exibirá: **“Assinatura confirmada!”**
+
+[⬆ Voltar ao índice](#índice)
 
 ---
 
@@ -606,6 +615,8 @@ Se não houver erros, você verá um novo e-mail de **Notificações da AWS** co
 
 O evento do CloudWatch Events invocou essa mensagem no momento especificado na expressão Cron.
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Conclusão
@@ -621,8 +632,3 @@ O evento do CloudWatch Events invocou essa mensagem no momento especificado na e
 ---
 
 👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
-
-
-
-
- 
