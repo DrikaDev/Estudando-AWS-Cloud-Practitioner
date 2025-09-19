@@ -57,7 +57,7 @@
 
 ## Laboratórios 🧪
 
-- [11 - EC2 Primeiro deploy "Mundo Invertido"](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2011%20-%20EC2%20Primeiro%20deploy.md)
+- [11 - Introdução ao EC2 - Primeiro deploy: Mundo Invertido](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2011%20-%20Introdu%C3%A7%C3%A3o%20ao%20EC2%20-%20Primeiro%20deploy.md)
 - [Banco de dados - Criando um servidor RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Criando%20um%20servidor%20de%20banco%20de%20dados%20RDS.md)
 - [Banco de dados - Criar tabela no DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Criar%20tabela%20no%20DynamoDB.md)
 - [Banco de dados - Introdução ao Amazon Aurora](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20Aurora.md)
@@ -74,6 +74,9 @@
 - [173 - Solucionar problemas para criar uma instância do EC2.md](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20173%20-%20Solucionar%20problemas%20para%20criar%20uma%20inst%C3%A2ncia%20do%20EC2.md#%C3%ADndice)
 - [174 - Dimensionar e balancear a carga da arquitetura](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20174%20-%20Dimensionar%20e%20balancear%20a%20carga%20da%20arquitetura.md)
 - [175 - Usar o Auto Scaling na AWS(Linux)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20175%20-%20Usar%20o%20Auto%20Scaling%20na%20AWS.md)
+- [176 - Roteamento de Failover do Amazon Route 53](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20176%20-%20Roteamento%20de%20failover%20do%20Route%2053.md)
+- [177 - Exercício AWS Lambda, S3 e SNS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20177%20-%20Exerc%C3%ADcio%20do%20AWS%20Lambda.md)
+- [178 - Trabalhar com o AWS Lambda]()
 - [180 - Configurar uma Amazon VPC](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20180%20-%20Configurar%20uma%20Amazon%20VPC.md)
 
 ---
