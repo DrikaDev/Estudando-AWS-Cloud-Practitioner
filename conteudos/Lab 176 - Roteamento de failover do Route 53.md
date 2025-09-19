@@ -1,4 +1,4 @@
-## 🔀 Roteamento de Failover do Amazon Route 53
+## 🧪 Lab 176 - Roteamento de Failover do Amazon Route 53
 
 ## Visão geral do laboratório
 Nesta atividade, vamos configurar o **roteamento de failover** para um aplicativo web simples.  
