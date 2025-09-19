@@ -76,7 +76,7 @@
 - [175 - Usar o Auto Scaling na AWS(Linux)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20175%20-%20Usar%20o%20Auto%20Scaling%20na%20AWS.md)
 - [176 - Roteamento de Failover do Amazon Route 53](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20176%20-%20Roteamento%20de%20failover%20do%20Route%2053.md)
 - [177 - Exercício AWS Lambda, S3 e SNS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20177%20-%20Exerc%C3%ADcio%20do%20AWS%20Lambda.md)
-- [178 - Trabalhar com o AWS Lambda]()
+- [178 - Trabalhar com o AWS Lambda](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20178%20-%20Trabalhar%20com%20AWS%20Lambda.md)
 - [180 - Configurar uma Amazon VPC](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20180%20-%20Configurar%20uma%20Amazon%20VPC.md)
 
 ---
