@@ -55,7 +55,7 @@ esses blocos.
   - **dados temporários** de aplicativos como os dados que são criados para uso imediato durante a execução do processo, e que não precisam ser
     salvos após a conclusão.
 
-  - **caches de alto desempenho** como armazenamento de **Redis** e **Memchaced**:
+  - **caches de alto desempenho** como armazenamento de **Redis** e **Memcached**:
 
     - **Redis**: banco de dados em memória, muito rápido, usado principalmente para armazenar dados temporários ou cache, funciona como
       uma tabela de chave-valor, permitindo acessar informações instantaneamente.
