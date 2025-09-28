@@ -1,6 +1,6 @@
-🧪 Lab 179 - Migração para o Amazon RDS
+## 🧪 Lab 179 - Migração para o Amazon RDS
 
-## Visão geral do laboratório  
+### Visão geral do laboratório  
 
 Neste laboratório, vamos migrar um banco de dados MySQL/MariaDB para o **Amazon RDS**.  
 Será criado um ambiente seguro, com sub-redes públicas e privadas, grupos de segurança e instância RDS.  
@@ -9,7 +9,7 @@ O objetivo é entender a criação de recursos na AWS, conectar via CLI e testar
 
 ---
 
-## Arquitetura inicial  
+### Arquitetura inicial  
 O diagrama a seguir ilustra a topologia do ambiente de runtime do aplicativo web da cafeteria **antes da migração**:  
 
 <img width="816" height="904" alt="image" src="https://github.com/user-attachments/assets/3acec2c0-0d32-4d4e-ac38-01047ed0ec5d" />
@@ -20,7 +20,7 @@ O diagrama a seguir ilustra a topologia do ambiente de runtime do aplicativo web
 
 ---
 
-## Arquitetura final  
+### Arquitetura final  
 Após a migração, a topologia do ambiente do aplicativo web da cafeteria ficará da seguinte forma:  
 
 <img width="1516" height="878" alt="image" src="https://github.com/user-attachments/assets/3f19d60b-7d98-41ca-9fdc-3423d6640260" />
