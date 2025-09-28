@@ -33,7 +33,7 @@
 - [Créditos de CPU](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Cr%C3%A9ditos%20de%20CPU.md)
 - [VPC, Sub-redes, Rotas e Segurança](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/VPC%2C%20sub-redes%2C%20rotas%20e%20seguran%C3%A7a.md)
 - [Segurança na Nuvem: Root e IAM](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Seguran%C3%A7a%20na%20Nuvem%3A%20Root%20e%20IAM.md)
-- [Armazenamentos na AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Armazenamentos%20na%20AWS.md)
+- [Armazenamentos na AWS: objetos, blocos, arquivos](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Armazenamentos%20na%20AWS.md)
 - [Amazon S3 - Simple Storage Service](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20S3%20-%20Simple%20Storage%20Service.md)  
 
 ### Bando de dados 🎲
