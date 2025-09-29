@@ -30,7 +30,8 @@ Ele é ideal para:
 ## Características do Amazon S3
 
 - Cada **Bucket** tem um nome único / exclusivo.  
-- O tamanho máximo de um arquivo / objeto é de **5 TB**.  
+- O tamanho máximo de um arquivo / objeto é de até **5 TB**.
+- **Não há limite para o "volume total de dados"**, o S3 foi projetado para armazenar quantidades praticamente ilimitadas de dados.  
 - Todos os objetos possuem:
   - **Chave**  
   - **ID de versão**  
