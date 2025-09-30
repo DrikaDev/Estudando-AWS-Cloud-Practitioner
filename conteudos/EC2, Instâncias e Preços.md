@@ -4,10 +4,10 @@
 
 - [O que é o Amazon EC2?](#o-que-é-o-amazon-ec2)
 - [O que é uma instância?](#o-que-é-uma-instância)
-- [Tipos de instâncias e casos de uso](#tipos-de-instâncias-e-casos-de-uso)
+  - [Tipos de instâncias](#tipos-de-instâncias)
+  - [Séries e casos de uso](#séries-e-casos-de-uso)
 - [Definição de preços do EC2](#definição-de-preços-do-ec2)
 - [Como escolher a instância EC2 correta?](#como-escolher-a-instância-ec2-correta)
-
 ---
 
 ## O que é o Amazon EC2?
@@ -22,7 +22,7 @@ Uma instância EC2 é um serviço do tipo IaaS, composta por:
 - Rede (interfaces de rede virtuais, largura de banda configurável);
 - Sistema Operacional (Linux, Windows ou outro que você escolher instalar);
 
-> PS: O disco de uma EC2 pode variar — não é fixo como em um PC comum.
+> ⚠️ O disco de uma EC2 pode variar — não é fixo como em um PC comum.
 > Você pode escolher EBS (Elastic Block Store) para armazenamento persistente,
 > ou usar o Instance Store (armazenamento temporário que se perde ao desligar a instância).
 
@@ -47,7 +47,9 @@ Benefícios principais:
 Uma **instância do Amazon EC2** é um **servidor virtual** na Nuvem AWS.  
 Ao iniciar uma instância, você precisa definir um **tipo de instância**, que determina o hardware subjacente e os recursos disponíveis.  
 
-As instâncias EC2 são organizadas em **famílias**, cada uma otimizada para um tipo de recurso:  
+### Tipos de instâncias
+
+Os tipos de instância são nomeados com base na **família** de instância e no tamanho da instância, cada uma otimizada para um tipo de recurso:  
 
 | Família Principal | Foco Principal | Casos de Uso |
 |-------------------|----------------|--------------|
@@ -57,9 +59,7 @@ As instâncias EC2 são organizadas em **famílias**, cada uma otimizada para um
 | 🌐 **Computação Acelerada** | GPU, FPGA, chips especializados | IA, Machine Learning, HPC, renderização |
 | 💾 **Otimizada para Armazenamento** | I/O de disco de alta performance | Big Data, data warehouses, bancos NoSQL |
 
----
-
-## Séries de instâncias e exemplos
+### Séries e casos de uso
 
 Dentro de cada família, existem **séries** (gerações) que trazem combinações específicas de hardware e otimizações.  
 
