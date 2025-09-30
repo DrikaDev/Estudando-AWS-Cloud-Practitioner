@@ -44,33 +44,33 @@ Benefícios principais:
 
 ## O que é uma instância?
 
-Uma **instância do EC2** é um **servidor virtual** na Nuvem AWS.  
-Ao iniciar uma instância do EC2, você precisa definir um **tipo de instância**, que determina o hardware e os recursos disponíveis.  
+Uma **instância do Amazon EC2** é um **servidor virtual** na Nuvem AWS.  
+Ao iniciar uma instância, você precisa definir um **tipo de instância**, que determina o hardware subjacente e os recursos disponíveis.  
 
-Cada tipo de instância oferece um equilíbrio diferente de:  
-- 💻 **Computação (CPU)**  
-- 🧠 **Memória (RAM)**  
-- 🌐 **Rede (Networking)**  
-- 💾 **Armazenamento (EBS, SSD, etc.)**
+As instâncias EC2 são organizadas em **famílias**, cada uma otimizada para um tipo de recurso:  
 
-[⬆ Voltar ao índice](#índice)
+| Família Principal | Foco Principal | Casos de Uso |
+|-------------------|----------------|--------------|
+| ⚙️ **Uso Geral** | Equilíbrio entre CPU, memória e rede | Aplicações web, ambientes de dev/teste |
+| 💻 **Otimizada para Computação** | Alto desempenho de CPU | Processamento intensivo, servidores de aplicação |
+| 🧠 **Otimizada para Memoria** | Grande capacidade de RAM | Bancos de dados, cache em memória, análises em tempo real |
+| 🌐 **Computação Acelerada** | GPU, FPGA, chips especializados | IA, Machine Learning, HPC, renderização |
+| 💾 **Otimizada para Armazenamento** | I/O de disco de alta performance | Big Data, data warehouses, bancos NoSQL |
 
 ---
 
-## Tipos de instâncias e casos de uso
+## Séries de instâncias e exemplos
 
-As instâncias da AWS são categorizadas de acordo com o perfil de desempenho que oferecem.  
-Escolher o tipo de instância certo é essencial para otimizar **custo x desempenho** em seus projetos na nuvem.  
-A seguir, alguns tipos e seus principais cenários de uso:  
+Dentro de cada família, existem **séries** (gerações) que trazem combinações específicas de hardware e otimizações.  
 
-| Família       | Otimização           | Exemplos de uso                                  |
-|---------------|----------------------|--------------------------------------------------|
-| **T2/T3/T4g** | Econômicas, burstable | Testes, dev, apps leves                          |
-| **M4/M5/M6**  | Balanceadas (CPU+RAM) | Aplicações web, servidores de aplicação          |
-| **C4/C5/C6**  | CPU otimizada        | Processamento intensivo, análises de dados       |
-| **R4/R5/R6**  | Memória otimizada    | Bancos de dados, cache, in-memory apps           |
-| **P3/P4/G4**  | Computação acelerada (GPU) | IA, Machine Learning, renderização               |
-| **I3/I4/D2**  | Armazenamento e I/O  | Big Data, data warehouses, alta taxa de leitura/escrita |
+| Série        | Família             | Otimização                | Exemplos de Uso |
+|--------------|---------------------|---------------------------|-----------------|
+| **T2/T3/T4g** | General Purpose     | Econômicas, burstable     | Testes, dev, apps leves |
+| **M4/M5/M6**  | General Purpose     | Balanceadas (CPU+RAM)     | Aplicações web, servidores de aplicação |
+| **C4/C5/C6**  | Compute Optimized   | CPU otimizada             | Processamento intensivo, análises de dados |
+| **R4/R5/R6**  | Memory Optimized    | Memória otimizada         | Bancos de dados, cache, in-memory apps |
+| **P3/P4/G4**  | Accelerated Comp.   | GPU                       | IA, Machine Learning, renderização |
+| **I3/I4/D2**  | Storage Optimized   | Armazenamento e I/O       | Big Data, data warehouses, alta taxa de leitura/escrita |
 
 [⬆ Voltar ao índice](#índice)
 
@@ -81,14 +81,22 @@ A seguir, alguns tipos e seus principais cenários de uso:
 Com o **Amazon EC2**, você paga apenas pelo tempo de computação que usar.  
 A AWS oferece diversas opções de preço para diferentes necessidades:
 
-| Tipo de Instância         | Vantagem Principal                       | Casos de Uso Comuns                                    |
-|----------------------------|------------------------------------------|-------------------------------------------------------|
-| **Sob Demanda**           | Flexibilidade máxima                     | Dev/teste, cargas imprevisíveis                       |
-| **Reservadas (Standard)** | Maior economia (até 3 anos)              | Aplicações estáveis, workloads previsíveis            |
-| **Reservadas (Conversíveis)** | Flexibilidade com bom desconto        | Workloads que podem mudar tipo de instância ou região |
-| **Savings Plans**         | Desconto alto sem especificar instância  | Diversos workloads dentro de uma família de instância |
-| **Spot**                  | Economia extrema (até 90%)               | Processamento flexível, tarefas tolerantes a falhas   |
-| **Hosts Dedicados**       | Controle total + licenciamento próprio   | Workloads com requisitos de conformidade/licenciamento |
+- **Instâncias Sob Demanda**:  
+  O pagamento é efetuado estritamente pela capacidade computacional consumida, eliminando a necessidade de investimentos iniciais ou contratos de longo prazo.  
+- **Instâncias Reservadas**:  
+  Para cargas de trabalho estáveis e previsíveis, é possível obter uma redução de custos de até 75% ao assumir um compromisso de uso por um período de 1 ou 3 anos, vinculado a famílias de instâncias e Regiões específicas da AWS.  
+- **Instâncias Spot**:  
+  Permitem ofertar lances em capacidade computacional excedente da AWS, alcançando descontos de até 90% em relação ao preço Sob Demanda. Em contrapartida, a instância pode ser interrompida caso a AWS precise reaver a capacidade.  
+- **Savings Plans**:  
+  Garantem economia de até 72% em uma variedade de tipos de instâncias e serviços, mediante o compromisso com um nível de uso consistente por 1 ou 3 anos.  
+- **Hosts Dedicados**:  
+  Reservam um servidor físico inteiro para uso exclusivo. Oferecem controle total e são ideais para workloads com requisitos estritos de conformidade, segurança ou licenciamento.  
+- **Instâncias Dedicadas**:  
+  Pagamento por instâncias que operam em hardware fisicamente isolado, reservado unicamente para a sua conta. O principal benefício é o isolamento em relação às operações de outros clientes da AWS.  
+
+<p align="center">
+  <img width="370" height="283" alt="image" src="https://github.com/user-attachments/assets/2ce8ecfe-0cde-460c-96dd-bb33d75f0345" />
+</p>
 
 [⬆ Voltar ao índice](#índice)
 
