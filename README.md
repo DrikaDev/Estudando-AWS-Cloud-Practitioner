@@ -1,4 +1,4 @@
-## ☁️ Meus Estudos com AWS | Rumo à Certificação Cloud Practitioner 🚀
+## ☁️ Minha jornada para a AWS Cloud Practitioner 🚀
 
 ### 🎯 Objetivo  
 
