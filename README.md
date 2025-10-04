@@ -60,7 +60,7 @@
 
 - [11 - Introdução ao EC2 - Primeiro deploy: Mundo Invertido](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2011%20-%20Introdu%C3%A7%C3%A3o%20ao%20EC2%20-%20Primeiro%20deploy.md)
 - [160 - Criando e interagindo com um servidor de banco de dados RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20160%20-%20Criando%20e%20interagindo%20com%20um%20servidor%20de%20banco%20de%20dados%20RDS.md)
-- [Banco de dados - Criar tabela no DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Criar%20tabela%20no%20DynamoDB.md)
+- [275 - Introdução ao Amazon DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20275%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20DynamoDB.md)
 - [Banco de dados - Introdução ao Amazon Aurora](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20Aurora.md)
 - [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
