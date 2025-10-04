@@ -36,7 +36,7 @@
 - [Armazenamentos na AWS: objetos, blocos, arquivos](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Armazenamentos%20na%20AWS.md)
 - [Amazon S3 - Simple Storage Service](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20S3%20-%20Simple%20Storage%20Service.md)  
 
-### Bando de dados 🎲
+### Banco de dados 🎲
 
 -[]()
 
