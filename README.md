@@ -63,7 +63,6 @@
 - [Banco de dados - Introdução ao Amazon Aurora](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20Aurora.md)
 - [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [S3 - Hospedagem de site estático](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/S3%20-%20Lab.%20Hospedar%20um%20Site%20Est%C3%A1tico.md)  
-- [263 - Criar Sub-redes e Alocar Endereços IP em uma Amazon VPC](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20263%20-%20Criar%20Sub-redes%20e%20Alocar%20Endere%C3%A7os%20IP%20em%20uma%20Amazon%20VPC.md) 
 - [VPC - Criação de VPC e Servidor Web](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Criar%20uma%20VPC%20e%20iniciar%20um%20servidor%20Web.md) 
 - [VPC - Protocolos da Internet: IP Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)
 - [AWS KMS - Proteção de dados usando criptografia](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Prote%C3%A7%C3%A3o%20de%20dados%20usando%20criptografia.md)
@@ -80,6 +79,7 @@
 - [179 - Migração para o Amazon RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20179%20-%20Migra%C3%A7%C3%A3o%20para%20o%20Amazon%20RDS.md)
 - [180 - Configurar uma Amazon VPC](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20180%20-%20Configurar%20uma%20Amazon%20VPC.md)
 - [218 - Monitorar a infraestrutura](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20218%20-%20Monitorar%20a%20infraestrutura.md)
+- [263 - Criar Sub-redes e Alocar Endereços IP em uma Amazon VPC](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20263%20-%20Criar%20Sub-redes%20e%20Alocar%20Endere%C3%A7os%20IP%20em%20uma%20Amazon%20VPC.md) 
 - [275 - Introdução ao Amazon DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20275%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20DynamoDB.md)
 
 ---
