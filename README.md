@@ -27,7 +27,7 @@
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelo%20de%20Responsabilidade%20Compartilhada.md)
 - [Well-Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20Well-Architected%20Framework.md)
 
-### Serviços Essenciais:
+### Serviços Essenciais 🛠️
 
 - [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)
 - [Créditos de CPU](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Cr%C3%A9ditos%20de%20CPU.md)
