@@ -60,7 +60,6 @@
 
 - [11 - Introdução ao EC2 - Primeiro deploy: Mundo Invertido](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2011%20-%20Introdu%C3%A7%C3%A3o%20ao%20EC2%20-%20Primeiro%20deploy.md)
 - [160 - Criando e interagindo com um servidor de banco de dados RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20160%20-%20Criando%20e%20interagindo%20com%20um%20servidor%20de%20banco%20de%20dados%20RDS.md)
-- [EC2 - Monitorar uma instância](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 - [170 - Criar um site Estático no S3](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20170%20-%20Criar%20um%20site%20Est%C3%A1tico%20no%20S3.md)  
 - [172 - Criar instância do EC2 + Servidor Apache](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20172%20-%20Criar%20instancia%20do%20EC2%20+%20Servidor%20Apache.md)
 - [173 - Solucionar problemas para criar uma instância do EC2.md](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20173%20-%20Solucionar%20problemas%20para%20criar%20uma%20inst%C3%A2ncia%20do%20EC2.md#%C3%ADndice)
@@ -81,6 +80,7 @@
 - [275 - Introdução ao Amazon DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20275%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20DynamoDB.md)
 - [278 - Proteção de dados usando criptografia - AWS KMS (Key Management Service)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20278%20-%20Prote%C3%A7%C3%A3o%20de%20dados%20usando%20criptografia.md)
 - [280 - Proteção contra Malware usando o AWS Network Firewall](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20280%20-%20Prote%C3%A7%C3%A3o%20contra%20malware%20usando%20o%20AWS%20Network%20Firewall.md)
+- [281 - Monitorar uma instância do EC2](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20281%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
 
 ---
 
