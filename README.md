@@ -1,4 +1,4 @@
-## ☁️ Minha jornada para a AWS Cloud Practitioner 🚀
+## 🚶🏻‍♀️‍➡️ Minha jornada para a AWS Cloud Practitioner 🚀
 
 ### 🎯 Objetivo  
 
@@ -16,7 +16,7 @@
 
 ## 📒 Índice de Conteúdos
 
-### AWS ☁️
+### ☁️ AWS
 
 - [Guia do Exame AWS Certified Cloud Practitioner (CLF-C02)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Guia%20do%20exame%20AWS%20Certified%20Cloud%20Practitioner.md)
 - [Um pouco de história da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Um%20pouco%20de%20hist%C3%B3ria.md)
@@ -27,7 +27,7 @@
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelo%20de%20Responsabilidade%20Compartilhada.md)
 - [Well-Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20Well-Architected%20Framework.md)
 
-### Serviços Essenciais 🛠️
+### 🛠️ Serviços Essenciais 
 
 - [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)
 - [Créditos de CPU](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Cr%C3%A9ditos%20de%20CPU.md)
@@ -36,13 +36,13 @@
 - [Armazenamentos na AWS: objetos, blocos, arquivos](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Armazenamentos%20na%20AWS.md)
 - [Amazon S3 - Simple Storage Service](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20S3%20-%20Simple%20Storage%20Service.md)  
 
-### Banco de dados 🎲
+### 🎲 Banco de dados 
 
 -[]()
 
 ---
 
-## Linux 🐧
+## 🐧 Linux 
 
 - [Linux - O que é?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Linux%20-%20O%20que%20%C3%A9.md)
 - [Linux - Trabalhando com o sistema de arquivos](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Linux%20-%20Trabalhando%20com%20o%20sistema%20de%20arquivos.md)
@@ -50,13 +50,13 @@
 
 ---
 
-## Python 🐍
+## 🐍 Python 
 
 - [DevOps: Automação x Orquestração](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/DevOps%20-%20Automa%C3%A7%C3%A3o%20x%20Orquestra%C3%A7%C3%A3o.md)
 
 ---
 
-## Laboratórios 🧪
+## 🧪 Laboratórios 
 
 - [11 - Introdução ao EC2 - Primeiro deploy: Mundo Invertido](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2011%20-%20Introdu%C3%A7%C3%A3o%20ao%20EC2%20-%20Primeiro%20deploy.md)
 - [160 - Criando e interagindo com um servidor de banco de dados RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20160%20-%20Criando%20e%20interagindo%20com%20um%20servidor%20de%20banco%20de%20dados%20RDS.md)
