@@ -1,14 +1,17 @@
-## 🧪 Lab: Hospedar um Site Estático no S3
+## 🧪 Lab 170 - Criar um site Estático no S3
 
-Vamos criar um bucket no Amazon S3 para hospedar um site estático e colocar em prática os conceitos de **permissões e políticas públicas**.  
+Neste laboratório, vamos criar um bucket no Amazon S3 para hospedar um site estático e colocar em prática os conceitos de **permissões e políticas públicas**.  
 
-### 📌 Passo 1 — Criar o Bucket
+> Os clientes poderão acessar o site implantado no Amazon S3.  
+<img width="951" height="354" alt="image" src="https://github.com/user-attachments/assets/ec215ab5-d84a-4f49-b5d2-184b73841064" />
+
+### Tarefa 1 - Criar um bucket do S3
 
 1. Acesse o **Amazon S3** e clique em **Create bucket**.  
    
    <img width="886" height="200" alt="image" src="https://github.com/user-attachments/assets/97850ab4-2f1f-4884-967b-a3b64b7572dd" />
    
-2. Escolha um **nome único** para o bucket.  
+2. Escolha um **nome único / exclusivo** para o bucket.  
    
    <img width="886" height="465" alt="image" src="https://github.com/user-attachments/assets/76cd967e-74d3-49cf-abae-f22f87b23284" />
    
@@ -23,7 +26,7 @@ Vamos criar um bucket no Amazon S3 para hospedar um site estático e colocar em 
 
 ---
 
-### 📌 Passo 2 — Fazer o Upload dos Arquivos
+### Tarefa 2 - Fazer o Upload dos Arquivos
 
 1. Entre no bucket criado.  
    
@@ -39,7 +42,7 @@ Vamos criar um bucket no Amazon S3 para hospedar um site estático e colocar em 
 
 ---
 
-### 📌 Passo 3 — Habilitar a Hospedagem de Site Estático
+### Tarefa 3 - Habilitar a Hospedagem de Site Estático
 
 1. Vá até a aba **Properties** do seu bucket.
    
@@ -61,7 +64,7 @@ Vamos criar um bucket no Amazon S3 para hospedar um site estático e colocar em 
 
 ---
 
-### 📌 Passo 4 — Corrigir o Erro 403 (Permissões)
+### Tarefa 4 - Corrigir o Erro 403 (Permissões)
 
 Ao tentar acessar o site, temos o **Erro 403 (Access Denied)**.  
 
@@ -110,7 +113,9 @@ Para corrigir:
 
 ---
 
-👉🏻 Essa prática não só reforça o aprendizado de **permissões e políticas públicas**,  
-mas também mostra como usar a AWS para **publicar um site real** de forma simples e acessível.
+👉🏻 Essa prática não só reforça o aprendizado de **permissões e políticas públicas**, mas também mostra como usar a AWS para **publicar um site real** 
+de forma simples e acessível.
+
+---
 
 👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
