@@ -1,4 +1,4 @@
-## 🧪 Lab - Monitorar uma instância do EC2
+## 🧪 Lab 281 - Monitorar uma instância do EC2
 
 ## 📝 Introdução
 
@@ -38,7 +38,10 @@ O monitoramento detecta acessos não autorizados e alinha o uso dos serviços co
 
 ---
 
-## Tarefa 1: configurar o Amazon SNS - criar um tópico do SNS e se inscrever nele usando um endereço de e-mail.  
+## Tarefa 1: Configurar o Amazon SNS
+
+Nesta tarefa, vamos criar um tópico do SNS e se inscrever nele usando um endereço de e-mail.  
+O **Amazon SNS** é um serviço de mensagens totalmente gerenciado para comunicações de aplicativo com aplicativo (A2A) e de aplicativo com pessoa (A2P).  
 
 1. Acesse o serviço **SNS (Simple Notification Service)** no console da AWS.
    
@@ -47,8 +50,8 @@ O monitoramento detecta acessos não autorizados e alinha o uso dos serviços co
 
 3. Na página **Create topic**, na seção **Details**, configure as seguintes opções:  
 
-- Type: escolha Standard  
-- Name: insira **'MyCwAlarm'**  
+   - Type: escolha Standard  
+   - Name: insira **'MyCwAlarm'**  
 
   <img width="1390" height="449" alt="image" src="https://github.com/user-attachments/assets/f4c993b1-66be-43c4-84d6-6473bf39594e" />
   Clique em **Create topic**  
@@ -58,9 +61,9 @@ O monitoramento detecta acessos não autorizados e alinha o uso dos serviços co
 
 5. Na página **Create subscription**, na seção **Details**, configure as seguintes opções:  
 
-- Topic ARN (ARN do tópico): deixe a opção padrão selecionada.  
-- Protocol (Protocolo): na lista suspensa, escolha Email.  
-- Endpoint: insira um endereço de e-mail válido que você possa acessar.  
+   - Topic ARN (ARN do tópico): deixe a opção padrão selecionada.  
+   - Protocol (Protocolo): na lista suspensa, escolha Email.  
+   - Endpoint: insira um endereço de e-mail válido que você possa acessar.  
   <img width="1391" height="436" alt="image" src="https://github.com/user-attachments/assets/4e3e0dbe-c128-4d58-91e8-94194a50b535" />
 
 6. Na seção Details, o status deve estar como **Pending confirmation**.  
@@ -79,9 +82,21 @@ O monitoramento detecta acessos não autorizados e alinha o uso dos serviços co
     
 ---
 
-## Tarefa 2: criar um alarme do CloudWatch para iniciar e enviar um e-mail para o seu tópico SNS se a instância do EC2 Stress Test aumentar para utilização de CPU em mais de 60%.  
-   
-1. No console de gerenciamento da AWS, insira Cloudwatch na barra de pesquisa e o selecione.  
+## Tarefa 2: Criar um alarme do CloudWatch
+
+Nesta tarefa, vamos criar um **alarme do Amazon CloudWatch** para monitorar a utilização da CPU da instância **EC2 Stress Test**.  
+O alarme será configurado para enviar uma notificação ao tópico SNS quando a utilização da CPU ultrapassar **60%**.  
+
+### O que é o Amazon CloudWatch?
+
+O **Amazon CloudWatch** é um serviço de monitoramento e observabilidade projetado para fornecer **dados e insights práticos** que ajudam a:  
+- Monitorar aplicativos  
+- Responder a alterações de performance  
+- Otimizar a utilização de recursos  
+
+O **CloudWatch** coleta **logs, métricas e eventos**, oferecendo uma visão unificada da integridade operacional e visibilidade de recursos, aplicativos e serviços da **AWS** e ambientes **on-premises**.
+
+1. No console de gerenciamento da AWS, insira **Cloudwatch** na barra de pesquisa e o selecione.  
    
 2. No painel de navegação à esquerda, escolha a lista suspensa **Metrics** e, depois, **All metrics**.  
    O CloudWatch geralmente leva de 5 a 10 minutos após a criação da instância do EC2 para começar a obter detalhes de métricas.
@@ -144,11 +159,12 @@ O monitoramento detecta acessos não autorizados e alinha o uso dos serviços co
 
 ---
 
-## Tarefa 3: testar o alarme do CloudWatch: fazer login na instância do EC2 **Stress Test** e executar um comando que force a CPU a carregar até 100%.  
+## Tarefa 3: Testar o alarme do CloudWatch
 
-   > Esse aumento de utilização da CPU ativará o alarme do CloudWatch, que fará com que o Amazon SNS envie uma notificação para o e-mail associado com o tópico SNS.  
+Nesta tarefa, vamos fazer login na instância do **EC2 Stress Test** e executar um comando que force a CPU a carregar até 100%.  
+Esse aumento de utilização da CPU ativará o alarme do CloudWatch, que fará com que o Amazon SNS envie uma notificação para o e-mail associado com o tópico SNS.  
 
-1. Navegue até à página do console Vocareum e selecione o botão AWS Details.  
+1. Navegue até à página do console Vocareum e selecione o botão **AWS Details**.  
    Ao lado de EC2InstanceURL, há um link. Copie e cole-o em uma nova guia do navegador.  
    Esse link conectará você à instância do EC2 Stress Test.  
 
@@ -171,16 +187,29 @@ top
 5. Escolha **LabCPUUtilizationAlarm**.
 
 6. Monitore o grafo enquanto seleciona o botão refresh a cada minuto até que o status do alarme seja **In alarm**.  
+
    > O status do alarme demora alguns minutos para mudar para **In alarm** e para enviar o e-mail.  
+   
    No grafo, você pode ver onde a **CPUUtilization** aumentou acima do limite de 60%.
+   
    <img width="903" height="526" alt="image" src="https://github.com/user-attachments/assets/92cd6598-686e-4a44-8389-db070b2126b6" />
 
-7. Acesse o e-mail que você forneceu ao configurar a assinatura do Amazon SNS.
+8. Acesse o e-mail que você forneceu ao configurar a assinatura do Amazon SNS.
    Deverá haver uma notificação de e-mail da AWS Notifications (Notificações da AWS).
 
 ---
 
-## Tarefa 4: criar um painel do CloudWatch usando as mesmas métricas que usou para CPUUtilization  
+## Tarefa 4: Criar um painel do CloudWatch 
+
+Nesta tarefa, vamos criar um **painel do CloudWatch** usando as mesmas métricas utilizadas para **CPUUtilization**, que foram usadas ao longo deste laboratório.  
+
+Os **painéis do CloudWatch** são páginas de início personalizáveis no console do CloudWatch que permitem monitorar seus recursos em uma única visualização.  
+
+Eles possibilitam:
+
+- Monitorar recursos distribuídos em **diferentes regiões**.  
+- Criar **visualizações personalizadas** de métricas e alarmes.  
+- Facilitar a análise de desempenho e saúde operacional dos seus recursos AWS.  
 
 1. Acesse a seção do CloudWatch no console da AWS e no painel de navegação à esquerda, escolha **Dashboards**.  
    Escolha **Create dashboard**.  
@@ -202,7 +231,9 @@ top
 ---
 
 ## ✅ Conclusão
+
 Com este laboratório, entendemos a importância de criar um alarme no **CloudWatch** que é acionado quando a instância de teste de estresse (**Stress Test**) excede um limite específico de utilização de CPU.  
+
 Também configuramos uma assinatura no **Amazon SNS** para envio de e-mails quando o alarme for disparado.  
 
 Além disso, realizamos login na instância do **EC2** e executamos um comando de teste de estresse que elevou a utilização da CPU a 100%.  
