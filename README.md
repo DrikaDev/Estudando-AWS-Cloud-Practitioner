@@ -26,6 +26,7 @@
 - [Infraestrutura Global da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Infraestrutura%20global%20da%20AWS.md)
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelo%20de%20Responsabilidade%20Compartilhada.md)
 - [Well-Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20Well-Architected%20Framework.md)
+- [AWS Cloud Adoption Framework (CAF)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20CAF.md)
 
 ### 🛠️ Serviços Essenciais 
 
