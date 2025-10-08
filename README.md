@@ -85,6 +85,7 @@
 - [267 - Criação de uma VPC e iniciar um servidor Web](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20267%20-%20Criar%20uma%20VPC%20e%20iniciar%20um%20servidor%20Web.md) 
 - [274 - Introdução ao Amazon Aurora](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20274%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20Aurora.md)
 - [275 - Introdução ao Amazon DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20275%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20DynamoDB.md)
+- [276 - Ativar o Amazon Inspector para avaliação e correção de vulnerabilidades.md](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20276%20-%20Ativar%20o%20Amazon%20Inspector%20para%20avalia%C3%A7%C3%A3o%20e%20corre%C3%A7%C3%A3o%20de%20vulnerabilidades.md)
 - [278 - Proteção de dados usando criptografia - AWS KMS (Key Management Service)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20278%20-%20Prote%C3%A7%C3%A3o%20de%20dados%20usando%20criptografia.md)
 - [280 - Proteção contra Malware usando o AWS Network Firewall](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20280%20-%20Prote%C3%A7%C3%A3o%20contra%20malware%20usando%20o%20AWS%20Network%20Firewall.md)
 - [281 - Monitorar uma instância do EC2](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20281%20-%20Monitorar%20uma%20inst%C3%A2ncia%20do%20EC2.md)
