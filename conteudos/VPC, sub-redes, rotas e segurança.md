@@ -68,8 +68,9 @@ Cada rota especifica uma origem e um destino: da onde o pacote tá saindo e pra 
 - **Internet Gateway (IGW)** → fica atachado na VPC, conecta a sub-rede pública diretamente à Internet.  
 - **NAT Gateway (Network Address Translation)** → fica em uma sub-rede pública e tem rota para a Internet via IGW.  
   - Permite que **recursos da sub-rede privada saiam para a Internet**, mas sem permitir conexões de entrada da Internet para eles.  
-  - Ou seja: a máquina privada consegue acessar "lá fora", mas ninguém de "lá fora" consegue iniciar conexão com ela.
+  - Ou seja: a máquina privada consegue acessar "lá fora", mas ninguém "lá de fora" consegue iniciar conexão com ela.
 
+  > 👉 Então sim: o NAT Gateway é a “ponte” para a sub-rede privada `sair para a Internet, mas sem abrir essa sub-rede para acesso externo.
 ---
 
 ## 🔒 Firewalls
