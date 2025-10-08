@@ -39,7 +39,7 @@
 
 ### 🎲 Banco de dados 
 
--[O que é um Banco de Dados?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Banco%20de%20dados.md)
+- [O que é um Banco de Dados?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Banco%20de%20dados.md)
 
 ---
 
