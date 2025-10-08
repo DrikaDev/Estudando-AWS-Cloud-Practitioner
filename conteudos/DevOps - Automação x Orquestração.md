@@ -1,8 +1,5 @@
 ## 🫱🏻‍🫲🏼 DevOps: Automação x Orquestração
 
-Este exercício tem como objetivo diferenciar **automação** e **orquestração** dentro do contexto de **DevOps**, 
-além de identificar pontos em comum entre eles.
-
 ## 🔹 O que é DevOps?
 
 É uma abordagem de desenvolvimento de software que **integra as equipes de Desenvolvimento (Dev) e Operações (Ops)** para entregar aplicações e 
