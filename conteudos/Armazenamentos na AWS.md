@@ -83,21 +83,39 @@ A **Instance Store** é ideal para dados que precisam de velocidade extrema e n�
 
 ### Amazon EBS (Elastic Block Store)
 
-- Fica na mesma zona de disponibilidade que a instância EC2.  
+Na AWS, um **EBS** é o volume de armazenamento usado por instâncias do **EC2 (Elastic Compute Cloud)**.  
 
-- Você define a configuração (tamanho e tipo do volume).  
+Foi projetado para **durabilidade de dados**, e os volumes são **replicados automaticamente dentro da sua Zona de Disponibilidade** para evitar perda de dados devido à falha de qualquer componente individual.  
 
-- Permite backups incrementais criando **snapshots** (cópias que servem para backup ou recuperação), ou seja, após o primeiro **snapshot**
-  completo, os próximos registram apenas as alterações feitas desde o último snapshot, economizando espaço.
+**Características principais:**  
 
-  <img width="1299" height="520" alt="image" src="https://github.com/user-attachments/assets/fe19752c-4c19-49c9-8658-f031c4d9518d" />
+- **Anexado a uma instância EC2**  
+  Os volumes do EBS são conectados a uma instância e aparecem como uma unidade de rede que você pode montar e formatar usando o sistema de arquivos de sua escolha.
 
-- Quando a instância encerra, os dados do volume permanecem disponíveis (desde que o volume não seja configurado para exclusão automática).
+- **Uso típico**  
+  - Armazenamento primário para dados que exigem atualizações frequentes.  
+  - Unidade de sistema para uma instância EC2.  
+  - Armazenamento para aplicativos de banco de dados.
 
-💡**Resumidamente falando:**
+- **Durabilidade e segurança**  
+  A replicação automática dentro da Zona de Disponibilidade garante que seus dados permaneçam seguros mesmo em caso de falhas de hardware.
 
-O **EBS** é como um **HD dedicado** para sua instância, é um volume “grudado” em uma instância, mas os dados ficam mesmo após encerrar a
-instância, se o volume não for deletado.
+- **Localização e configuração**  
+  - Fica na **mesma Zona de Disponibilidade** que a instância EC2.  
+  - Você define a **configuração** (tamanho e tipo do volume).  
+
+- **Backups e snapshots**  
+  - Permite backups incrementais criando **snapshots** (cópias para backup ou recuperação).  
+  - Após o primeiro snapshot completo, os próximos registram apenas as alterações desde o último snapshot, economizando espaço.
+
+- **Persistência de dados**  
+  Quando a instância encerra, os dados do volume permanecem disponíveis (desde que o volume não seja configurado para exclusão automática).
+
+<img width="1299" height="520" alt="Amazon EBS" src="https://github.com/user-attachments/assets/fe19752c-4c19-49c9-8658-f031c4d9518d" />
+
+**Resumo:**  
+
+O **EBS** é como um **HD dedicado** para sua instância: é um volume “grudado” na instância, mas os dados permanecem mesmo após encerrar a instância, se o volume não for deletado.
 
 [⬆ Voltar ao índice](#índice)
 
@@ -107,8 +125,8 @@ instância, se o volume não for deletado.
 
 O armazenamento já está organizado em pastas e arquivos (como EFS), pronto para múltiplos usuários acessarem via rede.
 
-- [Amazon EFS (Elastic File System)](#amazon-efs-elastic-file-system)
-- [Amazon FSx](#amazon-fsx)
+- [Amazon EFS (Elastic File System)](#amazon-efs-elastic-file-system)  
+- [Amazon FSx (File System)](#amazon-fsx-file-system)  
 
 ---
 
