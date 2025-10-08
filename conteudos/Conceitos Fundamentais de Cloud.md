@@ -1,10 +1,19 @@
-## Conceitos Fundamentais de Cloud: VPC, Sub-redes, Rotas e Segurança
+## Conceitos Fundamentais de Cloud
 
-Para conseguir sobreviver dentro desse universo de **Cloud**, é essencial saber o significado de **VPC, Sub-redes, Rotas e Segurança**.
+Para conseguir sobreviver dentro desse universo de **Cloud**, é essencial saber os conceitos de **VPC, Blocos CIDR, Sub-redes, Rotas, Firewalls e Gateways**.
+
+## Índice – Conceitos Fundamentais de Cloud
+
+- [VPC (Virtual Private Cloud)](#vpc-virtual-private-cloud)  
+- [Blocos CIDR](#blocos-cidr)  
+- [Sub-redes (Subnets)](#sub-redes-subnets)  
+- [Rotas (Route Tables)](#rotas-route-tables)  
+- [Firewalls](#firewalls)  
+- [Gateways (Portões de entrada)](#gateways-portões-de-entrada)  
 
 ---
 
-## 🌐 VPC (Virtual Private Cloud)
+## VPC (Virtual Private Cloud)
 
 É uma **rede virtual privada**, segura, isolada e configurável que serve para termos **controle total sobre o nosso ambiente de rede na nuvem**.  
 
@@ -12,11 +21,11 @@ Para conseguir sobreviver dentro desse universo de **Cloud**, é essencial saber
 
 Além disso, você pode criar uma **conexão de Rede Virtual Privada (VPN)** de hardware entre seu datacenter corporativo e sua VPC para aproveitar a nuvem AWS como uma extensão do seu datacenter corporativo.  
 
-### 🔑 Principais funções da VPC:
+Principais funções da VPC:
+
 - **Isolamento e segurança**  
   Cada VPC é separada das outras, então seus recursos não ficam “misturados” com os de outras empresas.  
-  Você controla quem acessa, de onde acessa e por quais portas (usando regras de firewall: **Security Groups** em nível de instância e
-  **NACLs** em nível de sub-rede).
+  Você controla quem acessa, de onde acessa e por quais portas (usando regras de firewall: **Security Groups** em nível de instância e **NACLs** em nível de sub-rede).
 
 - **Controle de endereços IP**  
   Você escolhe o intervalo de endereços IP (CIDR) que será usado.  
@@ -34,7 +43,23 @@ Além disso, você pode criar uma **conexão de Rede Virtual Privada (VPN)** de 
 
 ---
 
-## 🏘️ Sub-redes (Subnets)
+## Blocos CIDR
+
+**CIDR** significa *Roteamento Interdomínio Sem Classes* (*Classless Inter-Domain Routing*)  
+
+Na **VPC da AWS**, um **bloco CIDR** é o bloco de endereços IP a partir do qual os endereços IPv4 privados e públicos são alocados quando você cria uma VPC.  
+
+Características principais:
+
+- O bloco CIDR pode variar de **/28** (16 endereços IP) até **/16** (65.536 endereços IP).  
+- Ele representa um **segmento de rede** e está associado a um **limite de rede**.  
+- Após a criação, **não é possível alterar** o bloco CIDR principal da VPC.  
+- É possível **adicionar blocos CIDR adicionais** caso seja necessário.  
+- O bloco CIDR da VPC **não deve se sobrepor** a nenhum dos blocos CIDR da rede existente.  
+
+---
+
+## Sub-redes (Subnets)
 
 Dentro da VPC, dividimos a rede em **sub-redes menores** que são deploiadas dentro da VPC.
 
@@ -46,12 +71,13 @@ Dentro da VPC, dividimos a rede em **sub-redes menores** que são deploiadas den
 
 ---
 
-## 🚦 Rotas (Route Tables)
+## Rotas (Route Tables)
 
 Definem **para onde o tráfego vai dentro da rede**. 
 Cada rota especifica uma origem e um destino: da onde o pacote tá saindo e pra onde ele vai.
 
-### Exemplos:
+Exemplos:
+
 - Se a **sub-rede pública** precisar sair para a Internet → rota aponta para o **Internet Gateway**.  
   - **Sub-rede pública** → rota default `0.0.0.0/0` aponta direto para o **Internet Gateway (IGW)**.
 
@@ -63,24 +89,14 @@ Cada rota especifica uma origem e um destino: da onde o pacote tá saindo e pra 
 
 ---
 
-## 🌍 Gateways (Portões de entrada)
-
-- **Internet Gateway (IGW)** → fica atachado na VPC, conecta a sub-rede pública diretamente à Internet.  
-- **NAT Gateway (Network Address Translation)** → fica em uma sub-rede pública e tem rota para a Internet via IGW.  
-  - Permite que **recursos da sub-rede privada saiam para a Internet**, mas sem permitir conexões de entrada da Internet para eles.  
-  - Ou seja: a máquina privada consegue acessar "lá fora", mas ninguém "lá de fora" consegue iniciar conexão com ela.
-
-  > 👉 Então sim: o NAT Gateway é a “ponte” para a sub-rede privada `sair para a Internet, mas sem abrir essa sub-rede para acesso externo.
----
-
-## 🔒 Firewalls
+## Firewalls
 
 ### 🛡️ NACLs (Network Access Control Lists)
 - **Firewalls em nível de sub-rede**.  
 - Controlam o tráfego de **entrada e saída** (*inbound/outbound*) para as sub-redes da sua VPC.  
 - Diferente dos Security Groups (que funcionam em instâncias), as **NACLs atuam antes**, protegendo a sub-rede inteira.
 
-#### Características principais:
+Características principais:
 - Funcionam por **regras numéricas** (rule number).  
 - A AWS avalia da menor para a maior até achar uma que se aplique.  
 - Permitem e negam tráfego (**Allow** ou **Deny**).  
@@ -93,6 +109,18 @@ Cada rota especifica uma origem e um destino: da onde o pacote tá saindo e pra 
 - Funcionam diretamente sobre cada recurso (EC2, RDS, etc.).  
 - São **Stateful**: se você libera a entrada, a saída correspondente já é automaticamente liberada.
   
+---
+
+## Gateways (Portões de entrada)
+
+- **Internet Gateway (IGW)** → fica atachado na VPC, conecta a sub-rede pública diretamente à Internet.  
+
+- **NAT Gateway (Network Address Translation)** → fica em uma sub-rede pública e tem rota para a Internet via IGW.  
+  - Permite que **recursos da sub-rede privada saiam para a Internet**, mas sem permitir conexões de entrada da Internet para eles.  
+  - Ou seja: a máquina privada consegue acessar "lá fora", mas ninguém "lá de fora" consegue iniciar conexão com ela.
+
+  > 👉 Então sim: o NAT Gateway é a “ponte” para a sub-rede privada `sair para a Internet, mas sem abrir essa sub-rede para acesso externo.
+
 ---
 
 👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
