@@ -33,8 +33,8 @@
 
 - [EC2, Instâncias e Preços](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/EC2%2C%20Inst%C3%A2ncias%20e%20Pre%C3%A7os.md)
 - [Créditos de CPU](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Cr%C3%A9ditos%20de%20CPU.md)
-- [VPC, Sub-redes, Rotas e Segurança](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/VPC%2C%20sub-redes%2C%20rotas%20e%20seguran%C3%A7a.md)
 - [Armazenamentos na AWS: objetos, blocos, arquivos](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Armazenamentos%20na%20AWS.md)
+- [VPC, Blocos CIDR, Sub-redes, Rotas, Firewalls e Gateways](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/VPC,%20Blocos%20CIDR,%20Sub-redes,%20Rotas,%20Firewalls%20e%20Gateways.md)
 - [Amazon S3 - Simple Storage Service](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20S3%20-%20Simple%20Storage%20Service.md)  
 
 ### 🎲 Banco de dados 
