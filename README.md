@@ -39,7 +39,7 @@
 
 ### 🎲 Banco de dados 
 
--[]()
+-[O que é um Banco de Dados?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Banco%20de%20dados.md)
 
 ---
 
@@ -52,6 +52,12 @@
 ---
 
 ## 🐍 Python 
+
+- [DevOps: Automação x Orquestração](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/DevOps%20-%20Automa%C3%A7%C3%A3o%20x%20Orquestra%C3%A7%C3%A3o.md)
+
+---
+
+## 🛠️ DevOps
 
 - [DevOps: Automação x Orquestração](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/DevOps%20-%20Automa%C3%A7%C3%A3o%20x%20Orquestra%C3%A7%C3%A3o.md)
 
