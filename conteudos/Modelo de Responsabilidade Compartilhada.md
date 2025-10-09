@@ -1,7 +1,11 @@
 ## Modelo de Responsabilidade Compartilhada AWS
 
-Na AWS, o conceito de **"Responsabilidade Compartilhada"** refere-se à distribuição de responsabilidades de segurança e conformidade entre a AWS e o usuário/cliente.  
-Esse modelo compartilhado visa reduzir a carga operacional para os usuários e fornecer controles de segurança flexíveis.  
+Na AWS, o conceito de **"Responsabilidade Compartilhada"** refere-se à distribuição de responsabilidades de segurança, operação e conformidade entre a AWS e o usuário/cliente.  
+Esse modelo permite que os clientes se concentrem na criação e implantação de **aplicações**, enquanto a AWS gerencia a operação e manutenção dos componentes de **hardware, software e rede** subjacentes.
+
+> A **Área de Conformidade** da AWS engloba controles, certificações e ferramentas que garantem que a infraestrutura de nuvem atenda a diversos **padrões de segurança e regulamentações**.
+
+O modelo compartilhado visa **reduzir a carga operacional** para os usuários e fornecer controles de segurança flexíveis.
 
 ## Segurança **DA** nuvem
 Nesse modelo, a AWS é responsável pela segurança **"da nuvem"** — incluindo a infraestrutura global composta por hardware, software, redes e as instalações que executam os serviços de nuvem da AWS.  
