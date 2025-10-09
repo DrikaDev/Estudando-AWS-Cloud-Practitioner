@@ -7,6 +7,7 @@
   - [Tipos de instâncias](#tipos-de-instâncias)
   - [Séries e casos de uso](#séries-e-casos-de-uso)
 - [Definição de preços do EC2](#definição-de-preços-do-ec2)
+- [Opções de Pagamento para Instâncias Reservadas (RIs) do Amazon EC2](#opções-de-pagamento-para-instâncias-reservadas-ris-do-amazon-ec2)
 - [Como escolher a instância EC2 correta?](#como-escolher-a-instância-ec2-correta)
 ---
 
@@ -82,15 +83,19 @@ Com o **Amazon EC2**, você paga apenas pelo tempo de computação que usar.
 A AWS oferece diversas opções de preço para diferentes necessidades:
 
 - **Instâncias Sob Demanda**:  
-  O pagamento é efetuado estritamente pela capacidade computacional consumida, eliminando a necessidade de investimentos iniciais ou contratos de longo prazo.  
+  O pagamento é efetuado estritamente pela capacidade computacional consumida, eliminando a necessidade de investimentos iniciais ou contratos de longo prazo.
+  
 - **Instâncias Reservadas**:  
-  Para cargas de trabalho estáveis e previsíveis, é possível obter uma redução de custos de até 75% ao assumir um compromisso de uso por um período de 1 ou 3 anos, vinculado a famílias de instâncias e Regiões específicas da AWS.  
+  Para cargas de trabalho estáveis e previsíveis, é possível obter uma redução de custos de até 75% ao assumir um compromisso de uso por um período de 1 ou 3 anos, vinculado a famílias de instâncias e Regiões específicas da AWS.
+  
 - **Instâncias Spot**:  
-  Permitem ofertar lances em capacidade computacional excedente da AWS, alcançando descontos de até 90% em relação ao preço Sob Demanda. Em contrapartida, a instância pode ser interrompida caso a AWS precise reaver a capacidade.  
+  Permitem ofertar lances em capacidade computacional excedente da AWS, alcançando descontos de até 90% em relação ao preço Sob Demanda. Em contrapartida, a instância pode ser interrompida caso a AWS precise reaver a capacidade.
+  
 - **Savings Plans**:  
   Garantem economia de até 72% em uma variedade de tipos de instâncias e serviços, mediante o compromisso com um nível de uso consistente por 1 ou 3 anos.  
 - **Hosts Dedicados**:  
-  Reservam um servidor físico inteiro para uso exclusivo. Oferecem controle total e são ideais para workloads com requisitos estritos de conformidade, segurança ou licenciamento.  
+  Reservam um servidor físico inteiro para uso exclusivo. Oferecem controle total e são ideais para workloads com requisitos estritos de conformidade, segurança ou licenciamento.
+  
 - **Instâncias Dedicadas**:  
   Pagamento por instâncias que operam em hardware fisicamente isolado, reservado unicamente para a sua conta. O principal benefício é o isolamento em relação às operações de outros clientes da AWS.  
 
@@ -99,6 +104,33 @@ A AWS oferece diversas opções de preço para diferentes necessidades:
 </p>
 
 [⬆ Voltar ao índice](#índice)
+
+---
+
+## Opções de Pagamento para Instâncias Reservadas (RIs) do Amazon EC2
+
+As opções de pagamento para instâncias reservadas (RIs) do Amazon EC2 são **Tudo Adiantado**, **Parcialmente Adiantado** e **Sem Adiantamento**. A escolha da opção afeta o valor do desconto, sendo que o **Tudo Adiantado** oferece a maior economia.
+
+### Modelos de Pagamento
+
+#### AURI - Tudo Adiantado (All Upfront Payment)
+- **Descrição:** Você faz um único pagamento inicial que cobre todo o período da instância reservada.  
+- **Vantagem:** Oferece o maior desconto disponível.
+
+#### PURI - Parcialmente Adiantado (Partial Upfront Payment)
+- **Descrição:** Você paga um valor inicial baixo e, em seguida, realiza pagamentos por hora com desconto ao longo do período da reserva.  
+- **Vantagem:** Equilíbrio entre pagamento inicial e economia, com desconto menor que o "Tudo Adiantado".
+
+#### NURI - Sem Adiantamento (No Upfront Payment)
+- **Descrição:** Não é necessário nenhum pagamento inicial. Você é cobrado uma taxa por hora com desconto durante todo o período da reserva, independentemente de a instância estar em uso ou não.  
+- **Vantagem:** Sem custo inicial, mas o desconto é o menor entre as opções.
+
+<img width="1210" height="385" alt="image" src="https://github.com/user-attachments/assets/657136d9-5711-4419-b2f8-8e8ec4bb2261" />
+
+### Fatores a Considerar
+- **Redução de Custos:** Quanto mais você paga adiantado, maior é o desconto que você obtém.  
+- **Planejamento:** Planeje o uso contínuo dos recursos, pois o compromisso de um período mais longo (1 ou 3 anos) influencia a economia oferecida.  
+- **Flexibilidade:** Avalie se você precisa da flexibilidade das instâncias reservadas **conversíveis** (que permitem alterar atributos da instância) ou se as instâncias reservadas **padrão** (maior desconto) são mais adequadas para uso constante.
 
 ---
 
