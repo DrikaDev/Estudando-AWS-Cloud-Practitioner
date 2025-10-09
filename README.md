@@ -42,11 +42,14 @@
 - [Amazon SES (Simple Email Service)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20SES.md)
 - [AWS Route 53](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20Route%2053.md)
 - [Amazon CloudWatch](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20CloudWatch.md)
+- [Amazon CloudFront](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/tree/main/conteudos)
 
 ### 🎲 Banco de dados 
 
 - [O que é um Banco de Dados?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Banco%20de%20dados.md)
-
+- [Amazon RDS (Relational Database Service)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20RDS%20(Relational%20Database%20Service).md)
+- [Amazon DynamoDB](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20DynamoDB.md)
+  
 ---
 
 ## 🐧 Linux 
