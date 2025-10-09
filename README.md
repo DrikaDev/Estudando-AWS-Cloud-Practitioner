@@ -41,6 +41,7 @@
 - [Amazon S3 - Simple Storage Service](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20S3%20-%20Simple%20Storage%20Service.md)
 - [Amazon SES (Simple Email Service)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20SES.md)
 - [AWS Route 53](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20Route%2053.md)
+- [Amazon CloudWatch](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Amazon%20CloudWatch.md)
 
 ### 🎲 Banco de dados 
 
