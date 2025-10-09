@@ -281,6 +281,19 @@ Pronto, o arquivo estará de volta:
 
 ## Informações adicionais relevantes do Amazon S3
 
+### Transferência de dados gratuita
+
+O Amazon S3 oferece **transferência de dados gratuita** em algumas situações, o que pode ajudar a reduzir custos:
+
+- os **100 GB iniciais** de dados enviados do S3 para a internet (saída) por mês são gratuitos.
+- **Dados transferidos da internet para a AWS** (entrada).
+- **Dados transferidos dentro da mesma Região da AWS**.
+- **Transferências gratuitas adicionais**:
+  - Entre buckets S3 na mesma região.
+  - Através do Amazon CloudFront.
+
+💡 **Dica:** entender quais transferências são gratuitas ajuda a planejar o armazenamento e reduzir custos inesperados.
+
 ### Replicação entre regiões (Cross-Region Replication - CRR)
 - Duplica automaticamente objetos em **outra região AWS**.  
 - Benefícios:
