@@ -2,10 +2,8 @@
 
 ## Índice
 - [O que é o Amazon S3?](#o-que-é-o-amazon-s3)
-- [Características do Amazon S3](#características-do-amazon-s3)
-- [Abordagens para controle de acesso ao Amazon S3](#abordagens-para-controle-de-acesso-ao-amazon-s3)
+- [Ciclo de vida do Bucket no Amazon S3 (Lifecycle Policy)](#ciclo-de-vida-do-bucket-no-amazon-s3-lifecycle-policy)
 - [Classes de Armazenamento do Amazon S3](#classes-de-armazenamento-do-amazon-s3)
-- [Ciclo de vida no Amazon S3 (Lifecycle Policy)](#ciclo-de-vida-no-amazon-s3-lifecycle-policy)
 - [Criar notificação de evento](#criar-notificação-de-evento)
 - [Versionamento de bucket](#versionamento-de-bucket)
 - [Modelo de consistência de dados no Amazon S3](#modelo-de-consistência-de-dados-no-amazon-s3)
@@ -16,18 +14,18 @@
 ## O que é o Amazon S3?
 
 O **Amazon S3 (Simple Storage Service)** é um serviço da AWS de armazenamento de **objetos** na nuvem de forma **segura, escalável e acessível**.  
-
-Ele é ideal para:
-
-- Guardar **imagens, vídeos, documentos** e outros arquivos.  
+No **S3**, um **bucket** é um **contêiner para dados**. Ele é ideal para:  
+- Guardar objetos: quaisquer **imagens, vídeos, documentos** e outros arquivos.  
 - Hospedar **sites estáticos** compostos apenas por HTML, CSS e JavaScript.  
   👉 Exemplos: **portfólios pessoais, currículos online, landing pages**.
 
-[⬆ Voltar ao índice](#índice)
+**Hierarquia e organização** 
+- Os **buckets** estão no **nível mais alto** do S3.  
+- Dentro de um bucket, você pode armazenar **qualquer número de objetos**.  
+- É possível criar **pastas** dentro de buckets, e dentro dessas pastas armazenar objetos.  
+- Cada objeto possui uma **chave única** dentro do bucket, usada para **identificação e recuperação** do objeto.
 
----
-
-## Características do Amazon S3
+### Características do Amazon S3
 
 - Cada **Bucket** tem um nome único / exclusivo.  
 - O tamanho máximo de um arquivo / objeto é de até **5 TB**.
@@ -45,11 +43,7 @@ Ele é ideal para:
 - Algumas aplicações usam o **S3 como back-end**.  
 - Disponibilidade de **99,99%** na classe **S3 Standard**.  
 
-[⬆ Voltar ao índice](#índice)
-
----
-
-## Abordagens para controle de acesso ao Amazon S3
+### Abordagens para controle de acesso ao Amazon S3
 
 - **Configuração Default**: somente o dono da conta consegue acessar.  
 - **Acesso público**: usado para hospedagem de sites.  
@@ -65,6 +59,37 @@ Ele é ideal para:
   - **No lado do cliente**: você gerencia a criptografia antes de enviar os dados.  
 
 [⬆ Voltar ao índice](#índice)
+
+---
+
+## Ciclo de vida do Bucket no Amazon S3 (Lifecycle Policy)
+
+O **ciclo de vida** é um conjunto de regras que permite **automatizar** a movimentação ou **exclusão** de objetos ao longo do tempo em um bucket.  
+
+**Funcionalidades principais**  
+
+- **Transição automática de objetos**  
+  Permite mover objetos para diferentes **classes de armazenamento** com base em regras definidas, como tempo de criação ou condições específicas.
+
+- **Expiração de objetos**  
+  Objetos podem ser configurados para **expirar** após determinado período, automatizando a **limpeza de dados obsoletos**.
+
+**Aplicação**  
+
+- Um ciclo de vida pode ser aplicado a:
+  - **Todo o bucket**  
+  - **Subconjunto de objetos** (ex.: prefixos ou tags específicas)
+
+**Observações importantes**  
+- Cada atividade de **transição ou expiração** é considerada uma **ação separada** dentro do ciclo de vida.  
+- Ajuda a **reduzir custos de armazenamento** e a manter os dados organizados sem intervenção manual.
+
+💡 **Resumo:**  
+O S3 Lifecycle funciona como um **gerente automático de arquivos**, garantindo que os dados sejam movidos ou deletados de acordo com regras definidas, economizando espaço e otimizando custos.
+
+<img width="991" height="267" alt="Ciclo de vida Amazon S3" src="https://github.com/user-attachments/assets/2aafe898-1cae-4b69-a231-cb908dfab150" />   
+
+> PS: Não existe "exclusão" como parte do Intelligent-Tiering. A exclusão só ocorre se você configurar uma **lifecycle policy** separada.  
 
 ---
 
@@ -141,23 +166,6 @@ O Amazon S3 oferece várias classes de armazenamento para equilibrar **custo x d
 - **S3 Glacier Deep Archive** → mais barato de todos, recuperação em horas ou dias  
 
 > 💡 Dica: combinar classes com **Lifecycle Policy** reduz custos automaticamente.
-
-[⬆ Voltar ao índice](#índice)
-
----
-
-## Ciclo de vida no Amazon S3 (Lifecycle Policy)
-
-O **ciclo de vida** é um conjunto de regras que permite **automatizar** a movimentação ou **exclusão** de objetos ao longo do tempo.  
-Você pode 'definir políticas' para personalizar e gerenciar como os objetos serão armazenados.  
-
-- Dados podem migrar entre classes: **Standard → Standard-IA → Glacier → Deep Archive**.  
-- Objetos podem ser **excluídos automaticamente** após determinado período.  
-- Reduz custos e facilita gerenciamento sem intervenção manual. 
-
-<img width="991" height="267" alt="Ciclo de vida Amazon S3" src="https://github.com/user-attachments/assets/2aafe898-1cae-4b69-a231-cb908dfab150" />   
-
-> PS: Não existe "exclusão" como parte do Intelligent-Tiering. A exclusão só ocorre se você configurar uma **lifecycle policy** separada.  
 
 [⬆ Voltar ao índice](#índice)
 
