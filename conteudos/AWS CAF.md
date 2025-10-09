@@ -45,3 +45,4 @@ Cada uma tem um foco diferente na maturidade da jornada.
 
 ---
 
+👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
