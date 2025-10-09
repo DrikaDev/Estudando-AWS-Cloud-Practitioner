@@ -24,10 +24,10 @@
 
 - [Um pouco de história da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Um%20pouco%20de%20hist%C3%B3ria.md)
 - [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
-- [Modelos de Serviços: Iaas, PaasS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Servi%C3%A7o%3A%20IaaS%2C%20PaaS%2C%20SaaS.md)  
 - [Modelos de Implementação: Nuvem, Híbrida, On-Premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20implementa%C3%A7%C3%A3o:%20nuvem,%20h%C3%ADbrida,%20on-primise.md)
-- [Infraestrutura Global da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Infraestrutura%20global%20da%20AWS.md)
+- [Modelos de Serviços: Iaas, PaasS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Servi%C3%A7o%3A%20IaaS%2C%20PaaS%2C%20SaaS.md)
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelo%20de%20Responsabilidade%20Compartilhada.md)
+- [Infraestrutura Global da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Infraestrutura%20global%20da%20AWS.md)
 - [Well-Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20Well-Architected%20Framework.md)
 - [AWS Cloud Adoption Framework (CAF)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20CAF.md)
 
