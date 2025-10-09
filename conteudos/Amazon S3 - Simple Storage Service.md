@@ -91,6 +91,8 @@ O S3 Lifecycle funciona como um **gerente automático de arquivos**, garantindo 
 
 > PS: Não existe "exclusão" como parte do Intelligent-Tiering. A exclusão só ocorre se você configurar uma **lifecycle policy** separada.  
 
+[⬆ Voltar ao índice](#índice)
+
 ---
 
 ## Classes de Armazenamento do Amazon S3
