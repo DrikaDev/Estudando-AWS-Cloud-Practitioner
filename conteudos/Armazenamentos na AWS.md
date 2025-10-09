@@ -5,16 +5,13 @@ A AWS oferece diferentes tipos de armazenamento, cada um com **características 
 
 ### Índice
 
-- [Armazenamento de Objetos](#armazenamento-de-objetos) 
-- [Armazenamento em Bloco](#armazenamento-em-bloco)
-- [Armazenamento em Arquivos](#armazenamento-em-arquivos)  
-- [Comparação lado a lado](#comparação-lado-a-lado)
-
+- [Armazenamento de Objetos - Amazon S3 (Simple Storage Service)](#armazenamento-de-objetos) 
+- [Armazenamento em Bloco - Instance Store & EBS](#armazenamento-em-bloco)
+- [Armazenamento em Arquivos - EFS & FSx](#armazenamento-em-arquivos)  
+- [Armazenamento de dados em memória - Amazon ElastiCache](#armazenamento-de-dados-em-memoria-amazon-elasticache)
 ---
 
-## Armazenamento de Objetos
-
-### Amazon S3 (Simple Storage Service)
+## Armazenamento de Objetos - Amazon S3 (Simple Storage Service)
 
 - Armazenamento de **objetos** (arquivos).  
 
@@ -30,7 +27,7 @@ A AWS oferece diferentes tipos de armazenamento, cada um com **características 
 
 ---
 
-## Armazenamento em Bloco
+## Armazenamento em Bloco - Instance Store & EBS
 
 Os dados são organizados em blocos de armazenamento que o sistema operacional enxerga como um disco físico.  
 O armazenamento é dividido em unidades fixas (blocos). O sistema operacional gerencia partições, sistemas de arquivos e arquivos sobre 
@@ -121,7 +118,7 @@ O **EBS** é como um **HD dedicado** para sua instância: é um volume “grudad
 
 ---
 
-## Armazenamento em Arquivos
+## Armazenamento em Arquivos - EFS & FSx
 
 O armazenamento já está organizado em pastas e arquivos (como EFS), pronto para múltiplos usuários acessarem via rede.
 
@@ -201,26 +198,37 @@ Linux ou alto desempenho.
 
 ---
 
-## Comparação lado a lado
+## Armazenamento de dados em memória - Amazon ElastiCache
 
-| Característica            | Instance Store                                    | EBS (Elastic Block Store)                          | EFS (Elastic File System)                           | FSx (Amazon FSx)                                   |
-|----------------------------|--------------------------------------------------|---------------------------------------------------|----------------------------------------------------|---------------------------------------------------|
-| Tipo de armazenamento      | Bloco (disco local ligado ao host)              | Bloco (disco virtual)                             | Arquivos (sistema de rede)                         | Arquivos (sistema de rede gerenciado)            |
-| Zona de disponibilidade    | Restrito à mesma AZ da instância EC2            | Restrito à mesma AZ da instância EC2              | Replicado em múltiplas AZs                         | Depende do tipo: geralmente replicado em AZs ou região |
-| Acesso simultâneo          | Uma instância por vez                            | Uma instância por vez (salvo multi-attach)        | Várias instâncias ao mesmo tempo                   | Várias instâncias ao mesmo tempo (via SMB ou NFS) |
-| Escalabilidade             | Limitada ao tamanho do disco físico             | Manual (definida no momento da criação)           | Automática, sob demanda                            | Manual ou automática, dependendo do tipo de FSx  |
-| Dependência da instância   | Dados voláteis (perdem ao encerrar/reiniciar)  | Dados persistem, mas volume é acoplado à EC2      | Independente da vida útil de instâncias            | Independente da vida útil de instâncias          |
-| Protocolo de acesso        | Conexão direta de bloco                          | Conexão direta de bloco                            | NFS (Network File System)                          | SMB (Windows) ou NFS (Linux), dependendo do tipo |
-| Uso comum                  | Dados temporários, caches, processamento rápido | Disco para EC2 (banco de dados, SO, aplicações)  | Diretório compartilhado (web, microsserviços, etc) | Compartilhamento de arquivos corporativos, aplicações Windows ou HPC |
+O **Amazon ElastiCache** é um serviço de **armazenamento de dados em memória totalmente gerenciado** da AWS.  
+Ele é projetado para **acelerar aplicações web dinâmicas**, reduzindo latência e aumentando a taxa de transferência em comparação com bancos de dados baseados em disco.  
+
+### Mecanismos Suportados
+O ElastiCache oferece suporte a dois mecanismos de armazenamento em memória de código aberto:  
+- **Redis**  
+  - Usado para **cache de banco de dados**, **gerenciamento de sessões**, **mensageria** e **enfileiramento**.  
+  - Suporta persistência opcional e recursos avançados como **replicação** e **alta disponibilidade**.
+
+- **Memcached**  
+  - Ideal para **cache de conjuntos de dados menores e simples**.  
+  - Muito rápido e eficiente para operações de leitura/escrita em memória.
+
+### Principais Benefícios
+- **Desempenho consistente**: baixa latência mesmo com grandes volumes de dados.  
+- **Escalabilidade**: permite lidar com sites de alto tráfego e grandes conjuntos de dados.  
+- **Gerenciamento simplificado**: AWS cuida de provisionamento, patching, backup e monitoramento.  
+
+💡 Em resumo: O ElastiCache atua como um **cache em memória** que acelera aplicativos, reduzindo a dependência de armazenamento em disco e melhorando a experiência do usuário.
 
 ---
 
-💡 **Observações rápidas:**
+💡 **Observações rápidas sobre tipos de armazenamento na AWS:**
 
-- **Instance Store:** volátil, local, rápido.  
-- **EBS:** persistente, bloqueado a uma instância (salvo multi-attach).  
-- **EFS:** compartilhado, elástico, baseado em protocolo NFS.  
-- **FSx:** compartilhado, gerenciado, baseado em protocolos SMB (ou NFS conforme necessidade).
+- **Instance Store:** armazenamento em bloco, usado por instâncias EC2 - volátil, local, muito rápido - ideal para dados temporários ou cache transitório - armazenamento em bloco, usado por instâncias EC2.
+- **EBS (Elastic Block Store):** armazenamento em bloco, usado por instâncias EC2 - persistente, usado para sistemas de arquivos e bancos de dados.  
+- **EFS (Elastic File System):** armazenamento de arquivos, compartilhado entre instâncias, elástico, baseado em protocolo NFS - perfeito para múltiplas instâncias acessando o mesmo sistema de arquivos.  
+- **FSx:** armazenamento de arquivos, compartilhado entre instâncias, gerenciado, baseado em protocolos SMB (ou NFS conforme necessidade) - voltado para workloads específicos como Windows ou Lustre.  
+- **ElastiCache:** armazenamento **em memória**, rápido, volátil - usado para **cache de banco de dados, gerenciamento de sessões e enfileiramento**, suportando Redis e Memcached.
 
 [⬆ Voltar ao índice](#índice)
 
