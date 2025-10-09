@@ -8,7 +8,7 @@ A AWS oferece diferentes tipos de armazenamento, cada um com **características 
 - [Armazenamento de Objetos - Amazon S3](#armazenamento-de-objetos---amazon-s3)
 - [Armazenamento em Bloco - Instance Store & EBS](#armazenamento-em-bloco---instance-store--ebs)
 - [Armazenamento em Arquivos - EFS & FSx](#armazenamento-em-arquivos---efs--fsx)
-- [Armazenamento de Dados em Memória - Amazon ElastiCache](#armazenamento-de-dados-em-memória---amazon-elasticache)
+- [Armazenamento de cache de memória - Amazon ElastiCache](#armazenamento-de-cache-de-memória---amazon-elasticache)
 
 ---
 
@@ -199,7 +199,7 @@ Linux ou alto desempenho.
 
 ---
 
-## Armazenamento de Dados em Memória - Amazon ElastiCache
+## Armazenamento de cache de memória - Amazon ElastiCache
 
 O **Amazon ElastiCache** é um serviço de **armazenamento de dados em memória totalmente gerenciado** da AWS.  
 Ele é projetado para **acelerar aplicações web dinâmicas**, reduzindo latência e aumentando a taxa de transferência em comparação com bancos de dados baseados em disco.  
