@@ -74,7 +74,8 @@
 
 ## 🧪 Laboratórios 
 
-- [11 - Introdução ao EC2 - Primeiro deploy: Mundo Invertido](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2011%20-%20Introdu%C3%A7%C3%A3o%20ao%20EC2%20-%20Primeiro%20deploy.md)
+- [11 - Introdução ao Amazon EC2](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2011%20-%20Introdu%C3%A7%C3%A3o%20ao%20Amazon%20EC2%20.md)
+- [12 - Primeiro deploy: Mundo Invertido](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%2012%20-%20Primeiro%20Deploy:%20Mundo%20Invertido.md)
 - [160 - Criando e interagindo com um servidor de banco de dados RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20160%20-%20Criando%20e%20interagindo%20com%20um%20servidor%20de%20banco%20de%20dados%20RDS.md)
 - [170 - Criar um site Estático no S3](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20170%20-%20Criar%20um%20site%20Est%C3%A1tico%20no%20S3.md)  
 - [172 - Criar instância do EC2 + Servidor Apache](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20172%20-%20Criar%20instancia%20do%20EC2%20+%20Servidor%20Apache.md)
