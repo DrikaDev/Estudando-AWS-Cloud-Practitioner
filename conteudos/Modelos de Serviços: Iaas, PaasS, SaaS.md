@@ -1,4 +1,4 @@
-## Modelos de Serviços: Iaas, PaasS, SaaS
+## Modelos de Serviços: Iaas, PaaS, SaaS
 
 **IaaS, PaaS e SaaS** são três tipos de **modelos de serviços em nuvem**, cada um oferecendo diferentes níveis de controle e responsabilidade para os 
 usuários.
