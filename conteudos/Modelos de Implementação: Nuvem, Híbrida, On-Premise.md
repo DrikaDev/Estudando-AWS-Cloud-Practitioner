@@ -1,4 +1,4 @@
-## Modelos de Implementação: Nuvens pública, privada, híbrida, on-premise
+## Modelos de Implementação: Nuvens pública, privada, híbrida e on-premise
 
 A **Amazon Web Services (AWS)** oferece vários modelos de implantação baseados em nuvem para atender às diferentes necessidades de negócios, incluindo 
 **nuvens públicas, privadas, híbridas** e **on-premise**.  
