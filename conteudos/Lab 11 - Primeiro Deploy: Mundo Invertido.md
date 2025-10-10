@@ -1,4 +1,4 @@
-## 🧪 Lab 11 - Introdução ao Amazon EC2 - Primeiro Deploy: Mundo Invertido
+## 🧪 Lab 11 - Primeiro Deploy: Mundo Invertido
 
 Neste laboratório, realizei meu primeiro deploy de um projeto utilizando o **Amazon EC2**.  
 Abaixo está o passo a passo com imagens ilustrativas.
