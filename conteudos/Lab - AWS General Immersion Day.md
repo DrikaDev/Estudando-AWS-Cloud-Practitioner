@@ -1,6 +1,6 @@
 ## 🧪 Lab - AWS General Immersion Day.md
 
-Neste lab vamos aprender várias funcionalidades dos **serviços mais básicos da AWS**.
+Neste **AWS General Immersion Day**, realizado dias 14 e 15 de Outubro, vamos aprender várias funcionalidades dos **serviços mais básicos da AWS**.
 
 Os módulos básicos são constituídos pelos tópicos a seguir:
 
@@ -592,10 +592,442 @@ Após a criação:
 - Você verá uma nova instância EC2 criada automaticamente, com o nome tag: `[Suas Iniciais] - Auto Scaling Group`  
   > Pode ser necessário atualizar a página para vê-la.
 
+<img width="1893" height="387" alt="image" src="https://github.com/user-attachments/assets/e9739d78-ac51-4684-a328-c969f9c5d063" />
+
 - No menu à esquerda, em **Load Balancing → Load Balancers**, verifique o provisionamento do seu **Application Load Balancer**.
+
+<img width="1897" height="408" alt="image" src="https://github.com/user-attachments/assets/2788d1d1-06fe-426d-816e-8a7dac700bc3" />
 
 ## 🚦 Próximo Passo
 
 Agora que seu **Auto Scaling Group** está ativo, prossiga para a próxima etapa:  
 👉 **Configurar Grupos de Segurança (Security Groups)** para permitir o tráfego entre o **ALB** e os **web hosts**.
+
+## Configurando Security Groups
+
+Nesta etapa, vamos configurar os **Security Groups** para o **Load Balancer** e o **Auto Scaling Group**, garantindo que o tráfego seja seguro e restrito apenas às instâncias necessárias.
+
+## Criando o Security Group do Load Balancer
+
+Quando o **Load Balancer** foi provisionado, ele recebeu o grupo de segurança padrão da VPC.  
+Para permitir o acesso via **DNS público** e controlar o tráfego de saída, precisamos criar um novo **Security Group**.
+
+1. No console da AWS, acesse **EC2** → **Security Groups** (Menu à esquerda).  
+2. Clique em **Create security group**.
+
+### Detalhes básicos
+
+- **Security group name:** `[Suas Iniciais]-SG-Load-Balancer`  
+- **Description:** `[Suas Iniciais]-SG-Load-Balancer`  
+- **VPC:** Selecione sua VPC (provavelmente Default)
+
+### Regras de entrada (Inbound rules)
+
+1. Clique em **Add rule**  
+2. **Type:** HTTP  
+3. **Source:** Custom → `[Seu endereço IP]/32`  
+   > Para encontrar seu IP, pesquise “Qual é o meu IP”.
+
+### Regras de saída (Outbound rules)
+
+1. Delete a regra padrão **All traffic**.  
+2. Clique em **Add rule**  
+3. **Type:** HTTP  
+4. **Destination:** Custom → `[Suas Iniciais]-Auto Scaling SG`  
+
+> 💡 Comece digitando `sg` para localizar o Security Group correto.
+
+5. Clique em **Create security group** quando terminar.  
+
+<img width="1532" height="175" alt="image" src="https://github.com/user-attachments/assets/bcffcf82-e937-47a7-8025-94758ce01502" />
+
+## Anexando o Security Group ao Load Balancer
+
+1. No menu **Load Balancing → Load Balancers**, selecione o seu Load Balancer.  
+
+2. Na guia **Security** e clique em **Edit**.  
+
+3. Marque apenas o Security Group recém-criado: `[Suas Iniciais]-SG-Load-Balancer`  
+
+4. Desmarque qualquer outro grupo de segurança e clique em **Save**.  
+
+<img width="1895" height="611" alt="image" src="https://github.com/user-attachments/assets/86557bd8-e300-4164-8e0e-4bfbe875a986" />
+
+## Configurando regras de entrada para o Auto Scaling Group
+
+Agora, permitiremos que apenas o **Load Balancer** tenha acesso ao **Auto Scaling Group**.
+
+1. No console da AWS, vá para **Security Groups**.  
+2. Selecione o Security Group do Auto Scaling: `[Suas Iniciais]-Auto Scaling SG`  
+3. Na guia **Inbound rules**, clique em **Edit inbound rules** → **Add rule**.  
+4. Configure a regra:  
+   - **Type:** HTTP  
+   - **Source:** Custom → `[Suas Iniciais]-SG-Load-Balancer`  
+5. Clique em **Save rules**.  
+
+<img width="1898" height="609" alt="image" src="https://github.com/user-attachments/assets/9150f79e-ccdd-4b8b-93d4-f0dcc158f969" />
+
+## Testando o Load Balancer
+
+1. Acesse **Load Balancers** no menu à esquerda.  
+2. Na guia **Details**, copie o **DNS** do Load Balancer.  
+3. Cole o DNS em um navegador.  
+
+> Você deve ver o site sendo servido pelo seu **Auto Scaling Group**.  
+
+✅ Agora seu **Load Balancer** e **Auto Scaling Group** estão configurados corretamente.  
+
+Próxima etapa: **Testando o Auto Scaling Group**
+
+## Testando um Auto Scaling Group
+
+Agora que você criou o **Auto Scaling Group** e o **Load Balancer**, vamos testá-los para garantir que tudo esteja funcionando corretamente.
+
+## Acessando o site via Load Balancer
+
+1. Verifique se você está acessando o site pelo **DNS do Load Balancer** configurado na etapa anterior.  
+
+2. Na parte inferior da página inicial, clique em **Start CPU Load Generation**.  
+   > Quando a carga da CPU ultrapassar 25% por um período prolongado, a política de Auto Scaling começará a ativar novas instâncias conforme definido no **Launch Template**.  
+   > Talvez seja necessário clicar duas vezes se a primeira vez não gerar carga suficiente.
+
+## Observando novas instâncias
+
+1. No console do **EC2**, acesse a seção **Instances**.  
+
+2. Atualize a página e observe **novas instâncias** sendo criadas automaticamente pelo **Auto Scaling**.  
+
+<img width="1889" height="428" alt="image" src="https://github.com/user-attachments/assets/beaa2756-40d1-4cde-8635-bd28ecc387ee" />
+
+<img width="1885" height="427" alt="image" src="https://github.com/user-attachments/assets/7c7b9ba8-6515-4b75-9d30-01fdf907a5de" />
+
+3. Selecione uma instância chamada `[Suas Iniciais] - Auto Scaling Group` e vá até a guia **Monitoring** para acompanhar a **CPU Utilization**.
+
+## Verificando pelo Auto Scaling Group
+
+1. Acesse a página do Auto Scaling Group:  
+
+2. Selecione seu **Auto Scaling Group**: `[Suas Iniciais]-Lab-AutoScaling-Group`  
+
+3. Na guia **Instance management**, veja quantas instâncias existem no grupo atualmente.  
+
+4. A guia **Monitoring** mostra métricas como: tamanho do grupo, instâncias pendentes, total de instâncias e muito mais.
+
+## Arquitetura atual
+
+Sua arquitetura agora deve se parecer com a imagem abaixo:
+
+<img width="2278" height="1262" alt="image" src="https://github.com/user-attachments/assets/bcc20191-fa1f-41d3-a7b6-93e8acf883f0" />
+
+## Testando o balanceamento de carga
+
+Depois que várias instâncias forem iniciadas com sucesso (provavelmente 3 ou 4):
+
+1. Atualize repetidamente o navegador do site.  
+
+2. Observe que o **ID da instância**, a **zona de disponibilidade** e o **IP privado** mudam à medida que o **Load Balancer** distribui as solicitações pelo **Auto Scaling Group**.
+
+🎉 **Parabéns!**  
+Você criou com sucesso um **grupo EC2 Auto Scaling** por trás de um **Application Load Balancer**.
+
+> Se você precisar limpar este laboratório, vá para a seção: **Limpeza do laboratório de Auto Scaling**
+
+## Desprovisionamento dos recursos
+
+É importante que você **exclua os recursos criados neste laboratório** na ordem correta.
+
+## Excluindo seu Load Balancer
+
+1. No console da AWS, navegue até o serviço **EC2**.  
+2. No menu à esquerda, em **Load Balancing**, selecione **Load Balancers**.  
+3. Selecione o balanceador de carga chamado `[Suas Iniciais]-Application-Load-Balancer`.  
+4. Clique em **Actions** → **Delete**.  
+5. Na janela pop-up, selecione **Yes, Delete**.
+
+> O Load Balancer deve desaparecer imediatamente se a exclusão for bem-sucedida.
+
+## Excluindo seu Target Group
+
+1. No console do EC2, no menu à esquerda, selecione **Target Groups**.  
+2. Selecione o target group chamado `[Suas iniciais]-Grupo-alvo`.  
+3. Clique em **Actions** → **Delete**.  
+4. Na janela pop-up, selecione **Yes, Delete**.
+
+> O target group agora deve ser excluído.
+
+## Excluindo seu Auto Scaling Group
+
+1. No console do EC2, no menu à esquerda, selecione **Auto Scaling Groups**.  
+2. Selecione o grupo chamado `[Suas iniciais]-Lab-Autoscaling-group`.  
+3. Clique em **Delete**.  
+4. Na janela pop-up, digite `delete` e selecione **Delete**.
+
+> Todas as instâncias do grupo serão encerradas. Isso pode levar alguns minutos.
+
+## Excluindo seu Launch Template
+
+1. No console do EC2, no menu à esquerda, selecione **Launch Templates**.  
+2. Selecione o template chamado `[Suas iniciais]-scaling-template`.  
+3. Clique em **Actions** → **Delete template**.  
+4. Na janela pop-up, digite `Delete` e selecione **Delete**.
+
+> O Launch Template agora deve ser excluído.
+
+## Excluindo seus Security Groups
+
+1. No console do EC2, no menu à esquerda, selecione **Security Groups**.  
+2. Selecione `[Suas iniciais]-SG-Load-Balancer` e clique em **Edit inbound rules**.
+3. Clique em **Delete** para remover a regra e depois em **Save rules**.
+4. Selecione a guia **Outbound rules**, clique em **Edit outbound rules**, exclua todas as regras e salve.
+5. Repita o mesmo processo para `[Suas iniciais]-Auto Scaling SG` (não é necessário remover regras de saída).  
+6. Selecione ambos os Security Groups `[Suas iniciais]-SG-Load-Balancer` e `[Suas iniciais]-Auto Scaling SG`.  
+7. Clique em **Actions** → **Delete security groups**, digite `delete` e confirme.
+
+> Seus grupos de segurança agora devem ser excluídos.  
+> Se não conseguir remover, verifique se todas as regras foram deletadas corretamente.
+
+## Excluindo sua pilha do CloudFormation
+
+1. No console da AWS, abra **CloudFormation**.  
+2. Selecione a pilha chamada `[Suas iniciais]-EC2-Web-host`.  
+
+<img width="1900" height="433" alt="image" src="https://github.com/user-attachments/assets/d35257e3-55a3-4027-a161-ea4ffdce5c0d" />
+
+3. Clique em **Delete**.  
+4. No pop-up, selecione **Delete stack**.
+
+> A exclusão pode levar alguns minutos. Atualize a tela para confirmar que a pilha não está mais visível.
+
+🎉 **Parabéns!**  
+Você concluiu com sucesso o **Auto Scaling Lab**!
+
+---
+
+## Redes - Amazon VPC
+
+<img width="2487" height="1367" alt="image" src="https://github.com/user-attachments/assets/413f6f0a-e3d9-41ed-86b4-7469c74f6df4" />
+
+## Visão Geral da Amazon VPC
+
+A **Amazon Virtual Private Cloud (Amazon VPC)** permite que você execute recursos da AWS em uma **rede virtual que você definiu**. Essa rede virtual é similar a uma rede tradicional que você operaria em seu próprio data center, com os benefícios de usar a **infraestrutura escalável da AWS**.
+
+A Amazon VPC permite que você provisione uma **seção logicamente isolada da nuvem** onde você pode executar recursos da AWS em uma rede virtual que você define. Você tem **controle completo** sobre seu ambiente de rede virtual, incluindo:
+
+- Seleção do seu próprio **intervalo de endereços IP**  
+- Criação de **sub-redes**  
+- Configuração de **tabelas de rotas** e **gateways**  
+
+Você pode usar **IPv4** e **IPv6** em sua VPC para acesso fácil e seguro para recursos e aplicações.
+
+## Como criar uma VPC
+
+Clique em **Create VPC** para iniciar o assistente.  
+O Launch VPC Wizard facilita a criação de VPCs com diferentes configurações padrão.
+
+Em **VPC Settings**, configure os seguintes parâmetros:
+
+- **Name**: `VPC-Lab`  
+- **CIDR**: `10.0.0.0/16`  
+- Selecione **1 Availability Zone (AZ)**: `ap-northeast-2a`  
+- Número de subredes: `1`  
+- Subnet CIDR: `10.0.10.0/24`  
+- Subredes privadas: `0`  
+
+Clique em **Create VPC**.
+
+> ⚠️ Ao definir o CIDR da VPC, assegure-se de que os IPs **não se sobreponham** com redes que eventualmente se conectarão a esta VPC. Além disso, escolha uma quantidade de endereços suficiente para expansões futuras.
+
+## Renomear a VPC e Subrede
+
+- Após a criação, renomeie a VPC para `VPC-Lab`.  
+- Vá na guia **Subnets** e renomeie a subrede criada para `Public Subnet A`.  
+
+Agora a arquitetura deve se parecer com:
+```
+VPC-Lab
+└─ Public Subnet A
+```
+
+## Entendendo CIDR
+
+**CIDR (Classless Inter-Domain Routing)** é a forma de expressar o endereço e o tamanho de uma rede.
+
+- A VPC criada acima usa o intervalo de endereços IP `/16`.  
+- Isso permite **65.536 endereços IP** (2^16) para recursos.
+
+Ao especificar o CIDR de uma VPC, é permitido usar de `/16` (65.536 IPs) até `/28` (16 IPs).  
+
+> ⚠️ Os primeiros 4 endereços IP e o último endereço IP **não podem ser atribuídos a instâncias**.
+
+Por exemplo, em uma subrede `10.0.0.0/24`, os 5 endereços reservados são:
+
+| IP           | Descrição                                   |
+|--------------|--------------------------------------------|
+| 10.0.0.0     | Endereço da rede                            |
+| 10.0.0.1     | Reservado para roteadores da VPC da AWS    |
+| 10.0.0.2     | Endereço do servidor DNS                    |
+| 10.0.0.3     | Reservado para uso futuro da AWS           |
+| 10.0.0.255   | Endereço de broadcast da rede              |
+
+## Criando subredes adicionais
+
+Para manter alta disponibilidade, é importante fazer o deploy de serviços em múltiplas **Zonas de Disponibilidade (AZs)**. Neste laboratório, você criará uma subrede na **Zona de Disponibilidade C**, diferente da Zona de Disponibilidade A, onde a subrede criada anteriormente está localizada.
+
+## Passo 1: Criar nova Subnet
+
+1. No menu lateral esquerdo, clique em **Subnets**.  
+2. Clique no botão **Create Subnet**.
+
+## Passo 2: Configurar a Subnet
+
+- **VPC ID**: selecione a VPC que você acabou de criar (`VPC-Lab`).  
+- **Subnet settings**:
+
+| Chave             | Valor             |
+|------------------|-----------------|
+| Subnet name       | public subnet C  |
+| Availability Zone | ap-northeast-2c  |
+| IPv4 CIDR block   | 10.0.20.0/24     |
+
+3. Clique em **Create subnet**.
+
+## Resultado
+
+Após a criação, você deve ver as duas subnets:
+
+- `public subnet A`  
+- `public subnet C`  
+
+A arquitetura da sua VPC até o momento estará assim:
+```
+VPC-Lab
+├─ public subnet A (ap-northeast-2a)
+└─ public subnet C (ap-northeast-2c)
+```
+
+<img width="656" height="360" alt="image" src="https://github.com/user-attachments/assets/8af4f813-d294-4c48-a3d9-ab3e6659ce7b" />
+
+## Edite a tabela de rotas
+
+## Entendendo a tabela de rotas de uma VPC
+
+Uma **tabela de rotas** contém um conjunto de regras, chamadas **rotas**, que determinam para onde o tráfego da sua subnet ou gateway é direcionado.
+
+- **Tabela de rotas principal**: criada automaticamente com sua VPC. Controla o roteamento para todas as subnets que **não** estão explicitamente associadas a outra tabela de rotas.  
+- **Tabela de rotas personalizada**: uma tabela de rotas criada manualmente para a sua VPC.
+
+## Como editar a conexão de uma tabela de rotas
+
+1. Clique no botão **Actions** no menu **Subnet** e selecione **Edit routing table association**.  
+2. Selecione uma **tabela de rotas** que **não seja a principal**.  
+3. Verifique se há uma **rota para a internet** na tabela de rotas selecionada.  
+4. Depois de selecionar **public subnet C**, clique no hyperlink da tabela de rotas na guia **Details**.  
+5. Na guia **Routes**, você verá algo semelhante a:
+
+| Destination | Target    |
+|------------|-----------|
+| 10.0.0.0/16 | local    |
+| 0.0.0.0/0   | igw-OOO  |
+
+Isso confirma que uma rota para a **internet** foi criada para a **subnet pública C**.
+
+## Arquitetura atual
+
+A arquitetura construída até agora está ilustrada abaixo:
+
+<img width="794" height="572" alt="image" src="https://github.com/user-attachments/assets/23851fc2-8655-4079-8f81-1bf12cdabbde" />
+
+## Crie um Security Group
+
+Um **security group** atua como um **firewall virtual** para suas instâncias, permitindo controlar o tráfego de entrada e saída.
+
+## Criando o Security Group
+
+1. No console da AWS, clique no menu **Security Groups** no lado esquerdo.  
+2. Clique no botão **Create security group**.  
+3. Preencha os campos conforme abaixo e selecione a VPC criada neste laboratório:
+
+| Key                  | Value                       |
+|---------------------|-----------------------------|
+| Security group name  | webserver-sg                |
+| Description          | security group for web servers |
+| VPC                  | VPC-Lab                     |
+
+4. Adicione **Inbound Rules**:
+
+| Type | Source |
+|------|--------|
+| HTTP | Custom: [Seu endereço IP privado]/32 (Você pode encontrar seu IP local pesquisando “What is my IP”) |
+| SSH  | Custom: [Seu endereço IP privado]/32 (Você pode encontrar seu IP local pesquisando “What is my IP”) |
+
+5. Clique em **Create security group** no canto inferior direito.
+
+## Verificando as regras
+
+Revise se a **Inbound Rule** foi criada corretamente, garantindo que o tráfego HTTP e SSH será permitido apenas do seu IP.
+
+## Testar Conectividade
+
+## A. Criar 2 instâncias EC2 nas sub-redes públicas existentes
+
+### A1 - Crie um novo Par de Chaves
+
+Neste laboratório, vamor criar um **Par de Chaves SSH** para se conectar às instâncias EC2.
+
+1. Faça login no **Console de Gerenciamento da AWS** e abra o **Console Amazon EC2**.
+2. No canto superior direito, confirme se você está na região correta.
+3. No menu à esquerda, clique em **Pares de Chaves** (Key Pairs) em **Rede e Segurança**.
+4. Clique no botão **Criar Par de Chaves**.
+5. Digite `[Seu-nome]-ID` na caixa **Nome do Par de Chaves**.
+6. Selecione **.pem** para o formato do arquivo e clique em **Criar Par de Chaves**.
+7. O arquivo `[Seu-nome]-ID.pem` será baixado para seu computador. Lembre-se do caminho completo do arquivo, pois será usado para conectar às instâncias EC2.
+
+---
+
+### A2 - Inicie uma nova instância EC2 na Sub-rede Pública - 1
+
+1. No **Painel EC2**, clique em **Iniciar Instâncias**.
+2. Em **Nome**, insira `EC2-1`.
+3. Verifique a **Imagem de Máquina da Amazon** (Amazon Linux 2).
+4. Selecione **t2.micro** em Tipo de Instância.
+5. Escolha o **Par de Chaves** criado no início do laboratório.
+6. Clique em **Editar Configurações de Rede**:
+   - VPC: `VPC-Lab`
+   - Sub-rede: AZ-A
+   - Habilite **Atribuição Automática de IP Público**
+7. Crie um **Grupo de Segurança**:
+   - Nome: `ID-EC2-SG`
+   - Regra HTTP: Tipo: HTTP, Origem: Qualquer lugar (0.0.0.0/0)
+8. Aceite os demais valores padrão e clique em **Iniciar Instância**.
+9. Clique em **Exibir Instâncias** para ver `EC2-1`, sua zona de disponibilidade e o IP público.
+
+---
+
+### A3 - Inicie uma nova instância EC2 na Sub-rede Pública - 2
+
+1. Repita os passos do item A2.
+2. Configurações únicas:
+   - Nome da Instância: `EC2-2`
+   - Sub-rede: Zona de Disponibilidade B
+   - Grupo de Segurança: Selecione o existente `ID-EC2-SG`
+3. Conclua o lançamento da instância.
+
+---
+
+## B. Validar Conectividade
+
+### Pré-requisito
+
+Para validar a conectividade com **ping**, adicione uma regra **ICMP** no Grupo de Segurança existente (`ID-EC2-SG`).
+
+> Nota: Em ambientes de produção, seja restritivo ao definir os blocos CIDR aplicáveis.
+
+---
+
+### B1. Entre nas instâncias EC2
+
+1. Clique em `EC2-2` e anote o **endereço IPv4 público**.
+2. Clique em `EC2-1` e depois em **Conectar** > **Conectar Instância EC2**.
+3. No terminal, digite: ` ping <Endereço IPv4 Público da instância EC2-2> `
+4. Você deverá ver respostas de ping bem-sucedidas, confirmando que as duas instâncias EC2 estão conectadas.
 
