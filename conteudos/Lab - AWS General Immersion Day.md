@@ -1,6 +1,6 @@
-## 🧪 Lab - AWS General Immersion Day.md
+## 🧪 Lab - AWS General Immersion Day
 
-Neste **AWS General Immersion Day**, realizado dias 14 e 15 de Outubro, vamos aprender várias funcionalidades dos **serviços mais básicos da AWS**.
+Neste **AWS General Immersion Day**, realizado nos dias 14 e 15 de Outubro, vamos aprender várias funcionalidades dos **serviços mais básicos da AWS**.
 
 Os módulos básicos são constituídos pelos tópicos a seguir:
 
