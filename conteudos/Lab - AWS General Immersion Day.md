@@ -1031,3 +1031,75 @@ Para validar a conectividade com **ping**, adicione uma regra **ICMP** no Grupo 
 3. No terminal, digite: ` ping <Endereço IPv4 Público da instância EC2-2> `
 4. Você deverá ver respostas de ping bem-sucedidas, confirmando que as duas instâncias EC2 estão conectadas.
 
+## Desprovisionamento dos recursos
+
+## Desprovisionando os recursos
+
+1. No **Console da VPC**, selecione a **VPC** que você criou neste laboratório no menu **VPC**.
+2. Clique em **Actions** e selecione **Delete VPC**.
+3. Confirme a exclusão da VPC quando solicitado.
+
+> Nota: Excluir a VPC também excluirá todos os recursos associados, como subredes, tabelas de rotas, gateways e security groups que foram criados dentro dessa VPC.
+
+## Amazon API Gateway
+
+O **Amazon API Gateway** é um serviço totalmente gerenciado que facilita a criação, publicação, manutenção, monitoramento e proteção de APIs em qualquer escala. As APIs atuam como a porta de entrada para que os aplicativos acessem dados, lógica de negócios ou funcionalidade de seus serviços de backend. Usando o Amazon API Gateway, você pode criar APIs **RESTful**, **HTTP** ou **WebSocket**, que permitem aplicativos de comunicação bidirecional em tempo real.
+
+O Amazon API Gateway lida com todas as tarefas envolvidas na aceitação e processamento de até centenas de milhares de chamadas de API simultâneas, incluindo:
+
+- Gerenciamento de tráfego
+- Suporte a CORS
+- Autorização e controle de acesso
+- Throttling
+- Monitoramento
+- Gerenciamento de versão das APIs
+
+O Amazon API Gateway não possui taxas mínimas ou custos de inicialização. Você paga pelas chamadas de API que recebe e pela quantidade de dados transferidos. Com o modelo de preços em camadas do Amazon API Gateway, é possível reduzir seu custo à medida que o uso da API aumenta.
+
+> **Nota:** Este laboratório foi movido para **Module 1 of The Amazon API Gateway Workshop**. Complete a etapa **System Setup** antes de iniciar o lab.
+
+## Segurança - AWS IAM
+
+Com a AWS, você tem o controle e a confiança necessários para executar suas aplicações no ambiente de nuvem pública mais flexível e seguro disponível hoje. Como cliente AWS, você se beneficia dos data centers da AWS e de uma rede arquitetada para proteger suas informações, identidades, aplicações e dispositivos.
+
+A AWS ajuda você a:
+
+- Atender requisitos de **compliance e segurança**, como guarda e proteção de dados, utilizando os serviços e funcionalidades da plataforma.
+- **Automatizar tarefas de segurança** manuais, permitindo que você foque em escalar e inovar o seu negócio.
+- **Pagar apenas pelo que utiliza**, garantindo eficiência de custos.
+- Contar com uma nuvem **avaliada e aceita como segura** o suficiente para cargas de trabalho ultrassecretas.
+
+## AWS IAM
+
+O **AWS Identity and Access Management (IAM)** é um serviço que ajuda você a controlar de forma segura o acesso aos recursos da AWS. Com o IAM, você controla quem está **autenticado** e **autorizado** a usar os recursos.
+
+Quando você cria uma conta AWS, você começa com uma identidade que possui **acesso total a todos os serviços e recursos** da conta. Essa identidade é chamada de **usuário root**, acessada com o endereço de email e senha usados para criar a conta.
+
+> **Recomendação:** Não use o usuário root para atividades diárias, nem mesmo administrativas.
+> Crie e utilize um **usuário IAM** seguindo as instruções [aqui](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html).
+
+### Componentes do AWS IAM
+
+- **Identidades do IAM**
+  - Users
+  - User Groups
+  - Roles
+- **Policy**
+
+Para deixar seu ambiente AWS seguro, confira o documento de [melhores práticas com IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html).
+
+<img width="2155" height="883" alt="image" src="https://github.com/user-attachments/assets/f3b0d7dd-5687-4f84-ad99-90c18e691ec4" />
+
+## Estrutura do laboratório
+
+Este laboratório está dividido nas seguintes partes:
+
+1. Crie instâncias EC2 com tags  
+2. Crie identidades com o AWS IAM  
+3. Testando o acesso à instância EC2  
+4. IAM Role para EC2  
+5. Desprovisionamento dos recursos  
+
+---
+
+
