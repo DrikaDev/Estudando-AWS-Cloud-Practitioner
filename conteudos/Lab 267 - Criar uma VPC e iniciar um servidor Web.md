@@ -101,7 +101,7 @@ Nesta tarefa, vamos utilizar o **Assistente de VPC** para criar:
 >  - Uma sub-rede privada  
 >  - Gateway da Internet  
 >  - NAT Gateway  
-   - Tabelas de rota configuradas
+>  - Tabelas de rota configuradas
 
 ---
 
