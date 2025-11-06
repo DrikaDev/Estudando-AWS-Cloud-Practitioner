@@ -93,11 +93,15 @@ A AWS oferece diversas opções de preço para diferentes necessidades:
   
 - **Savings Plans**:  
   Garantem economia de até 72% em uma variedade de tipos de instâncias e serviços, mediante o compromisso com um nível de uso consistente por 1 ou 3 anos.  
+
 - **Hosts Dedicados**:  
-  Reservam um servidor físico inteiro para uso exclusivo. Oferecem controle total e são ideais para workloads com requisitos estritos de conformidade, segurança ou licenciamento.
-  
+  Reservam um servidor físico inteiro para uso exclusivo.
+  Oferecem controle total e são ideais para workloads com requisitos estritos de conformidade, segurança ou licenciamento **BYOL** (Bring Your Own License).
+  Permite licenciamento de software por socket/CPU/host (como Windows Server, SQL Server, Oracle) porque você sabe onde as instâncias estão fisicamente.  
+    
 - **Instâncias Dedicadas**:  
-  Pagamento por instâncias que operam em hardware fisicamente isolado, reservado unicamente para a sua conta. O principal benefício é o isolamento em relação às operações de outros clientes da AWS.  
+  Pagamento por instâncias que operam em hardware fisicamente isolado, dedicado exclusivamente para você, reservado unicamente para a sua conta.
+  O principal benefício é o isolamento em relação às operações de outros clientes da AWS.  
 
 <p align="center">
   <img width="370" height="283" alt="image" src="https://github.com/user-attachments/assets/2ce8ecfe-0cde-460c-96dd-bb33d75f0345" />
