@@ -1,4 +1,4 @@
-## 🚀 Auto Scaling Group (ASG) — O que é?
+## 🚀 Auto Scaling Group (ASG) 
 
 Os **Auto Scaling Groups (ASGs)** na AWS são os principais componentes utilizados para **escalar recursos automaticamente** conforme a necessidade da 
 aplicação.  
@@ -8,7 +8,7 @@ Eles agrupam diversas instâncias do **Amazon EC2** e tratam esse conjunto como 
 
 ---
 
-### ✅ Como funciona
+### ✅ Como funciona?
 
 - Um ASG contém um conjunto de instâncias EC2
 - Ele ajusta automaticamente o número de instâncias com base em demanda
@@ -66,5 +66,3 @@ Escalonamento | Aumenta ou reduz EC2s conforme a demanda |
 ---
 
 👉🏻 [Clique aqui para voltar ao Readme](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/README.md) 📒
----
-
