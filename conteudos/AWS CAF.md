@@ -8,6 +8,8 @@ Ele divide a adoção da nuvem em **6 perspectivas**, cada uma com um conjunto d
 
 ## 🧭 As 6 Perspectivas do AWS CAF
 
+<img width="517" height="230" alt="image" src="https://github.com/user-attachments/assets/cc91a657-279a-4e93-9d14-deaddaafb359" />
+
 | Perspectiva | Foco Principal |
 |--------------|----------------|
 | 💼 **Negócios (Business)** | Alinhar a estratégia corporativa à adoção da nuvem. |
@@ -19,7 +21,9 @@ Ele divide a adoção da nuvem em **6 perspectivas**, cada uma com um conjunto d
 
 ---
 
-## 💼 1. Perspectiva de Negócios (Business)
+## 💼 1. Negócios (Business)
+
+<img width="282" height="368" alt="image" src="https://github.com/user-attachments/assets/ef7091e5-d9d1-4b92-ab7a-f9b86dfa9beb" />
 
 **Foco:** Estratégia, valor e resultados de negócio.
 
@@ -43,7 +47,9 @@ De acordo com a documentação oficial do **AWS CAF**, a Perspectiva de Negócio
 
 ---
 
-## 👥 2. Perspectiva de Pessoas (People)
+## 👥 2. Pessoas (People)
+
+<img width="269" height="398" alt="image" src="https://github.com/user-attachments/assets/9cab3e9e-93bb-4ef0-ab4f-936d77fc42fa" />
 
 **Foco:** Cultura, liderança e capacitação.
 
@@ -64,7 +70,9 @@ De acordo com a documentação oficial do **AWS CAF**, a Perspectiva de Negócio
 
 ---
 
-## 🧭 3. Perspectiva de Governança (Governance)
+## 🧭 3. Governança (Governance)
+
+<img width="295" height="338" alt="image" src="https://github.com/user-attachments/assets/392eda11-7a8c-42b2-ab26-fc1cd1811c0a" />
 
 **Foco:** Políticas, riscos e conformidade.
 
@@ -85,7 +93,9 @@ De acordo com a documentação oficial do **AWS CAF**, a Perspectiva de Negócio
 
 ---
 
-## ⚙️ 4. Perspectiva de Plataforma (Platform)
+## ⚙️ 4. Plataforma (Platform)
+
+<img width="291" height="422" alt="image" src="https://github.com/user-attachments/assets/2492b99a-f2fc-4398-8bb5-65117e4d0b57" />
 
 **Foco:** Infraestrutura e arquitetura técnica.
 
@@ -106,7 +116,9 @@ De acordo com a documentação oficial do **AWS CAF**, a Perspectiva de Negócio
 
 ---
 
-## 🔒 5. Perspectiva de Segurança (Security)
+## 🔒 5. Segurança (Security)
+
+<img width="290" height="427" alt="image" src="https://github.com/user-attachments/assets/9dc034ef-a5e2-49c5-88f8-6dbfbdbc1a29" />
 
 **Foco:** Confidencialidade, integridade e disponibilidade.
 
@@ -128,7 +140,9 @@ De acordo com a documentação oficial do **AWS CAF**, a Perspectiva de Negócio
 
 ---
 
-## 🧰 6. Perspectiva de Operações (Operations)
+## 🧰 6. Operações (Operations)
+
+<img width="283" height="452" alt="image" src="https://github.com/user-attachments/assets/b3d9173e-7261-4da8-8eaf-ee5e61eca510" />
 
 **Foco:** Monitoramento, eficiência e continuidade.
 
