@@ -24,10 +24,7 @@
 
 - [Um pouco de história da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Um%20pouco%20de%20hist%C3%B3ria.md)
 - [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
-- Benefícios da Nuvem AWS:
-    - Elasticidade e escalabilidade
-    - Alta disponibilidade e resiliência
-    - [Custo total de propriedade (TCO) e economia](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/O%20que%20%C3%A9%20TCO.md)
+- [Benefícios da Nuvem AWS: Elasticidade e Escalabilidade, Alta Disponibilidade e Resiliência, Custo Total de Propriedade (TCO)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Benef%C3%ADcios%20da%20Nuvem.md)
 - [Modelos de Serviços: IaaS, PaaS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Servi%C3%A7os%20-%20IaaS,%20PaaS,%20SaaS.md)
 - [Modelos de Implementação: Nuvens pública, privada, híbrida e on-premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Implementa%C3%A7%C3%A3o%20-%20Nuvem,%20H%C3%ADbrida,%20On-Premise.md)
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelo%20de%20Responsabilidade%20Compartilhada.md)
