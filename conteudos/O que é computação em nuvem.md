@@ -4,6 +4,8 @@ A **Computação em Nuvem** é a entrega de serviços de computação — como *
 
 Com a computação em nuvem, as empresas podem consumir **recursos de tecnologia sob demanda**, sem precisar construir e manter uma infraestrutura própria.  
 
+A computação em nuvem permite que você deixe de pensar em sua infraestrurua como hardware e passe a pensar nela (e usá-la) como software.
+
 ---
 
 ## 🌩️ Mas... o que é “nuvem”?
@@ -16,6 +18,7 @@ Esses computadores são chamados de **servidores** e ficam em grandes **data cen
 ---
 
 ## 🎯 Vantagens da Computação em Nuvem
+
 - **Escalabilidade** → ajuste de recursos conforme a necessidade.  
 - **Custo sob demanda** → pague apenas pelo que usar.  
 - **Alta disponibilidade** → serviços distribuídos globalmente.  
