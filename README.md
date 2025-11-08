@@ -28,8 +28,8 @@
     - Elasticidade e escalabilidade
     - Alta disponibilidade e resiliência
     - [Custo total de propriedade (TCO) e economia](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/O%20que%20%C3%A9%20TCO.md)
-- [Modelos de Implementação: Nuvens pública, privada, híbrida e on-premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Implementa%C3%A7%C3%A3o%20-%20Nuvem,%20H%C3%ADbrida,%20On-Premise.md)
 - [Modelos de Serviços: IaaS, PaaS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Servi%C3%A7os%20-%20IaaS,%20PaaS,%20SaaS.md)
+- [Modelos de Implementação: Nuvens pública, privada, híbrida e on-premise](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Implementa%C3%A7%C3%A3o%20-%20Nuvem,%20H%C3%ADbrida,%20On-Premise.md)
 - [Modelo de responsabilidade compartilhada](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelo%20de%20Responsabilidade%20Compartilhada.md)
 - [Infraestrutura Global da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Infraestrutura%20global%20da%20AWS.md)
 - [Well-Architected Framework](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/AWS%20Well-Architected%20Framework.md)
