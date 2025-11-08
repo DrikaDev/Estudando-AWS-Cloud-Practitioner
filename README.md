@@ -22,7 +22,7 @@
 
 ### ☁️ AWS
 
-- [Um pouco de história da AWS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Um%20pouco%20de%20hist%C3%B3ria.md)
+- [AWS - Um pouco de história](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Um%20pouco%20de%20hist%C3%B3ria.md)
 - [O que é Computação em Nuvem?](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/O%20que%20%C3%A9%20computa%C3%A7%C3%A3o%20em%20nuvem.md)
 - [Benefícios da Nuvem AWS: Elasticidade e Escalabilidade, Alta Disponibilidade e Resiliência, Custo Total de Propriedade (TCO)](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Benef%C3%ADcios%20da%20Nuvem.md)
 - [Modelos de Serviços: IaaS, PaaS, SaaS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Modelos%20de%20Servi%C3%A7os%20-%20IaaS,%20PaaS,%20SaaS.md)
