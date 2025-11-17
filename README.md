@@ -1,14 +1,19 @@
 ## 🚶🏻‍♀️‍➡️ Minha jornada para a AWS Cloud Practitioner 🚀
 
+### 🎉 **Status atualizado:** Aprovada na **AWS Certified Cloud Practitioner (CLF-C02)** em **novembro/2025**!
+
 ### 🎯 Objetivo  
 
-✏️ Este repositório tem como objetivo documentar minha jornada de estudos com a **AWS** com foco na certificação **AWS Certified Cloud Practitioner**.  
-📝 Aqui pretendo reunir minhas anotações, explicações, resumos e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
-🚧 Este conteúdo está sendo construído e alimentado gradualmente à medida que avanço nos meus estudos sobre cloud.  
+> 📌 **Atualização (novembro/2025):** Concluí com sucesso minha certificação **AWS Cloud Practitioner**!  
+> Este repositório agora documenta minha jornada *até a certificação* e meu aprofundamento contínuo em AWS.
+
+✏️ Este repositório documenta minha jornada de estudos *até a certificação* **AWS Certified Cloud Practitioner**.  
+📝 Aqui reuni minhas anotações, explicações, resumos e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
+🚧 Este conteúdo está foi construído e alimentado gradualmente à medida que avancei nos meus estudos sobre cloud.  
 
 🛑 Atenção! Os Labs destes estudos foram todos construídos em ambiente Sandbox! ⌛
 
-> *Lembrando que este conteúdo está em constante construção, portanto, pode haver 'erros'.*  
+> *Lembrando que este conteúdo AINDA está em constante construção POIS O APRENDIZADO NUNCA ACABA, portanto, pode haver 'erros'.*  
 > Sinta-se à vontade para explorar e sugerir melhorias!  
 > Deixe uma ⭐ se gostar do conteúdo!  
 
@@ -109,14 +114,15 @@
 
 Olá, me chamo **Adriana Gutierrez**, sou uma profissional 40+, formada em Análise e Desenvolvimento de Sistemas, com inglês avançado e uma breve experiência profissional como desenvolvedora de front-end. 
 
-Atualmente, estou em transição de carreira para a área de tecnologia, me aprofundando em **AWS e soluções em nuvem** e, este repositório faz parte dessa caminhada. 🚶🏻‍♀️‍➡️
+Atualmente, estou em transição de carreira para a área de tecnologia, me aprofundando em **AWS e soluções em nuvem**.  
+Em **novembro/2025**, conquistei minha certificação **AWS Certified Cloud Practitioner**. 🎉
 
 ---
 
 ### 🫱🏻‍🫲🏼 Vamos juntos?
 
 Se este conteúdo te ajudar de alguma forma, agradeço se puder me dar uma ⭐!  
-E, se você também estiver estudando para a AWS Cloud Practitioner, bora trocar figurinhas? 🤩
+E, se você está estudando para a AWS Cloud Practitioner, fico à diposição para ajudar! 🚀   
 
 ---
 
