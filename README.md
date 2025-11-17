@@ -9,7 +9,7 @@
 
 ✏️ Este repositório documenta minha jornada de estudos *até a certificação* **AWS Certified Cloud Practitioner**.  
 📝 Aqui reuni minhas anotações, explicações, resumos e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
-🚧 Este conteúdo está foi construído e alimentado gradualmente à medida que avancei nos meus estudos sobre cloud.  
+🚧 Este conteúdo foi construído e alimentado gradualmente à medida que avancei nos meus estudos sobre cloud.  
 
 🛑 Atenção! Os Labs destes estudos foram todos construídos em ambiente Sandbox! ⌛
 
