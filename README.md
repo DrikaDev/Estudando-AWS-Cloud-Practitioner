@@ -122,7 +122,7 @@ Em **novembro/2025**, conquistei minha certificação **AWS Certified Cloud Prac
 ### 🫱🏻‍🫲🏼 Vamos juntos?
 
 Se este conteúdo te ajudar de alguma forma, agradeço se puder me dar uma ⭐!  
-E, se você está estudando para a AWS Cloud Practitioner, fico à diposição para ajudar! 🚀   
+E, se você está estudando para a AWS Cloud Practitioner, fico à diposição para ajudar! 😉   
 
 ---
 
