@@ -2,11 +2,6 @@
 
 ### 🎉 **Status atualizado:** Aprovada na **AWS Certified Cloud Practitioner (CLF-C02)** em **novembro/2025**!
 
-### 🎯 Objetivo  
-
-> 📌 **Atualização (novembro/2025):** Concluí com sucesso minha certificação **AWS Cloud Practitioner**!  
-> Este repositório agora documenta minha jornada *até a certificação* e meu aprofundamento contínuo em AWS.
-
 ✏️ Este repositório documenta minha jornada de estudos *até a certificação* **AWS Certified Cloud Practitioner**.  
 📝 Aqui reuni minhas anotações, explicações, resumos e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
 🚧 Este conteúdo foi construído e alimentado gradualmente à medida que avancei nos meus estudos sobre cloud.  
