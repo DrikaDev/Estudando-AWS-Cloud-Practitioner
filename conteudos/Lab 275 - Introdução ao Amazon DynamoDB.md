@@ -8,6 +8,7 @@
 - [3. Modificar um item existente](#3-modificar-um-item-existente)
 - [4. Consultar a tabela](#4-consultar-a-tabela)
 - [5. Excluir a tabela](#5-excluir-a-tabela)
+- [6. Conclusão](#6-conclusão)
 
 ---
 
@@ -205,6 +206,19 @@ Nesta tarefa, vamos excluir a tabela **Music**. Todos os dados da tabela também
 <img width="831" height="133" alt="image" src="https://github.com/user-attachments/assets/f181246d-5529-4b2e-a3d7-59e4d374b90f" />
 
 A tabela será excluída permanentemente do **DynamoDB**.  
+
+---
+
+### 6. Conclusão
+
+Parabéns! Você concluiu com êxito as seguintes tarefas:
+
+- ✅ Criou uma tabela no **Amazon DynamoDB**  
+- ✅ Inseriu dados em uma tabela do **Amazon DynamoDB**  
+- ✅ Consultou uma tabela do **Amazon DynamoDB**  
+- ✅ Excluiu uma tabela do **Amazon DynamoDB**
+
+Para aprofundar seus conhecimentos sobre o DynamoDB, consulte a **documentação oficial da AWS**.
 
 ---
 
