@@ -403,7 +403,9 @@ FROM cloudtrail_logs_monitoring####
 LIMIT 5;
 ```
 Retorna 5 registros completos, útil para entender o esquema e as colunas disponíveis.  
-
+Concentre-se nas colunas useridentity, eventtime, eventsource, eventname e requestparameters, que contêm as informações mais valiosas para ajudar a encontrar a origem do invasor.  
+A coluna useridentity tem muitos detalhes que dificultam a leitura. Agora você retornará apenas o nome de usuário dessa coluna.  
+  
 Consulta focada — colunas mais relevantes  
 ```
 SELECT useridentity.userName, eventtime, eventsource, eventname, requestparameters
@@ -426,3 +428,146 @@ Com o Athena você deve conseguir identificar:
 - Quando (eventtime) a alteração ocorreu;  
 - Quais parâmetros foram enviados (requestparameters) — por exemplo, o IP adicionado;  
 - Se a ação foi feita via Console ou programaticamente (analise userIdentity e o tipo de evento).  
+
+🎉 Parabéns! Você descobriu com êxito a identidade do hacker.
+
+## Tarefa 5 — Analisar ainda mais a invasão e melhorar a segurança
+Nesta última etapa, vamos reforçar a segurança da instância comprometida e da sua conta AWS, identificando usuários suspeitos no sistema operacional e removendo acessos indevidos.
+
+### 🔍 Tarefa 5.1 — Verificar os usuários do sistema operacional
+
+1. No terminal conectado via SSH à instância do servidor web, verifique quem fez login recentemente no sistema operacional: `sudo aureport --auth`  
+>💡 Observação: Há evidências de que um usuário diferente do ec2-user acessou a instância. O usuário suspeito é chaos-user.  
+
+2. Verifique quem está conectado no momento.  
+Execute: `who`
+Você verá que chaos-user ainda está conectado.  
+É necessário removê-lo imediatamente!  
+
+3. Remova o usuário chaos-user.
+Tente remover o usuário: `sudo userdel -r chaos-user`
+Esse comando falha porque o usuário ainda possui uma sessão ativa.  
+O terminal retorna o número do processo associado ao login dele.  
+
+4. Finalize o processo ativo do usuário.  
+Substitua *ProcNum* pelo número do processo retornado acima e execute: `sudo kill -9 ProcNum`  
+Depois, confirme novamente quem está conectado: `who`  
+Agora somente você (ec2-user) deve estar conectado.
+
+5. Exclua o usuário definitivamente.  
+Com o processo encerrado, execute novamente: `sudo userdel -r chaos-user`  
+Dessa vez o comando deve funcionar corretamente.
+
+6. Verifique se há outros usuários suspeitos no sistema operacional
+Execute: `sudo cat /etc/passwd | grep -v nologin`  
+Esse comando mostra apenas usuários com login permitido (filtrando contas do sistema).  
+Usuários normais do Amazon Linux que devem aparecer: `root`, `sync`, `shutdown` e `halt`  
+Se somente eles aparecerem (além de ec2-user), significa que não há mais usuários suspeitos.
+
+### 🔐 Tarefa 5.2 — Atualizar a segurança SSH
+Agora que o usuário malicioso foi removido, é hora de identificar **como ele conseguiu acesso à instância via SSH** e corrigir a vulnerabilidade.
+
+#### 🔎 Verificar configurações do SSH
+1. Liste as informações do arquivo de configuração do SSH: `sudo ls -l /etc/ssh/sshd_config`  
+📌 Observação: O arquivo foi modificado hoje, o que é um grande alerta de segurança.  
+
+2. Edite o arquivo de configuração do SSH.
+Edite o arquivo usando o editor VI: `sudo vi /etc/ssh/sshd_config`  
+Dentro do VI, ative a visualização de números de linha: `:set number`  
+⚠️ Problema identificado (linha 61)
+A linha **PasswordAuthentication yes** está habilitando autenticação por senha, o que não é recomendado.  
+Isso permite que qualquer pessoa com nome de usuário e senha válidos tente acesso via SSH.  
+
+3. Corrija a configuração.
+Navegue até a linha: `PasswordAuthentication yes`  
+Entre no modo de edição pressionando: `a`  
+Comente a linha, adicionando # no início: `#PasswordAuthentication yes`  
+Vá para a linha seguinte e descomente: `#PasswordAuthentication no` deixando assim: `PasswordAuthentication no`  
+Saia do modo de edição: `Esc`  
+Salve e saia: `:wq`
+
+4. Reinicie o serviço SSH
+Para aplicar as alterações: `sudo service sshd restart`  
+⚠️ Observação: Se a conexão SSH cair, reconecte antes de continuar.
+
+5. Remover regra insegura no Security Group
+No console da AWS:  
+Acesse EC2 → Security Groups  
+Selecione o SG da instância Café Web Server  
+Vá em Regras de entrada → Editar  
+Remova a regra criada pelo hacker: `Porta 22 — Origem: 0.0.0.0/0`  
+Salve as alterações.
+
+6. Excelente trabalho fortalecendo sua segurança! 🔐🚀
+- Removeu o acesso SSH inseguro criado pelo invasor
+- Reforçou a configuração do sshd_config
+- Bloqueou autenticação por senha
+- Garantiu que apenas conexões usando par de chaves e IP permitido possam acessar a instância
+
+### ☕ Tarefa 5.3 — Corrigir o site após a invasão
+Agora que o invasor foi removido e o acesso à instância está seguro, é hora de restaurar o site da cafeteria Café para o estado original.
+
+1. Acessar o diretório de imagens do site
+No terminal conectado via SSH à instância, navegue até o diretório onde as imagens do site são armazenadas:
+```bash
+cd /var/www/html/cafe/images/
+ls -l
+```
+⚠️ Ao listar os arquivos, você verá que o hacker criou um backup da imagem original — um sinal de que ele substituiu o arquivo principal!  
+
+2. Restaurar o arquivo original
+Execute o comando abaixo para substituir a imagem alterada pela versão original criada pelo sistema:  
+`sudo mv Coffee-and-Pastries.backup Coffee-and-Pastries.jpg` 
+Isso restaura a imagem correta no site.
+
+3. Verificar se o site voltou ao normal
+Abra no navegador: `http://<WebServerIP>/cafe`  
+**Dica:**
+Se as imagens não atualizarem, pressione Shift + Atualizar para forçar o navegador a recarregar sem cache.
+
+4. Resultado  
+A imagem original foi restaurada e o site voltou ao normal — sem o conteúdo colocado pelo invasor.  
+Site corrigido com sucesso! 🚀
+
+### 🛡️ Tarefa 5.4: Excluir o usuário hacker da AWS
+Lembre-se de que o hacker não apenas acessou a instância EC2 que hospeda o site, mas também executou um comando da AWS CLI que abriu a porta 22 no grupo de segurança para 
+toda a internet.  
+Nesta etapa, vamos remover da conta o usuário **chaos** do AWS Identity and Access Management (AWS IAM).  
+
+1. No **Console de Gerenciamento da AWS**, selecione o menu **Services (Serviços)** e escolha **IAM**.  
+2. Clique em **Usuários**.  
+3. Marque a caixa de seleção ao lado do usuário **chaos**.  
+4. Selecione **Excluir**.  
+5. Insira o nome do usuário quando solicitado e clique em **Excluir** novamente.
+
+Ótimo trabalho! O usuário **chaos** foi completamente removido da conta. 🚫
+
+---
+
+## ☕ Atualização da cafeteria Café
+
+<img width="227" height="177" alt="image" src="https://github.com/user-attachments/assets/62a31a3f-4c67-4c9a-80e9-53e702b3eae5" />
+
+Todos na cafeteria Café estão aliviados por Sofia ter descoberto quem causou a violação, removido o acesso indevido ao servidor web e restaurado a segurança da conta AWS.
+
+No fim das contas, o hacker parecia estar apenas tentando se divertir — mas os danos poderiam ter sido sérios.  
+Agora, toda a equipe envolvida na atualização e manutenção do site entende a importância de mantê-lo sempre seguro.
+
+Eles também continuarão utilizando o **AWS CloudTrail** como uma ferramenta essencial para auditar e monitorar atividades na conta AWS.
+
+✨ *Ótimo trabalho! Segurança reforçada e lições importantes aprendidas.*  
+
+## 🏁 Atividade Concluída
+Parabéns! Você concluiu o laboratório. 🎉
+Para finalizar:
+
+1. Selecione **End Lab (Encerrar laboratório)** na parte superior da página.  
+2. Escolha **Sim** para confirmar que deseja encerrar o laboratório.  
+3. Um painel será exibido com a mensagem:  
+   **DELETE has been initiated... You may close this message box now**  
+   *(A EXCLUSÃO foi iniciada... Você já pode fechar esta caixa de mensagem.)*
+4. Selecione o **X** no canto superior direito para fechar o painel.
+
+---
+
+✨ *Laboratório finalizado com sucesso!*  
