@@ -1,10 +1,5 @@
 ## 🧪 Lab 187 - Trabalhar com o AWS CloudTrail
 
-Este laboratório demonstra como:
-- **monitorar ações na conta AWS**, 
-- **investigar atividades suspeitas** e 
-- **proteger recursos** utilizando o **AWS CloudTrail**, Amazon EC2, AWS CLI, grep e Amazon Athena.
-
 Nesta atividade vamos criar uma trilha do **AWS CloudTrail** para auditar ações executadas na sua conta.  
 Em seguida vamos investigar **quem modificou o site** da cafeteria **Café**, que está hospedado em uma instância **Amazon EC2** chamada **Café Web Server**.
 
@@ -244,3 +239,190 @@ Dessa forma veremos os campos estruturados, como:
 - entre outros  
 📌 Isso permite identificar rapidamente o tipo de evento registrado em cada log.  
 
+#### 🎯 3. Encontrar eventos relacionados ao servidor violado
+Como o foco é descobrir ações feitas na instância Café Web Server, é útil filtrar registros onde o **sourceIPAddress** corresponde ao IP desse servidor.  
+Defina o IP como variável: `ip=<WebServerIP>`  
+
+Execute o seguinte comando: `for i in $(ls); do echo $i && cat $i | python -m json.tool | grep sourceIPAddress ; done`  
+
+🤔 O que esse comando faz?  
+- Percorre todos os arquivos do diretório atual (for i in $(ls)).  
+- Exibe o nome de cada arquivo (echo $i).  
+- Formata o conteúdo JSON (python -m json.tool).  
+- Filtra somente linhas contendo sourceIPAddress.  
+✔️ Você verá vários registros onde o IP do Café Web Server aparece.
+
+#### 📝 4. Filtrar eventos por **eventName**
+Agora filtre para descobrir quais ações foram realizadas:  
+`for i in $(ls); do echo $i && cat $i | python -m json.tool | grep eventName ; done`  
+Você verá muitos eventos:  
+- Describe*  
+- List*  
+Esses são geralmente inofensivos.  
+Mas também aparecerão eventos mais sensíveis, como:  
+- Update*  
+- AuthorizeSecurityGroupIngress  
+- ModifyInstanceAttribute  
+- etc.  
+Estes podem indicar alterações reais na infraestrutura.  
+
+#### 🔍 5. Analisar um log específico (opcional)
+Se quiser investigar um evento suspeito, abra o arquivo no editor vi (ou outro): `vi <filename.json>`  
+Procure pelo nome do evento: `/eventName`  
+Analise os detalhes do registro.
+
+💡 Próximo passo
+Embora grep seja útil, existem ferramentas mais poderosas para investigar logs — a seguir você usará Amazon Athena, que permite consultas SQL diretamente nos logs do CloudTrail.
+
+### Tarefa 3.5: Analisar os Logs Usando Comandos CloudTrail da AWS CLI
+Nesta tarefa vamos utilizar diretamente a **AWS CLI** para consultar eventos registrados pelo **AWS CloudTrail**.  
+Essa abordagem permite filtrar logs por atributos específicos, como tipo de evento, usuário, recursos modificados e muito mais.  
+
+#### 📘 1. Consultar a documentação da AWS CLI
+Acesse a página de referência da AWS CLI para CloudTrail e procure pelo comando: **`lookup-events`**  
+Esse comando permite filtrar eventos usando até **8 atributos**, como:  
+
+- Nome do evento (`EventName`)
+- Tipo de recurso (`ResourceType`)
+- Nome do usuário (`Username`)
+- Chave de acesso (`AccessKeyId`)
+- Entre outros
+
+#### 🔐 2. Filtrar eventos de login no console
+Role até a seção **Examples** da documentação e execute o comando para procurar eventos de login no console:  
+```
+aws cloudtrail lookup-events --lookup-attributes  
+AttributeKey=EventName,AttributeValue=ConsoleLogin
+```  
+Resultado esperado:  
+- Pode não haver nenhum login diferente do seu.
+- Ou o único login registrado é o do usuário que você usou para acessar o console.
+📌 Isso sugere que o invasor **não** usou o Console da AWS.
+
+#### 🛡️ 3. Buscar alterações em grupos de segurança
+Como o site foi violado e houve modificação no Security Group, procure por eventos relacionados a AWS::EC2::SecurityGroup:  
+```
+aws cloudtrail lookup-events --lookup-attributes  
+AttributeKey=ResourceType,AttributeValue=AWS::EC2::SecurityGroup --output text
+```  
+Esse comando retorna todas as ações realizadas em grupos de segurança da conta.  
+Contudo, os resultados podem ser muito extensos.  
+
+#### 🎯 4. Encontrar o Security Group da instância Café Web Server
+Para filtrar somente o Security Group que realmente importa, primeiro obtenha:  
+
+🔹 Região onde a instância está rodando:  
+`region=$(curl http://169.254.169.254/latest/dynamic/instance-identity/document | grep region | cut -d '"' -f4)`  
+
+🔹 ID do Security Group associado ao Café Web Server:  
+```
+sgId=$(aws ec2 describe-instances \
+  --filters "Name=tag:Name,Values='Cafe Web Server'" \
+  --query 'Reservations[*].Instances[*].SecurityGroups[*].[GroupId]' \
+  --region $region \
+  --output text)
+```
+
+Exiba o valor encontrado: `echo $sgId`  
+Agora você tem o ID exato do Security Group modificado pelo invasor.
+
+#### 🕵️ 5. Filtrar os eventos usando o Security Group específico
+Agora refine a consulta anterior procurando somente eventos que envolvem esse Security Group:  
+```
+aws cloudtrail lookup-events \
+  --lookup-attributes AttributeKey=ResourceType,AttributeValue=AWS::EC2::SecurityGroup \
+  --region $region --output text | grep $sgId
+```
+
+Esse comando revela:  
+- Quem alterou o Security Group  
+- Quando a alteração ocorreu  
+- Qual ação foi executada  
+- E outros detalhes importantes do evento registrado
+
+#### 💭 6. Próximos passos
+Você poderia continuar refinando consultas com a AWS CLI, mas a análise se tornaria trabalhosa.  
+Por isso, a AWS e parceiros da APN oferecem ferramentas especializadas em análise de logs:  
+🔗 https://aws.amazon.com/cloudtrail/partners/  
+Contudo, no contexto deste laboratório, existe uma alternativa poderosa:  
+👉 Usar o Amazon Athena para consultar os logs do CloudTrail usando SQL.  
+
+## Tarefa 4 — Analisar os logs do CloudTrail usando Athena
+Como visto anteriormente, encontrar informações específicas em grandes volumes de logs pode ser difícil.  
+O **Amazon Athena** permite consultar arquivos armazenados no S3 usando SQL padrão, facilitando a análise dos logs do CloudTrail.
+
+### 📌 Tarefa 4.1 — Criar a tabela do Athena
+
+1. No **AWS Management Console** vá para **Services → CloudTrail**.  
+
+2. No painel de navegação, selecione **Event history (Histórico de eventos)**.  
+   > A interface de histórico permite filtros rápidos, mas neste exercício usaremos o Athena.
+
+3. Clique em **Create Athena table (Criar tabela do Athena)**.
+
+4. Em **Storage location (Local de armazenamento)**, selecione o bucket S3 que você criou para os logs do CloudTrail, por exemplo: `s3://monitoring####/`  
+(Substitua `####` pelos quatro dígitos do seu bucket.)  
+
+5. Analise a declaração **CREATE TABLE** gerada pelo console:
+- Ela cria colunas correspondentes aos pares nome/valor do JSON do CloudTrail.
+- Observe a cláusula `LOCATION` no final — ela aponta para os dados já presentes no S3.
+
+6. Consulte a documentação (opcional):
+- CloudTrail event reference: https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference.html  
+- Athena + CloudTrail: https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html
+
+7. Após revisar, selecione **Create table**.  
+A tabela será criada com um nome padrão que incorpora o nome do bucket (por exemplo `cloudtrail_logs_monitoring####`).
+
+8. No Console, abra **Services → Analytics → Athena**.
+
+### 🧠 Tarefa 4.2 — Analisar logs usando o Athena
+
+1. No **Athena Query Editor**, feche o tutorial se aparecer e localize a tabela criada no painel esquerdo (ex.: `cloudtrail_logs_monitoring####`).
+
+2. Expanda a tabela para ver as colunas. Observações:
+- `useridentity` é um **struct** (contém subcampos como `userName`).
+- `resources` é uma **array**.
+- Cada campo do JSON virou uma coluna no esquema.
+
+3. Configure o local de resultados das consultas:
+- No canto superior direito, clique em **Settings → Manage**.
+- Em **Location of query result**, defina:
+  ```
+  s3://monitoring####/results/
+  ```
+  (substitua `####` pelo seu bucket)
+- Clique em **Save**.
+
+### ▶ Consultas úteis
+
+#### Consulta básica — ver primeiras linhas
+```sql
+SELECT *
+FROM cloudtrail_logs_monitoring####
+LIMIT 5;
+```
+Retorna 5 registros completos, útil para entender o esquema e as colunas disponíveis.  
+
+Consulta focada — colunas mais relevantes  
+```
+SELECT useridentity.userName, eventtime, eventsource, eventname, requestparameters
+FROM cloudtrail_logs_monitoring####
+LIMIT 30;
+```
+- Retorna `userName`, `eventtime`, `eventsource`, `eventname` e `requestparameters`.  
+- Use essa consulta para identificar ações suspeitas (ex.: alterações em security groups).  
+
+### ✅ Dicas para investigação
+- Remova o LIMIT para consultar todo o conjunto de logs quando necessário.  
+- Filtre por eventos do EC2: `WHERE eventsource = 'ec2.amazonaws.com'`  
+- Procure por eventnames relacionados a security groups, por exemplo `AuthorizeSecurityGroupIngress` ou `RevokeSecurityGroupIngress`:
+`WHERE eventname LIKE '%SecurityGroup%' OR eventname LIKE '%AuthorizeSecurityGroupIngress%'`
+- Use `from_iso8601_timestamp(eventtime)` para comparar datas/horários em consultas (por exemplo, últimos 1 dia).  
+
+### 🎯 Objetivo desta tarefa  
+Com o Athena você deve conseguir identificar:  
+- Quem (useridentity.userName) modificou o Security Group da instância Café Web Server;  
+- Quando (eventtime) a alteração ocorreu;  
+- Quais parâmetros foram enviados (requestparameters) — por exemplo, o IP adicionado;  
+- Se a ação foi feita via Console ou programaticamente (analise userIdentity e o tipo de evento).  
