@@ -754,4 +754,4 @@ Eles também continuarão utilizando o **AWS CloudTrail** como uma ferramenta es
 
 ✨ *Ótimo trabalho! Segurança reforçada e lições importantes aprendidas.*  
 
-## 🏁 Atividade Concluída. Parabéns! 🎉  
+🏁 Atividade Concluída. Parabéns! 🎉  
