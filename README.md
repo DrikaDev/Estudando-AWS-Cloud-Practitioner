@@ -91,6 +91,7 @@
 - [179 - Migração para o Amazon RDS](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20179%20-%20Migra%C3%A7%C3%A3o%20para%20o%20Amazon%20RDS.md)
 - [180 - Configurar uma Amazon VPC](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20180%20-%20Configurar%20uma%20Amazon%20VPC.md)
 - [186 - Monitorar a infraestrutura](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20186%20-%20Monitorar%20a%20infraestrutura.md)
+- [187 - Trabalhar com o AWS CloudTrail](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20187%20-%20Trabalhar%20com%20o%20AWS%20CloudTrail.md)
 - [229 - Gerenciamento de Usuários e Grupos no Linux](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20229%20-%20Gerenciamento%20de%20usu%C3%A1rios%20e%20grupos.md)
 - [233 - Trabalhar com o Sistema de Arquivos no Linux: criação de estrutura de pastas](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20233%20-%20Trabalhar%20com%20o%20Sistema%20de%20Arquivos%20no%20Linux.md)
 - [261 - Protocolos da Internet: endereços IPs Públicos e Privados](https://github.com/DrikaDev/Estudando-AWS-Cloud-Practitioner/blob/main/conteudos/Lab%20261%20-%20Protocolos%20da%20Internet%20-%20enderecos%20IP%20publicos%20e%20privados.md)
