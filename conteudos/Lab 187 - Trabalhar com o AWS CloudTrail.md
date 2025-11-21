@@ -87,7 +87,7 @@ Não deve aparecer **0.0.0.0/0**, que deixaria o SSH aberto para qualquer pessoa
 18. Na guia **Detalhes**, copie o valor de **Public IPv4 address**
 <img width="1214" height="399" alt="image" src="https://github.com/user-attachments/assets/db06ed1c-d310-4c71-a61e-ece09c576217" />
 
-19. Abra uma nova aba no navegador e acesse: `http://<WebServerIP>/cafe/` 
+19. Abra uma nova aba no navegador e acesse: `http://<WebServerIP>/cafe/`  
 ➡️ *Substitua `<WebServerIP>` pelo endereço copiado.*
 <img width="417" height="48" alt="image" src="https://github.com/user-attachments/assets/a7a04ba4-f776-4ef4-91d0-52a25f4d6a4f" />
 
@@ -127,11 +127,12 @@ Confirme que a trilha aparece listada em **Trails / Trilhas**.
 
 ### Tarefa 2.2: Observar o Site Violado  
 1. Retorne à aba do navegador onde o site da cafeteria está aberto.  
-2. Atualize a página.  
+2. Atualize a página.
+
 ⚠️ **Atenção:**  
 - Pode levar até **1 minuto** para que o site seja invadido.  
 - O navegador pode estar mantendo imagens em cache.  
-Use: **Shift + Atualizar** para forçar o carregamento completo.  
+- Use **Shift + Atualizar** para forçar o carregamento completo.  
 <img width="1409" height="800" alt="image" src="https://github.com/user-attachments/assets/12b23315-f3c5-41a7-b85a-2472886ca771" />
 
 ### 😱 O que você viu?  
@@ -257,23 +258,18 @@ Execute o seguinte comando: `for i in $(ls); do echo $i && cat $i | python -m js
 - Exibe o nome de cada arquivo (echo $i).  
 - Formata o conteúdo JSON (python -m json.tool).  
 - Filtra somente linhas contendo sourceIPAddress.  
-✔️ Você verá vários registros onde o IP do Café Web Server aparece.  
+- Você verá vários registros onde o IP do Café Web Server aparece.  
 
 #### 📝 4. Filtrar eventos por **eventName**  
 Agora filtre para descobrir quais ações foram realizadas:  
 `for i in $(ls); do echo $i && cat $i | python -m json.tool | grep eventName ; done`  
 <img width="981" height="312" alt="image" src="https://github.com/user-attachments/assets/91e70a6b-d465-4926-949c-da8eaa834ac8" />
 
-Você verá muitos eventos:  
-- Describe*  
-- List*  
-Esses são geralmente inofensivos.  
+Você verá muitos eventos como :  
+- Describe / List: esses são geralmente inofensivos.  
+
 Mas também aparecerão eventos mais sensíveis, como:  
-- Update*  
-- AuthorizeSecurityGroupIngress  
-- ModifyInstanceAttribute  
-- etc.  
-Estes podem indicar alterações reais na infraestrutura.  
+- Update / AuthorizeSecurityGroupIngress / ModifyInstanceAttribute: estes podem indicar alterações reais na infraestrutura.  
 
 #### 🔍 5. Analisar um log específico (opcional)  
 Se quiser investigar um evento suspeito, abra o arquivo no editor vi (ou outro): `vi <filename.json>`  
@@ -281,8 +277,7 @@ Procure pelo nome do evento: `/eventName`
 Analise os detalhes do registro.  
 
 💡 Próximo passo  
-Embora grep seja útil, existem ferramentas mais poderosas para investigar logs — a seguir você usará Amazon Athena, que permite consultas SQL diretamente nos logs do 
-CloudTrail.  
+Embora `grep` seja útil, existem ferramentas mais poderosas para investigar logs — a seguir você usará Amazon Athena, que permite consultas SQL diretamente nos logs do CloudTrail.  
 
 ### Tarefa 3.5: Analisar os Logs Usando Comandos CloudTrail da AWS CLI  
 Nesta tarefa vamos utilizar diretamente a **AWS CLI** para consultar eventos registrados pelo **AWS CloudTrail**.  
@@ -315,22 +310,20 @@ Contudo, os resultados podem ser muito extensos.
 <img width="1413" height="459" alt="image" src="https://github.com/user-attachments/assets/46c1dc2b-a758-4481-89d8-221c78525454" />
 
 #### 🎯 4. Encontrar o Security Group da instância Café Web Server
-Para filtrar somente o Security Group que realmente importa, primeiro obtenha:  
-🔹 Região onde a instância está rodando:  
+Para filtrar somente o **Security Group** que realmente importa, primeiro obtenha:  
+
+🔹A região onde a instância está rodando:  
 `region=$(curl http://169.254.169.254/latest/dynamic/instance-identity/document | grep region | cut -d '"' -f4)`  
 <img width="1228" height="101" alt="image" src="https://github.com/user-attachments/assets/9348b77f-dfb5-4b89-95db-5525db49e3b3" />
 
-O que esse comando faz?  
-- **curl** acessa o *Instance Metadata Service (IMDS)* da instância EC2.  
-- O serviço retorna um documento **JSON** com várias informações sobre a instância, incluindo a **região**.  
-- **grep** localiza a linha onde aparece o campo `"region"`.  
-- **cut** extrai apenas o valor da região, como `us-east-1`.  
-- O resultado final é armazenado na variável **`region`**.  
+> O que esse comando faz? 🤔  
+> - O **curl** acessa o *Instance Metadata Service (IMDS)* da instância EC2.  
+> - O serviço retorna um documento **JSON** com várias informações sobre a instância, incluindo a **região**.  
+> - O **grep** localiza a linha onde aparece o campo `"region"`.  
+> - O **cut** extrai apenas o valor da região, como `us-east-1`.  
+> - E o resultado final é armazenado na variável **`region`**.  
 
-Sobre a saída do **curl**  
-O bloco que aparece com: `% Total % Received % Xferd ...` é apenas a **barra de progresso do curl**, totalmente normal e esperada.  
-
-🔹 ID do Security Group associado ao Café Web Server:  
+🔹O ID do Security Group associado ao Café Web Server:  
 `sgId=$(aws ec2 describe-instances \ --filters "Name=tag:Name,Values='Cafe Web Server'" \ --query 'Reservations[*].Instances[*].SecurityGroups[*].[GroupId]' \ --region $region \ --output text)`  
 Exiba o valor encontrado: `echo $sgId`  
 Agora você tem o ID exato do Security Group modificado pelo invasor.  
@@ -423,7 +416,6 @@ Concentre-se nas colunas **useridentity**, **eventtime**, **eventsource**, **eve
 
 A coluna **useridentity** tem muitos detalhes que dificultam a leitura.  
 Agora você retornará apenas o nome de usuário dessa coluna.  
-Consulta focada — colunas mais relevantes  
 ```
 SELECT useridentity.userName, eventtime, eventsource, eventname, requestparameters
 FROM cloudtrail_logs_monitoring####
@@ -480,7 +472,7 @@ Essa consulta mostra:
 - Todos os usuários ativos no último dia  
 - As ações distintas executadas por cada um  
 
-🎯 Objetivos do Desafio  
+### 🎯 Objetivos do Desafio  
 Você terá concluído com sucesso quando identificar:  
 - O nome do usuário AWS que modificou o grupo de segurança do Café Web Server  
 - A hora exata da violação  
@@ -570,6 +562,7 @@ Digite `:wq` para salvar e saia com Enter
 4. Reinicie o serviço SSH  
 Para aplicar as alterações: `sudo service sshd restart`  
 <img width="477" height="59" alt="image" src="https://github.com/user-attachments/assets/33fdc96e-1378-4189-97e5-25ca0283e37f" />
+
 Esse resultado significa que o comando service foi encaminhado internamente para o systemctl, que é o sistema moderno de gerenciamento de serviços no Linux.  
 E como nenhum erro apareceu, isso confirma que:  
 ✔️ O serviço sshd reiniciou com sucesso  
