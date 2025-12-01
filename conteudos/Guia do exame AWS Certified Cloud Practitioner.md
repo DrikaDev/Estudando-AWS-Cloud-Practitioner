@@ -24,7 +24,7 @@
    3.5 [Serviços de Rede](#35-serviços-de-rede)  
    3.6 [Serviços de Armazenamento](#36-serviços-de-armazenamento)  
    3.7 [Serviços de Inteligência Artificial, Machine Learning e Analytics](#37-serviços-de-inteligência-artificial-machine-learning-e-analytics)  
-   3.8 [Outros Serviços – Categorias](#38-outros-serviços-–-categorias)  
+   3.8 [Outros Serviços - Categorias](#38-outros-serviços---categorias)  
 
 4. [Cobrança, Preços e Suporte](#4-cobrança-preços-e-suporte)  
    4.1 [Comparar Modelos de Preços](#41-comparar-modelos-de-preços)  
@@ -284,7 +284,7 @@ dados organizados e pesquisáveis.
 
 ---
 
-### 3.8 Outros Serviços – Categorias  
+### 3.8 Outros Serviços - Categorias  
 
 **Integração de Aplicações:**  
 - **Amazon EventBridge** → barramento de eventos para integração entre aplicações e serviços.  
