@@ -31,8 +31,6 @@
    4.2 [Gerenciamento de Cobrança](#42-gerenciamento-de-cobrança)  
    4.3 [Recursos Técnicos e Opções de Suporte](#43-recursos-técnicos-e-opções-de-suporte)  
 
----
-
 ## Sobre o Guia do Exame
 
 Antes de iniciarmos a preparação para o exame **AWS Certified Cloud Practitioner (CLF-C02)**, é essencial ler o guia oficial 
@@ -50,16 +48,12 @@ Em outras palavras, é como **conhecer as regras do jogo antes de jogar** - o qu
 
 [⬆ Voltar ao índice](#índice)
 
----
-
 ## 1. Conceitos de Nuvem  
 
 ### 1.1 Benefícios da Nuvem  
 - **Alta disponibilidade** → manter os sistemas acessíveis mesmo diante de falhas.  
 - **Elasticidade** → ajustar automaticamente a capacidade de acordo com a demanda.  
 - **Agilidade** → provisionar e implementar recursos de forma rápida e eficiente.  
-
----
 
 ### 1.2 Princípios de Design da Nuvem  
 
@@ -71,8 +65,6 @@ Em outras palavras, é como **conhecer as regras do jogo antes de jogar** - o qu
 - **Eficiência de desempenho** → usar os recursos de forma eficiente para atender às necessidades do negócio.  
 - **Otimização de custos** → evitar gastos desnecessários e otimizar o uso de recursos.  
 - **Sustentabilidade** → reduzir impactos ambientais ao executar cargas de trabalho na nuvem.  
-
----
 
 ### 1.3 Migração para a Nuvem  
 
@@ -94,8 +86,6 @@ O **AWS CAF** agrupa os recursos em **seis perspectivas** que orientam a migraç
 **Estratégias de migração adequadas:**
   - **Réplicas de banco de dados** → permitem migração contínua e com menos downtime.  
   - **Uso do AWS Snowball** → facilita a transferência segura e rápida de grandes volumes de dados para a nuvem.  
-
----
 
 ### 1.4 Conceitos dos Aspectos Econômicos  
 
@@ -123,8 +113,6 @@ A **segurança da/na nuvem** é uma responsabilidade dividida entre a **AWS** e 
   - Gerenciamento de dados, aplicações e sistemas operacionais.  
   - Controle de identidades, permissões e criptografia.  
 
----
-
 ### 2.2 Conceitos de Segurança, Governança e Conformidade  
 
 - **Criptografia em trânsito e em repouso** → proteger dados enquanto são transferidos ou armazenados.  
@@ -138,8 +126,6 @@ A **segurança da/na nuvem** é uma responsabilidade dividida entre a **AWS** e 
 - **AWS Audit Manager** → auxilia na automação de auditorias ao coletar de forma contínua evidências de uso dos serviços AWS.  
 - **AWS Config** → monitora as configurações e mudanças dos recursos gerenciáveis pela AWS para garantir conformidade e segurança.  
 
----
-
 ### 2.3 Gerenciamento de Acesso  
 
 - **IAM (Identity and Access Management)** → serviço que permite criar e gerenciar usuários, grupos, funções e permissões para controlar o acesso aos
@@ -149,8 +135,6 @@ recursos da AWS.
 - **Princípio do menor privilégio** → conceder apenas as permissões estritamente necessárias para que usuários ou serviços executem suas tarefas.  
 - **Single Sign-On (SSO)** → permite que usuários acessem múltiplas contas ou aplicações AWS com um único login centralizado, simplificando a gestão de
 identidades.  
-
----
 
 ### 2.4 Recursos de Segurança  
 
@@ -181,8 +165,6 @@ identidades.
   - **Híbrido (Hybrid)** → combinação de recursos on-premises e na nuvem.  
   - **On-Premises** → recursos hospedados localmente, dentro da própria infraestrutura da empresa.  
 
----
-
 ### 3.2 Definir a Infraestrutura Global  
 
 - **Regiões AWS** → localidades geográficas distintas que contêm múltiplos datacenters (AZs).  
@@ -190,8 +172,6 @@ identidades.
 - **Locais de borda (Edge Locations)** → pontos de presença para distribuição de conteúdo via Amazon CloudFront e serviços de baixa latência.  
 - **Alta disponibilidade** → arquiteturas que garantem que aplicações continuem funcionando mesmo diante de falhas em AZs ou regiões.  
 - **Benefícios da infraestrutura global** → redução de latência, resiliência, redundância e escalabilidade para usuários finais.  
-
----
 
 ### 3.3 Serviços Computacionais  
 
@@ -205,8 +185,6 @@ de trabalho.
   - **Fargate** → executar containers sem provisionar ou gerenciar servidores, totalmente serverless.  
 - **Auto Scaling** → ajusta automaticamente a quantidade de instâncias ou containers de acordo com a demanda, proporcionando elasticidade.  
 - **Balanceadores de Carga (Elastic Load Balancer)** → distribuem tráfego entre múltiplas instâncias ou containers, aumentando disponibilidade e desempenho.  
-
----
 
 ### 3.4 Banco de Dados, Serviços e Migração  
 
@@ -227,8 +205,6 @@ de trabalho.
 - **DMS (Database Migration Service)** → migração de dados para a AWS de forma segura e com mínimo downtime.  
 - **AWS SCT (Schema Conversion Tool)** → converte esquemas de banco de dados de diferentes formatos, facilitando migração entre bancos heterogêneos.  
 
----
-
 ### 3.5 Serviços de Rede  
 
 **Componentes da VPC (Virtual Private Cloud):**  
@@ -248,8 +224,6 @@ de trabalho.
 - **AWS VPN** → cria conexões seguras entre data centers locais e a VPC.  
 - **AWS Direct Connect** → conexão de rede dedicada entre o ambiente local e a AWS, com baixa latência e alta largura de banda.  
 
----
-
 ### 3.6 Serviços de Armazenamento  
 
 - **Amazon S3 (Simple Storage Service)** → armazenamento de objetos altamente escalável, durável e acessível.  
@@ -266,8 +240,6 @@ de trabalho.
 - **Políticas de ciclo de vida do S3** → automatizam a transição de objetos entre classes de armazenamento ou exclusão após determinado tempo.  
 - **AWS Backup** → serviço centralizado para automação e gerenciamento de backups em múltiplos serviços AWS (RDS, EFS, DynamoDB, etc.).  
 
----
-
 ### 3.7 Serviços de Inteligência Artificial, Machine Learning e Analytics  
 
 **Machine Learning e IA:**  
@@ -281,8 +253,6 @@ de trabalho.
 - **AWS Glue** → serviço de ETL (Extract, Transform, Load => extração, transformação e carga) totalmente gerenciado que ajuda a transformar dados crus em
 dados organizados e pesquisáveis.
 - **Amazon QuickSight** → serviço de business intelligence para criação de dashboards e visualizações interativas.  
-
----
 
 ### 3.8 Outros Serviços - Categorias  
 
@@ -334,8 +304,6 @@ dados organizados e pesquisáveis.
 - Dados recebidos ou enviados **entre regiões** → podem gerar cobrança de transferência de dados.  
 - Dados recebidos ou enviados **na mesma região** → geralmente gratuitos entre serviços AWS, mas depende do serviço específico.  
 
----
-
 ### 4.2 Gerenciamento de Cobrança  
 
 - **AWS Organizations** → gerenciamento centralizado de múltiplas contas AWS, permitindo aplicar políticas e consolidar faturamento.  
@@ -343,8 +311,6 @@ dados organizados e pesquisáveis.
 - **AWS Cost Explorer** → ferramenta para visualizar, analisar e detalhar os custos e padrões de uso ao longo do tempo.  
 - **Tags de alocação de custos** → permitem categorizar recursos para rastrear custos por projeto, departamento ou equipe.  
 - **AWS Pricing Calculator** → ajuda a estimar o custo de serviços antes da implementação, considerando diferentes cenários e modelos de preços.  
-
----
 
 ### 4.3 Recursos Técnicos e Opções de Suporte  
 
