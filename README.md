@@ -1,6 +1,7 @@
-## 🚶🏻‍♀️‍➡️ Minha jornada para a AWS Cloud Practitioner 🚀
+## Minha jornada para a AWS Cloud Practitioner 🚀☁️
 
-### 🎉 **Status atualizado:** Aprovada na **AWS Certified Cloud Practitioner (CLF-C02)** em **novembro/2025**!
+### 🎉 Status atualizado: Aprovada na *AWS Certified Cloud Practitioner (CLF-C02)* em *novembro/2025*!
+![AWS CCP](https://img.shields.io/badge/AWS%20Cloud%20Practitioner-Conclu%C3%ADdo-success?logo=amazonaws&logoColor=white)
 
 ✏️ Este repositório documenta minha jornada de estudos *até a certificação* **AWS Certified Cloud Practitioner**.  
 📝 Aqui reuni minhas anotações, explicações, resumos e exercícios práticos para compreender melhor os principais serviços da nuvem AWS.  
@@ -122,4 +123,6 @@ E, se você está estudando para a AWS Cloud Practitioner, fico à diposição p
 
 ---
 
-> ✨ *Se quiser trocar ideias ou sugestões, fique à vontade para abrir uma issue ou me chamar!*  
+> ✨ *Quer sugerir melhorias ou bater um papo? Abra uma issue ou me chame!*
+> 
+> [![LinkedIn](https://img.shields.io/badge/LinkedIn-Adriana%20Gutierrez-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adri-ana-gutierrez/)
