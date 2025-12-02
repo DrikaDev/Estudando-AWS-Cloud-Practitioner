@@ -45,11 +45,11 @@ No **S3**, um **bucket** é um **contêiner para dados**. Ele é ideal para:
 
 ### Abordagens para controle de acesso ao Amazon S3
 
-- **Configuração Default**: somente o dono da conta consegue acessar.  
-- **Acesso público**: usado para hospedagem de sites.  
-- **Políticas de acesso**: controlam quais usuários terão acesso ao bucket.  
-  - **Políticas do IAM**: adote o princípio do **privilégio mínimo**, concedendo apenas permissões necessárias.  
-  - **URLs pré-assinadas**: concedem acesso temporário a outras pessoas.  
+- **Configuração Default**: apenas o proprietário do bucket tem acesso. O acesso é negado por padrão para qualquer pessoa ou serviço.  
+- **Acesso público**: usado quando é necessário disponibilizar conteúdo publicamente (ex.: hospedagem de sites estáticos).  
+- **Políticas de acesso**: definem quem pode acessar o bucket e quais ações podem realizar.  
+  - **Políticas do IAM**: controlam quais permissões usuários/roles têm adotando sempre o princípio do **privilégio mínimo**.  
+  - **URLs pré-assinadas** (Pre-signed URLs): concedem acesso temporário e controlado a outras pessoas, sem expor credenciais.  
 
 <img width="991" height="342" alt="Controle de acesso Amazon S3" src="https://github.com/user-attachments/assets/5f2a6178-b9c6-4270-ab27-c0151ba55726" />
 
