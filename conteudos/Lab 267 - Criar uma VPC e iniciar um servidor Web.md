@@ -197,7 +197,7 @@ Isso garante que as sub-redes possam se comunicar corretamente e que a VPC funci
 
 ![image](https://github.com/user-attachments/assets/6d31037a-069a-4811-ac6e-b8c5d8f87f9c)
 
-**✅ Resultado Esperado**
+**✅ Resultado Esperado**  
 Agora a **VPC** possui sub-redes **públicas e privadas** configuradas em **duas Zonas de Disponibilidade**.  
 
 > 📌 Estrutura Final:  
@@ -238,7 +238,6 @@ Um grupo de segurança controla o tráfego de entrada e saída das instâncias d
 ![image](https://github.com/user-attachments/assets/6c0d3f91-c0ba-4d62-8aab-816e5980e330)
 
 **✅ Resultado Esperado**  
-
 Um grupo de segurança chamado **Web Security Group** foi criado e configurado para permitir tráfego HTTP (porta 80) de qualquer origem IPv4.  
 
 📌 Esse grupo de segurança será usado na **próxima tarefa** para associar a uma instância do Amazon EC2.  
