@@ -110,7 +110,7 @@ Nesta tarefa, vamos utilizar o **Assistente de VPC** para criar:
 Nesta tarefa, vamos criar **duas sub-redes adicionais** em uma segunda **Zona de Disponibilidade (AZ)**.  
 Isso garante **alta disponibilidade**, permitindo que recursos sejam distribuídos em múltiplas zonas.
 
-1. Criar a segunda sub-rede **pública**:  
+#### 1. Criar a segunda sub-rede **pública**:  
 
 - No menu lateral, vá em **Sub-redes** → **Criar sub-rede**  
 ![image](https://github.com/user-attachments/assets/d32b3161-f857-45ab-9fe8-9c202cbe97cc)
@@ -132,7 +132,7 @@ Isso garante **alta disponibilidade**, permitindo que recursos sejam distribuíd
 
 📌 Essa sub-rede terá endereços IP que começam com **10.0.2.x**.  
 
-2. Criar a segunda sub-rede **privada**:  
+#### 2. Criar a segunda sub-rede **privada**:  
 
 - Clique em **Criar sub-rede** novamente e configure:  
    - **VPC ID:** `Lab VPC`  
