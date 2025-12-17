@@ -38,12 +38,13 @@ Vamos criar uma política de senhas rígida para todos os usuários da conta.
 2. No painel esquerdo, vá em **Account settings**.
 3. Observe a política de senha padrão. Sua empresa exige requisitos mais fortes.
 4. Clique em **Change password policy** e configure:
-
    - **Minimum password length**: `10` (em vez de 8)  
    - Marque **todas as caixas**, exceto:  
      - ☐ *Password expiration requires administrator reset*  
    - **Password expiration**: `90 days` (padrão)  
    - **Prevent password reuse**: `5` senhas anteriores (padrão)
+
+<img width="1408" height="670" alt="image" src="https://github.com/user-attachments/assets/3fe164ec-525e-4d82-9333-4db33bdd339b" />
 
 5. Clique em **Save changes**.
 
@@ -57,7 +58,7 @@ Vamos criar uma política de senhas rígida para todos os usuários da conta.
 1. No menu esquerdo, clique em **Users**.
    - Usuários disponíveis: `user-1`, `user-2`, `user-3`
 2. Clique em **user-1**:
-   - Guia **Permissions**: sem permissões  
+   - Guia **Permissions**: está sem permissões  
    - Guia **Groups**: não pertence a nenhum grupo  
    - Guia **Security credentials**: possui senha de console
 
@@ -69,26 +70,30 @@ Vamos criar uma política de senhas rígida para todos os usuários da conta.
    - Grupos pré-criados: `EC2-Admin`, `EC2-Support`, `S3-Support`
 
 #### Grupo EC2-Support
-
-- Política anexada: **AmazonEC2ReadOnlyAccess** (gerenciada pela AWS)
+- Na guia Permissions -> Política anexada: **AmazonEC2ReadOnlyAccess** (gerenciada pela AWS)
 - Permite: listar e descrever recursos do EC2, ELB, CloudWatch e Auto Scaling — **sem modificar**
 - Estrutura da política:
   - **Effect**: `Allow`
   - **Action**: ex: `ec2:DescribeInstances`
   - **Resource**: `*` (todos os recursos)
 
-#### Grupo S3-Support
+<img width="1059" height="467" alt="image" src="https://github.com/user-attachments/assets/ef64f3ec-7d71-4f03-aaa6-d1a0ac13087e" />
+<img width="1058" height="205" alt="image" src="https://github.com/user-attachments/assets/46c724cf-1f26-4e33-9aee-bebc70a73bb4" />
 
-- Política: **AmazonS3ReadOnlyAccess**
+#### Grupo S3-Support
+- Na guia Permissions -> Política anexada: **AmazonS3ReadOnlyAccess**
 - Permite: `s3:Get*`, `s3:List*` — somente leitura no S3
 
-#### Grupo EC2-Admin
+<img width="1064" height="405" alt="image" src="https://github.com/user-attachments/assets/a3c3c6e4-cbab-48df-836c-a03b12b8ed4a" />
 
-- Política **inline** (personalizada): **EC2-Admin-Policy**
+#### Grupo EC2-Admin
+- Na guia Permissions -> Política **inline** (personalizada): **EC2-Admin-Policy**
 - Permite: `ec2:Describe*`, `ec2:StartInstances`, `ec2:StopInstances`
 
+<img width="1065" height="405" alt="image" src="https://github.com/user-attachments/assets/4fc50997-8c91-419b-8ecf-23e4ad400843" />
+
 > ✅ **Resumo da Tarefa 2**  
-> Exploramos usuários e grupos, identificamos políticas gerenciadas vs. inline, e compreendemos como as permissões são atribuídas.
+> Exploramos usuários e grupos, identificamos políticas **gerenciadas** vs. **inline**, e compreendemos como as permissões são atribuídas.
 
 ## Cenário de negócios
 
@@ -102,20 +107,15 @@ Sua empresa usa intensivamente **EC2** e **S3**. Novos colaboradores precisam de
 
 ## Tarefa 3: Adicionar usuários a grupos
 
-> ⚠️ **Ignore mensagens de "not authorized"** — são normais no ambiente de laboratório.
-
 ### Adicionar `user-1` ao grupo `S3-Support`
-
 1. Em **User groups**, selecione **S3-Support**.
 2. Guia **Users** → **Add users**.
 3. Marque **user-1** → **Add users**.
 
 ### Adicionar `user-2` ao grupo `EC2-Support`
-
 Repita o processo acima para `user-2` no grupo `EC2-Support`.
 
 ### Adicionar `user-3` ao grupo `EC2-Admin`
-
 Repita para `user-3` no grupo `EC2-Admin`.
 
 > ✅ Verifique: cada grupo deve ter **1 usuário** na coluna *Users*.  
@@ -124,14 +124,13 @@ Repita para `user-3` no grupo `EC2-Admin`.
 ## Tarefa 4: Fazer login e testar permissões
 
 1. No IAM, acesse o **Dashboard**.
-2. Copie o **IAM sign-in URL** (ex: `https://123456789012.signin.aws.amazon.com/console`).
+2. Copie o *IAM sign-in URL* no **AWS Account** no canto direito da tela (ex: `https://123456789012.signin.aws.amazon.com/console`).
 3. Abra uma **janela privada/anônima**:
    - **Chrome**: `Ctrl+Shift+N` → Nova janela anônima  
    - **Firefox**: `Ctrl+Shift+P` → Nova janela privada  
    - **Edge**: `Ctrl+Shift+P` → Nova janela InPrivate
 
 ### Teste com `user-1` (S3-Support)
-
 - Credenciais:
   - Usuário: `user-1`
   - Senha: `Lab-Password1`
@@ -139,7 +138,6 @@ Repita para `user-3` no grupo `EC2-Admin`.
 - Acesse **EC2**: mensagem *"You are not authorized"* ❌
 
 ### Teste com `user-2` (EC2-Support)
-
 - Credenciais:
   - Usuário: `user-2`
   - Senha: `Lab-Password2`
@@ -148,7 +146,6 @@ Repita para `user-3` no grupo `EC2-Admin`.
 - Acesse **S3**: *"You don't have permissions to list buckets"* ❌
 
 ### Teste com `user-3` (EC2-Admin)
-
 - Credenciais:
   - Usuário: `user-3`
   - Senha: `Lab-Password3`
