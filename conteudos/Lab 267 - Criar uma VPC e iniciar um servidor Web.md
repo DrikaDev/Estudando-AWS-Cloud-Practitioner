@@ -132,7 +132,9 @@ Isso garante **alta disponibilidade**, permitindo que recursos sejam distribuíd
 
 📌 Essa sub-rede terá endereços IP que começam com **10.0.2.x**.  
 
-- Clique em **Criar sub-rede** e configure:  
+2. Criar a segunda sub-rede **privada**:  
+
+- Clique em **Criar sub-rede** novamente e configure:  
    - **VPC ID:** `Lab VPC`  
    - **Nome:** `Private Subnet 2`  
    - **Zona de disponibilidade:** `Sem preferências`  
