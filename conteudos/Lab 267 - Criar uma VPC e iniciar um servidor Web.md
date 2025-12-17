@@ -247,7 +247,7 @@ Um grupo de segurança chamado **Web Security Group** foi criado e configurado p
 
 ### Tarefa 5: Iniciar uma instância de servidor web
 
-Nesta tarefa, vamos iniciará uma instância do **Amazon EC2** dentro da **Lab VPC**.  
+Nesta tarefa, vamos iniciar uma instância do **Amazon EC2** dentro da **Lab VPC**.  
 A instância será configurada como um **servidor web** que hospeda uma aplicação simples.  
 
 - No **Console da AWS**, procure por **EC2**.  
@@ -269,7 +269,7 @@ A instância será configurada como um **servidor web** que hospeda uma aplicaç
 - **Par de chaves (login)**: `vockey`  
 ![image](https://github.com/user-attachments/assets/05e2ad3f-a70f-435e-accc-cb618b8d3bd0)
 
-- **Configurações de rede**  
+- **Configurações de rede** - clique em Editar:  
    - **VPC:** `Lab VPC`  
    - **Sub-rede:** `Public Subnet 2`  
    - **Atribuir IP público automaticamente:** `Habilitar`  
@@ -277,7 +277,7 @@ A instância será configurada como um **servidor web** que hospeda uma aplicaç
 
 ![image](https://github.com/user-attachments/assets/9b60ac0c-3c9b-4f71-a70c-e571e0a92b96)
 
-- Expanda **Detalhes avançados** e, em **Dados do usuário**, insira o seguinte script:
+- Expanda **Detalhes avançados** e, em **User data / Dados do usuário**, insira o seguinte script:
 
 ```
 #!/bin/bash
@@ -318,13 +318,13 @@ cat <<EOF > /var/www/html/index.html
   <a href="https://aws.amazon.com/what-is-cloud-computing" target="_blank">
     <img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS Cloud Computing">
   </a>
-  <h1>BRSAO215 é a melhor turma de AWS re/Start 2025</h1>
+  <h1>EDN é a melhor escola para estudar AWS re/Start!</h1>
 </body>
 </html>
 EOF
 ```
 
-- Escolha **Executar instância**.  
+- Clique em **Executar instância**.  
 
 - Para exibir a instância em execução, clique em **Visualizar todas as instâncias**.  
   Aguarde até que o **Web Server 1** mostre **3/3 checks passed (2/2 verificações aprovadas)** na coluna *Verificação de status*.  
@@ -334,14 +334,12 @@ EOF
 - Conectar ao servidor web:
    - Marque a caixa de seleção da instância **Web Server 1** e abra a guia **Detalhes**.
    - Copie o valor **Public IPv4 DNS** (DNS IPv4 público).
-   - Abra uma nova aba no navegador, cole o **Public IPv4 DNS** e pressione **Enter**.  
-   
+
    ![public-dns](https://github.com/user-attachments/assets/caac392e-0f50-46b0-ae53-cb48b380f878)
 
-- Resultado esperado  
-  Se tudo deu certo, a página exibida no navegador deve corresponder à página do servidor web do laboratório.  
-
-![Imagem do WhatsApp de 2025-08-07 à(s) 11 29 28_97015cbf](https://github.com/user-attachments/assets/9d50ec86-c80c-4131-992a-d043d57978c0)
+   - Abra uma nova aba no navegador, digite ` http:// ` , cole o **Public IPv4 DNS** e pressione **Enter**.
+     
+   <img width="1198" height="566" alt="image" src="https://github.com/user-attachments/assets/39a0285d-cfe3-45f2-bdde-92ad20cb38db" />
 
 - Veja a seguir a arquitetura completa que você implantou:
 
