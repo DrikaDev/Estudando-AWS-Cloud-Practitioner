@@ -50,8 +50,25 @@ O grupo de segurança será usado quando você executar a instância de banco de
 
 Isso configura o grupo de segurança do banco de dados para permitir tráfego de entrada na **porta 3306** de qualquer instância do **EC2** associada ao *Web Security Group*.  
 
-5. Role até a parte inferior da tela e clique em **Criar grupo de segurança**.  
+> 💡 Observações:  
 
+> 🤔 Por que usar MySQL/Aurora (3306) nas Inbound Rules em um lab de RDS?  
+> O **Amazon RDS** é apenas o **serviço gerenciado** de banco de dados.  
+> Quem define **qual porta será usada** é o **motor do banco** (engine).  
+
+> No lab:  
+> - O banco é **MySQL ou Aurora compatível com MySQL**  
+> - Esses motores utilizam a **porta TCP 3306**  
+
+> Os **Security Groups** trabalham em nível de rede e exigem: Protocolo / Porta / Origem  
+> Por isso, a regra correta é:  
+> - **Tipo:** MySQL/Aurora (3306)  
+> - **Origem:** Web Security Group  
+
+> **Resumo mental:**  
+> *RDS é o serviço, o motor define a porta, e o Security Group protege essa porta.*  
+
+5. Role até a parte inferior da tela e clique em **Criar grupo de segurança**.  
 Vamos usar esse grupo de segurança ao iniciar o banco de dados do **Amazon RDS**.  
 
 <img width="1205" height="179" alt="image" src="https://github.com/user-attachments/assets/d5daf43d-0ab8-4c59-9551-2ea9372cc232" />  
@@ -188,7 +205,7 @@ Seu banco de dados será iniciado.
 
 <img width="1134" height="193" alt="image" src="https://github.com/user-attachments/assets/d9849bdb-d661-4a2d-ba41-5382f0ba8f4c" />
 
-18. Quando o status estiver **Disponível**, role até a seção **Conectividade e Segurança** e copie o campo Endpoint e cole num editor de testo pois vamos
+18. Quando o status estiver **Disponível**, role até a seção **Conectividade e Segurança** e copie o campo Endpoint e cole num editor de texto pois vamos
     usar ele mais adiante no laboratório.  
 
 <img width="1134" height="229" alt="image" src="https://github.com/user-attachments/assets/849ae634-eb30-403f-8d43-ac77e5f8d93d" />
