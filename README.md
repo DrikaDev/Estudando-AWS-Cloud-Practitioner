@@ -114,15 +114,13 @@ Olá, me chamo **Adriana Gutierrez**, sou uma profissional 40+, formada em Anál
 Atualmente, estou em transição de carreira para a área de tecnologia, me aprofundando em **AWS e soluções em nuvem**.  
 Em **novembro/2025**, conquistei minha certificação **AWS Certified Cloud Practitioner**. 🎉
 
+![AWS CCP](https://img.shields.io/badge/AWS%20Cloud%20Practitioner-Conclu%C3%ADdo-success?logo=amazonaws&logoColor=white)
+
 ---
 
 ### 🫱🏻‍🫲🏼 Vamos juntos?
 
-Se este conteúdo te ajudar de alguma forma, agradeço se puder me dar uma ⭐!  
-E, se você está estudando para a AWS Cloud Practitioner, fico à diposição para ajudar! 😉   
+Se este conteúdo te ajudar de alguma forma, agradeço se puder me dar uma 🌟!  
+E, se você está estudando para a AWS Cloud Practitioner, fico à diposição para ajudar! 😉  
 
----
-
-> ✨ *Quer sugerir melhorias ou bater um papo? Abra uma issue ou me chame!*
-> 
-> [![LinkedIn](https://img.shields.io/badge/LinkedIn-Adriana%20Gutierrez-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adri-ana-gutierrez/) ![AWS CCP](https://img.shields.io/badge/AWS%20Cloud%20Practitioner-Conclu%C3%ADdo-success?logo=amazonaws&logoColor=white)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Adriana%20Gutierrez-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adri-ana-gutierrez/) 
