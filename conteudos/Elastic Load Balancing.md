@@ -2,7 +2,8 @@
 
 ## Índice
 
-- [Instâncias **saudáveis** no contexto do ELB](#instâncias-saudáveis-no-contexto-do-elb)
+- [O que é o Elastic Load Balancing (ELB)](#o-que-é-o-elastic-load-balancing-elb)
+- [Instâncias saudáveis no contexto do ELB](#instâncias-saudáveis-no-contexto-do-elb)
 - [Tipos de Load Balancers](#tipos-de-load-balancers)
 - [Visibilidade da integridade das instâncias no ELB](#visibilidade-da-integridade-das-instâncias-no-elb)
 - [Componentes do Application Load Balancer (ALB)](#componentes-do-application-load-balancer-alb)
@@ -16,6 +17,7 @@
 - [Resumo geral (nível prova AWS)](#resumo-geral-nível-prova-aws)
 - [Dica para memorizar](#dica-para-memorizar)
 
+## O que é o **Elastic Load Balancing (ELB)**?
 
 O **Elastic Load Balancing (ELB)** é um serviço da AWS que distribui automaticamente o tráfego de rede ou aplicação entre múltiplos
 destinos, como instâncias EC2, contêineres e endereços IP.
