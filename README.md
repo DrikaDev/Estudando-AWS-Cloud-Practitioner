@@ -10,7 +10,7 @@
 
 > *Lembrando que este conteúdo AINDA está em constante construção POIS O APRENDIZADO NUNCA ACABA, portanto, pode haver 'erros'.*  
 > Sinta-se à vontade para explorar e sugerir melhorias!  
-> Deixe uma ⭐ se gostar do conteúdo!  
+> Deixe uma 🌟 se gostar do conteúdo!  
 
 ---
 
