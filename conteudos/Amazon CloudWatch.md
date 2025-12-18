@@ -1,11 +1,10 @@
 ## Amazon CloudWatch
 
 - [Sobre o Amazon CloudWatch](#sobre-o-amazon-cloudwatch)  
-- [Métricas no Amazon CloudWatch](#métricas-no-amazon-cloudwatch)  
+- [Métricas no Amazon CloudWatch](#métricas-no-amazon-cloudwatch)
+- [Políticas de Escalabilidade com Amazon CloudWatch](#políticas-de-escalabilidade-com-amazon-cloudwatch)
 - [Eventos no Amazon CloudWatch](#eventos-no-amazon-cloudwatch)  
 - [Logs (Registros) no Amazon CloudWatch](#logs-registros-no-amazon-cloudwatch)
-
----
 
 ## Sobre o Amazon CloudWatch
 
@@ -36,8 +35,6 @@ O CloudWatch funciona de forma integrada com vários serviços, como:
 - Detecção proativa de falhas ou degradação de desempenho.  
 - Ações automatizadas para manter a **resiliência e disponibilidade**.  
 
----
-
 ## Métricas no Amazon CloudWatch
 
 No **Amazon CloudWatch**, **métricas** são o conceito fundamental de monitoramento.  
@@ -65,7 +62,86 @@ O CloudWatch fornece métricas para **todos os serviços da AWS**, como:
 💡 **Em resumo:**  
 As métricas são a **base do monitoramento no CloudWatch**, permitindo rastrear, analisar e reagir a mudanças nos recursos da AWS.  
 
----
+## Políticas de Escalabilidade com Amazon CloudWatch
+
+O **Amazon CloudWatch** é o serviço responsável por **monitorar métricas** e **disparar ações de escalabilidade**.  
+Quem executa a escalabilidade de fato é o **Amazon EC2 Auto Scaling**, com base nas métricas e alarmes do CloudWatch.
+
+### 🔁 Principais políticas de escalabilidade (Auto Scaling + CloudWatch)
+
+### 🔹 Target Tracking Scaling
+- Mantém uma **métrica em um valor-alvo**
+- A AWS ajusta automaticamente a capacidade
+- **Mais simples e mais usada**
+
+**Exemplo:**
+- Manter CPU média em **50%**
+- Se subir → adiciona instâncias  
+- Se cair → remove instâncias
+
+📌 Métricas comuns:
+- CPUUtilization
+- RequestCountPerTarget (ALB)
+- Utilização de memória (custom metric)
+
+### 🔹 Step Scaling
+- Ajusta a capacidade em **etapas**, com base na intensidade do alarme
+- Usa **CloudWatch Alarms**
+- Permite maior controle
+
+**Exemplo:**
+- CPU > 60% → +1 instância  
+- CPU > 80% → +3 instâncias  
+
+📌 Ideal quando você quer respostas diferentes para cargas diferentes.
+
+### 🔹 Simple Scaling (legado)
+- Baseado em **um único alarme**
+- Executa **uma única ação**
+- Usa cooldown obrigatório
+- ⚠️ Considerado **obsoleto** (não recomendado)
+
+**Exemplo:**
+- CPU > 70% → +1 instância
+
+### 🔹 Scheduled Scaling
+- Escalabilidade baseada em **horários definidos**
+- Não depende de métricas
+- Ótimo para cargas previsíveis
+
+**Exemplo:**
+- Aumentar instâncias às 8h
+- Reduzir instâncias às 20h
+
+### 🔹 Predictive Scaling
+- Usa **Machine Learning**
+- Analisa padrões históricos
+- Escala **antes** da demanda aumentar
+
+**Exemplo:**
+- E-commerce que sempre cresce em datas específicas
+
+📌 Funciona junto com Target Tracking.
+
+### 🧠 Relação CloudWatch x Auto Scaling
+- **CloudWatch**
+  - Coleta métricas
+  - Cria alarmes
+- **Auto Scaling**
+  - Executa as ações de escala
+  - Adiciona ou remove instâncias
+
+👉 CloudWatch **decide quando**, Auto Scaling **executa**.
+
+### 🧠 Resumo rápido
+
+| Política | Uso principal |
+|--------|---------------|
+| Target Tracking | Manter métrica em valor fixo |
+| Step Scaling | Controle detalhado por níveis |
+| Simple Scaling | Legado (evitar) |
+| Scheduled Scaling | Escala por horário |
+| Predictive Scaling | Escala antecipada com ML |
 
 ## Eventos no Amazon CloudWatch
 
@@ -92,8 +168,6 @@ O **CloudWatch Events** ajuda a:
 - Aumentar a **eficiência operacional** do ambiente AWS.  
 
 💡 Em resumo: o CloudWatch Events é essencial para criar sistemas **reativos e automatizados** na AWS.  
-
----
 
 ## Logs (Registros) no Amazon CloudWatch
 
