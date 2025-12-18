@@ -5,11 +5,11 @@
 - [O que é o Amazon EC2?](#o-que-é-o-amazon-ec2)
 - [O que é uma instância?](#o-que-é-uma-instância)
   - [Tipos de instâncias](#tipos-de-instâncias)
-  - [Séries e casos de uso](#séries-e-casos-de-uso)
+  - [Famílias de instâncias](#famílias-de-instâncias)
+- [Perfil de instância](#perfil-de-instância)
 - [Definição de preços do EC2](#definição-de-preços-do-ec2)
 - [Opções de Pagamento para Instâncias Reservadas (RIs) do Amazon EC2](#opções-de-pagamento-para-instâncias-reservadas-ris-do-amazon-ec2)
 - [Como escolher a instância EC2 correta?](#como-escolher-a-instância-ec2-correta)
----
 
 ## O que é o Amazon EC2?
 
@@ -41,8 +41,6 @@ Benefícios principais:
 
 [⬆ Voltar ao índice](#índice)
 
----
-
 ## O que é uma instância?
 
 Uma **instância do Amazon EC2** é um **servidor virtual** na Nuvem AWS.  
@@ -60,7 +58,7 @@ Os tipos de instância são nomeados com base na **família** de instância e no
 | 🌐 **Computação Acelerada** | GPU, FPGA, chips especializados | IA, Machine Learning, HPC, renderização |
 | 💾 **Otimizada para Armazenamento** | I/O de disco de alta performance | Big Data, data warehouses, bancos NoSQL |
 
-### Séries e casos de uso
+### Famílias de instâncias
 
 Dentro de cada família, existem **séries** (gerações) que trazem combinações específicas de hardware e otimizações.  
 
@@ -75,7 +73,38 @@ Dentro de cada família, existem **séries** (gerações) que trazem combinaçõ
 
 [⬆ Voltar ao índice](#índice)
 
----
+## Perfil de instância
+
+Um **perfil de instância (Instance Profile)** é um mecanismo da AWS que permite **associar uma IAM Role a uma instância EC2**, possibilitando que a instância **acesse serviços da AWS de forma segura**, **sem uso de chaves de acesso (Access Key / Secret Key)**.
+
+### 🎯 Para que serve um perfil de instância?
+O perfil de instância permite que a EC2 obtenha **credenciais temporárias automaticamente**, via **IAM Role**, para acessar serviços como:
+- Amazon S3
+- DynamoDB
+- CloudWatch
+- AWS Systems Manager
+- Amazon SNS, SQS
+- Outros serviços da AWS
+
+### ⚙️ Como funciona
+1. Cria-se uma **IAM Role** com as permissões necessárias
+2. A role é associada a um **Instance Profile**
+3. O Instance Profile é **anexado à instância EC2**
+4. A instância acessa os serviços AWS usando **credenciais temporárias**
+
+📌 As credenciais são fornecidas automaticamente pelo **IMDS (Instance Metadata Service)**.
+
+### 🧠 Exemplo prático
+Uma instância EC2 precisa acessar arquivos em um bucket S3.
+- Criar uma **IAM Role** com permissão `s3:GetObject`
+- Associar a role a um **Instance Profile**
+- Anexar o Instance Profile à instância EC2
+
+➡️ Nenhuma credencial precisa ser armazenada na instância.
+
+> Um **perfil de instância** é um **container que permite anexar uma IAM Role a uma instância EC2**, fornecendo **credenciais temporárias** para acesso seguro aos serviços da AWS.
+
+[⬆ Voltar ao índice](#índice)
 
 ## Definição de preços do EC2
 
@@ -109,8 +138,6 @@ A AWS oferece diversas opções de preço para diferentes necessidades:
 
 [⬆ Voltar ao índice](#índice)
 
----
-
 ## Opções de Pagamento para Instâncias Reservadas (RIs) do Amazon EC2
 
 As opções de pagamento para instâncias reservadas (RIs) do Amazon EC2 são **Tudo Adiantado**, **Parcialmente Adiantado** e **Sem Adiantamento**. A escolha da opção afeta o valor do desconto, sendo que o **Tudo Adiantado** oferece a maior economia.
@@ -135,8 +162,6 @@ As opções de pagamento para instâncias reservadas (RIs) do Amazon EC2 são **
 - **Redução de Custos:** Quanto mais você paga adiantado, maior é o desconto que você obtém.  
 - **Planejamento:** Planeje o uso contínuo dos recursos, pois o compromisso de um período mais longo (1 ou 3 anos) influencia a economia oferecida.  
 - **Flexibilidade:** Avalie se você precisa da flexibilidade das instâncias reservadas **conversíveis** (que permitem alterar atributos da instância) ou se as instâncias reservadas **padrão** (maior desconto) são mais adequadas para uso constante.
-
----
 
 ## Como escolher a instância EC2 correta?
 
