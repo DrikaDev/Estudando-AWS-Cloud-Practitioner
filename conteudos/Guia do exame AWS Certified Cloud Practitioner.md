@@ -337,7 +337,7 @@ riscos.
 
 ✅ Agora é com você!  
 Espero que esse guia te ajude a revisar melhor os conteúdos.  
-Boa prova e sucesso na sua jornada para se tornar AWS Certified Cloud Practitioner!🚀  
+Boa prova e sucesso na sua jornada para se tornar **AWS Certified Cloud Practitioner**!🚀  
 
 ---
 
