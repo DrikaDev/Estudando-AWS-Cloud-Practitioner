@@ -31,47 +31,76 @@ seja dentro ou fora da AWS, enquanto simplifica o gerenciamento de domínios e r
 
 👉🏻 O nome **"Route 53"** faz referência à porta 53, que é a porta padrão usada para comunicação DNS em redes.
 
----
-
 ## Políticas de Roteamento do Route 53
 
-O **AWS Route 53** oferece diferentes **políticas de roteamento** para atender a diversas necessidades de distribuição de tráfego:
+O **AWS Route 53** oferece diferentes **políticas de roteamento** para atender a diversas necessidades de distribuição de tráfego.  
+As **políticas de roteamento do Amazon Route 53** definem **como o DNS responde às consultas**, ou seja, **para onde o tráfego será direcionado**.
 
-### 1. Política de Roteamento Simples (Simple routing policy)
-- Usada para **um único recurso** que executa uma função específica.  
-- Direciona todo o tráfego para esse recurso sem lógica adicional.
+### 🔹 Simple Routing (Roteamento Simples)
+- Retorna **um único recurso** (IP ou nome DNS)
+- Não realiza verificação de saúde (Health Check)
+- Ideal para arquiteturas simples
 
-### 2. Política de Roteamento Ponderado (Weighted routing policy)
-- Útil quando há **vários recursos** disponíveis.  
-- Permite **direcionar uma certa porcentagem de tráfego** para cada recurso.
+**Exemplo:**  
+Um único servidor web atendendo o domínio.
 
-### 3. Política de Roteamento de Latência (Latency routing policy)
-- Roteia o tráfego com base na **menor latência de rede** para o usuário.  
-- Garante que o usuário receba a resposta mais rápida possível de qualquer região.
+### 🔹 Weighted Routing (Roteamento Ponderado)
+- Distribui o tráfego entre vários recursos com base em **pesos**
+- Muito usado para **testes A/B** ou **migrações graduais**
 
-### 4. Política de Roteamento de Failover (Failover routing policy)
-- Configuração **ativa/passiva**.  
-- O recurso principal atende a todo o tráfego, mas se falhar, o Route 53 redireciona para um **recurso de backup**.
+**Exemplo:**  
+- 80% do tráfego para a versão antiga  
+- 20% para a nova versão
 
-### 5. Política de Roteamento de Localização Geográfica (Geolocation routing policy)
-- Roteia o tráfego com base na **localização geográfica dos usuários**.  
-- Permite customizar conteúdo ou serviços por região.
-- Excelente para cumprir requisitos legais.
+### 🔹 Latency-based Routing (Baseado em Latência)
+- Direciona o usuário para a região AWS com **menor latência**
+- Focado em **melhorar a performance**
+- Garante que o usuário receba a resposta mais rápida possível de qualquer região
 
-### 6. Política de Roteamento de Proximidade Geográfica (Geoproximity routing policy)
-- Roteia o tráfego com base na **localização geográfica dos recursos**.  
+**Exemplo:**  
+Usuários do Brasil → `sa-east-1`  
+Usuários da Europa → `eu-west-1`
+
+### 🔹 Failover Routing
+- Configuração **ativa/passiva**  
+- Usado para **alta disponibilidade**
+- Define um recurso **primário** e outro **secundário**
+- Funciona em conjunto com **Health Checks**
+- O recurso principal atende a todo o tráfego, mas se falhar, o Route 53 redireciona para um **recurso de backup**
+
+**Exemplo:**  
+Se o recurso primário falhar, o tráfego é direcionado automaticamente para o secundário.
+
+### 🔹 Geolocation Routing (Geolocalização)
+- Direciona o tráfego com base na **localização do usuário** (país ou continente)
+- Permite customizar conteúdo ou serviços por região
+- Muito usado para cumprir **requisitos legais** ou **conteúdo regional**
+
+**Exemplo:**  
+Usuários do Brasil acessam uma versão específica do site.
+
+### 🔹 Geoproximity Routing
+- Direciona o tráfego com base na **distância geográfica** entre usuário e recurso
+- Permite ajustar o alcance usando **bias**
+- Requer o **Route 53 Traffic Flow**
 - Pode transferir tráfego de recursos em um local para recursos em outro.  
 - Usada **somente para fluxo de tráfego**.
 
-### 7. Política de Roteamento de Resposta Multivalor (Multivalue answer routing policy)
-- Permite que o Route 53 responda a consultas DNS com até **oito registros saudáveis selecionados aleatoriamente**.  
-- Distribui o tráfego de forma balanceada e aumenta a resiliência.
+**Exemplo:**  
+Aumentar ou reduzir artificialmente a área de influência de uma região.
+
+### 🔹 Multivalue Answer Routing
+- Retorna até **oito registros saudáveis selecionados aleatoriamente**  
+- Realiza um balanceamento simples no lado do cliente
+- Suporta **Health Checks**
+- Distribui o tráfego de forma balanceada e aumenta a resiliência
+
+**Exemplo:**  
+Vários servidores web respondendo ao mesmo domínio.
 
 💡 **Resumo:**  
 Essas políticas permitem que você **controle com precisão como o tráfego DNS é distribuído**, garantindo **desempenho, resiliência e experiência otimizada 
 para os usuários**.
-
----
 
 ## Verificações de Saúde no Route 53
 
