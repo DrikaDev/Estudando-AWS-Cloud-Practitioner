@@ -34,8 +34,6 @@ Ao final, teremos uma aplicação capaz de se adaptar dinamicamente à demanda e
 
 <img width="2534" height="1550" alt="image" src="https://github.com/user-attachments/assets/6d69d7f9-22c3-47aa-83ef-ca19d0cfb401" />
 
----
-
 ## Tarefa 1: Criar uma AMI para o Auto Scaling
 
 Nesta tarefa, vamos criar uma **AMI** usando o **Web Server 1** existente.  
@@ -77,8 +75,6 @@ Nesta tarefa, vamos criar uma **AMI** usando o **Web Server 1** existente.
 A tela de confirmação exibirá o **ID da nova AMI**, que será usado ao iniciar o grupo de **Auto Scaling** posteriormente no laboratório.
 
 [⬆ Voltar ao índice](#índice)
-
----
 
 ## Tarefa 2: Criar um balanceador de carga
 
@@ -141,8 +137,6 @@ Disponibilidade.
 
 [⬆ Voltar ao índice](#índice)
 
----
-
 ## Tarefa 3: Criar um modelo de execução
 
 Nesta tarefa, vamos criar um **modelo de execução** (Launch Template) para o grupo do **Auto Scaling**.  
@@ -196,9 +190,9 @@ tipo de instância, par de chaves, grupo de segurança e discos.
 
 6. Clique em **Visualizar modelos de execução**
 
-[⬆ Voltar ao índice](#índice)
+<img width="1428" height="306" alt="image" src="https://github.com/user-attachments/assets/126ca7f0-fe75-4948-9493-d4632fc9fb51" />
 
----
+[⬆ Voltar ao índice](#índice)
 
 ## Tarefa 4: Criar um grupo do Auto Scaling
 
@@ -288,8 +282,6 @@ Nesta tarefa, vamos usar o **modelo de execução** para criar um **grupo do Aut
 
 [⬆ Voltar ao índice](#índice)
 
----
-
 ## Tarefa 5: Verificar se o balanceamento de carga está funcionando
 
 Nesta tarefa, vamos verificar se o **balanceamento de carga** está funcionando corretamente.
@@ -324,8 +316,6 @@ Nesta tarefa, vamos verificar se o **balanceamento de carga** está funcionando 
 <img width="1195" height="456" alt="image" src="https://github.com/user-attachments/assets/6ebbc4c0-e00b-4af4-b26a-22111138ad8b" />
 
 [⬆ Voltar ao índice](#índice)
-
----
 
 ## Tarefa 6: Testar o Auto Scaling
 
@@ -368,8 +358,6 @@ criados.
 
 [⬆ Voltar ao índice](#índice)
 
----
-
 ## Tarefa 7: Encerrar a instância "Web Server 1"  
 
 Nesta tarefa, vamos encerrar a instância **Web Server 1**.  
@@ -386,8 +374,6 @@ Essa instância foi utilizada para criar a AMI usada pelo grupo do Auto Scaling,
 <img width="1170" height="142" alt="image" src="https://github.com/user-attachments/assets/12fe30f7-8d6e-48c0-b226-37a04fa61500" />
 
 [⬆ Voltar ao índice](#índice)
-
----
 
 ### Desafio opcional: Criar uma AMI utilizando a AWS CLI  
 
