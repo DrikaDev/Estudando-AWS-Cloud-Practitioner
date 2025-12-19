@@ -22,6 +22,7 @@ Este laboratório mostra como usar:
 - **Amazon CloudWatch Logs**
 - **Amazon CloudWatch Events**
 - **AWS Config**  
+
 para monitorar aplicações e infraestrutura.  
 
 ---
