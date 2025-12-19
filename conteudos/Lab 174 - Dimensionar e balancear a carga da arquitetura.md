@@ -39,7 +39,25 @@ Ao final, teremos uma aplicação capaz de se adaptar dinamicamente à demanda e
 ## Tarefa 1: Criar uma AMI para o Auto Scaling
 
 Nesta tarefa, vamos criar uma **AMI** usando o **Web Server 1** existente.  
-Essa ação salvará o conteúdo do disco de inicialização para que novas instâncias possam ser iniciadas com conteúdo idêntico.  
+
+> 🤔 Por que criar uma AMI para o Auto Scaling?  
+> A criação de uma **AMI (Amazon Machine Image)** é um passo fundamental ao trabalhar com **Auto Scaling**, pois ela funciona como um **modelo base** para a criação automática de novas instâncias do EC2.  
+> O **Auto Scaling Group** não cria instâncias do zero. Ele precisa de uma referência que defina:  
+> - Sistema operacional
+> - Aplicações instaladas
+> - Configurações do servidor
+> - Estado validado do ambiente  
+> Essa referência é a AMI.  
+> Isso garante que todas as instâncias criadas pelo Auto Scaling sejam **idênticas e consistentes**.  
+
+> 🤔 O que acontece se a AMI não for criada?  
+> Sem uma AMI personalizada:  
+> - As instâncias criadas pelo Auto Scaling iniciariam apenas com o sistema operacional  
+> - Seria necessário instalar e configurar o servidor web novamente  
+> - Poderiam ocorrer falhas ou inconsistências entre instâncias  
+> - O tempo de inicialização seria maior  
+
+🌟 Dessa forma, ao criar a AMI, o conteúdo do disco de inicialização é salvo, permitindo que novas instâncias possam ser iniciadas com conteúdo idêntico.  
 
 1. No **Console da AWS**, na barra Pesquisar, insira e escolha **EC2** para abrir o Console do Amazon EC2.  
 2. No painel de navegação à esquerda, localize a seção **Instâncias** e selecione **Instâncias**.  
