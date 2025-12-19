@@ -7,7 +7,7 @@
 - [Resumo da Missão](#resumo-da-missão)
 - [Tarefa 1: Modificar um Grupo de Segurança e Observar o Site](#tarefa-1-modificar-um-grupo-de-segurança-e-observar-o-site)
 - [Tarefa 2: Criar um Log do CloudTrail e Observar o Site Invadido](#tarefa-2-criar-um-log-do-cloudtrail-e-observar-o-site-invadido)
-- [Tarefa 3: Analisar os Logs do CloudTrail Usando-o-comando-grep](#tarefa-3-analisar-os-logs-do-cloudtrail-usando-o-comando-grep)
+- [Tarefa 3: Analisar os Logs do CloudTrail Usando o comando grep](#tarefa-3-analisar-os-logs-do-cloudtrail-usando-o-comando-grep)
 - [Tarefa 4: Analisar os Logs do CloudTrail Usando Athena](#tarefa-4-analisar-os-logs-do-cloudtrail-usando-athena)
 - [Desafio: Identificar o Hacker](#desafio-identificar-o-hacker)
 - [Tarefa 5: Analisar-ainda-mais-a-invasão-e-melhorar-a-segurança](#tarefa-5-analisar-ainda-mais-a-invasão-e-melhorar-a-segurança)
