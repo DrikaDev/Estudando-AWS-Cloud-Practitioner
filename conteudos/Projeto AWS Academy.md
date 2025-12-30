@@ -35,7 +35,7 @@ O departamento de admissões recebeu reclamações de que o aplicativo web de re
 <img width="2242" height="750" alt="image" src="https://github.com/user-attachments/assets/8a550b4b-c37b-4261-a855-fe2a698fe6b7" />
 
 Você é um **engenheiro de nuvem**, responsável por criar uma **Prova de Conceito (POC)** para hospedar o aplicativo web na AWS.  
-Seu desafio é planejar, projetar, criar e implantar a solução seguindo as **práticas recomendadas do AWS Well-Architected Framework**.
+Seu desafio é planejar, projetar, criar e implantar a solução seguindo as **práticas recomendadas do AWS Well-Architected Framework**.  
 
 Durante períodos de pico, o aplicativo deve:
 - Suportar milhares de usuários
@@ -99,6 +99,8 @@ Crie um diagrama ilustrando a arquitetura proposta e como os requisitos serão a
 **Referências:**
 - Ícones de arquitetura da AWS
 - Diagramas de arquitetura de referência da AWS
+
+<img width="866" height="604" alt="image" src="https://github.com/user-attachments/assets/a4c9d86c-2221-4310-bad9-980690f34bd6" />
 
 ### Tarefa 2: Desenvolver Estimativa de Custo
 - Estimar o custo para **12 meses** na região `us-east-1`
