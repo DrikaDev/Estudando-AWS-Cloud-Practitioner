@@ -10,7 +10,7 @@
 - [Tarefa 3: Analisar os Logs do CloudTrail Usando o comando grep](#tarefa-3-analisar-os-logs-do-cloudtrail-usando-o-comando-grep)
 - [Tarefa 4: Analisar os Logs do CloudTrail Usando Athena](#tarefa-4-analisar-os-logs-do-cloudtrail-usando-athena)
 - [Desafio: Identificar o Hacker](#desafio-identificar-o-hacker)
-- [Tarefa 5: Analisar-ainda-mais-a-invasão-e-melhorar-a-segurança](#tarefa-5-analisar-ainda-mais-a-invasão-e-melhorar-a-segurança)
+- [Tarefa 5: Analisar ainda mais a invasão e melhorar a segurança](#tarefa-5-analisar-ainda-mais-a-invasão-e-melhorar-a-segurança)
 
 ## Introdução
 Nesta atividade vamos criar uma trilha do **AWS CloudTrail** para auditar ações executadas na sua conta.  
